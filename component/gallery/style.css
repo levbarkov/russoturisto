@@ -1,0 +1,332 @@
+/*Small reset*/
+body, ul, ol, h1,h2,h3,h4,h5,h6,form,li,p,input,select,legend,textarea,fieldset{ margin:0; padding:0;}
+
+.center, .breadcrumb{ /*center content area */
+position: relative;
+margin:0 auto;
+width:940px;
+padding:0px 20px;
+}
+
+
+#wrapper_featured_stripe{
+z-index: 1;
+height:135px;
+}
+
+#wrapper_stripe{
+float: left;
+height: auto;
+z-index: 2;
+padding:11px 0;
+}
+
+#wrapper_footer_top, #wrapper_footer_bottom{clear:both; width: 100%;  position: relative}
+
+
+#wrapper_main{
+padding-bottom:40px;
+}
+
+
+
+/************************************************************************
+-) FEATURED
+*************************************************************************/
+
+/*The heights of the following 3 classes controll the slider height*/
+.slideshow{ 
+height:440px; 	/*this changes the height of the main image slider*/
+width:940px;
+overflow: hidden;
+position: relative;
+margin:0; 
+padding:0;
+}
+
+.featured, .fadeout {
+height:440px;
+}
+
+.feature_excerpt{
+max-height:400px;
+padding:20px 30px 20px;
+bottom:0;
+display:none;
+font-size:13px;
+line-height:1.8em;
+position:absolute;
+width:250px;
+z-index:3;
+}
+
+.feature_excerpt_pos_2{
+left:0;
+}
+
+.feature_excerpt_pos_3{
+right:0;
+}
+
+#top div .feature_excerpt .excerpt_button{
+display:block;
+font-size:24px;
+height:auto;
+margin-top:35px;
+padding:18px 18px 16px;
+text-align:center;
+width:210px;
+}
+
+/***********/
+
+
+.slideshow li, .slideshow .featured{
+display: block;
+width:100%;
+height:100%;
+position: absolute;
+top:0;
+left:0;
+z-index: 1;
+}
+
+.js_active .slideshow li, .js_active .slideshow .featured{
+display:none;
+}
+
+#top .slideshow img, #top .slideshow a img, #top .slideshow a{
+border:none;
+text-decoration: none;
+display: block;
+}
+
+#top .slideshow a{
+height:100%;
+width:100%;
+display: block;
+}
+
+.slidecontrolls {
+float:left;
+margin:10px auto 0;
+position:absolute;
+right:0;
+z-index: 100;
+}
+
+.slidecontrolls a{
+height:20px;
+width:14px;
+display:block;
+cursor: pointer;
+float:left;
+outline: none;
+}
+
+
+.feature_excerpt strong{
+display: block;
+font-size: 15px;
+padding-bottom: 3px;
+}
+
+
+.feature_wrap {
+padding:35px 0;
+position:relative;
+width:100%;
+}
+
+#feature_info {
+position:relative;
+}
+
+#feature_info .text {
+padding:0 0 20px;
+width:680px;
+}
+
+
+
+.featured object{
+z-index: 1;
+position: relative;
+}
+
+.entry .slidecontrolls{
+margin:0;
+}
+
+
+
+
+
+/*slideshow thumbnails*/
+.slideshowThumbs{
+float: left;
+position: absolute;
+top:25px;
+left:16px;
+}
+
+.slideThumb{
+float: left;
+display: block;
+list-style-type: none;
+padding:15px 10px;
+position: relative;
+margin-left:-6px;
+}
+
+.slideThumWrap, .slideThumWrap img{
+display: block;
+height:50px;
+width:70px;
+overflow: hidden;
+position: relative;
+outline: none;
+}
+
+.slideThumWrap span{
+display: block;
+height:44px;
+width:64px;
+overflow: hidden;
+position: absolute;
+z-index: 10;
+}
+
+.slideThumWrap img, .slideThumWrap:hover img{
+border:none;
+}
+#top .slideThumbTitle{
+display:none;
+padding-bottom:12px;
+position: absolute;
+left:-35px;
+width:160px;
+bottom: 80px;
+}
+
+#top .slideThumbHeading{
+position: relative;
+font-size: 11px;
+font-weight: normal;
+background: #000;
+color:#fff;
+width:140px;
+padding:5px 10px;
+display: block;
+}
+
+.slideThumbTitle strong{
+font-weight: normal;
+}
+
+
+.slideWelcome{
+width:400px;
+height:100px;
+position: relative;
+background: #fff;
+margin: 172px auto 0 auto;
+display: block;
+}
+
+#top .slideshow .slideWelcome a
+{
+	display: inline;
+	width:auto;
+	height:auto;
+}
+
+
+
+.rounded, .excerpt_button{
+-moz-border-radius: 5px;
+-webkit-border-radius:5px;
+border-radius:5px;
+}
+
+.rounded_small, .button, .categories, .comments, .entry-head a, .more-link, #top .portfolio_item h3 a, #top .pagination span, #top .pagination a, #top .pagination .current, #js_sort_items a, #top .entry .feature_wrap{
+-moz-border-radius: 2px;
+-webkit-border-radius:2px;
+border-radius:2px;
+}
+
+
+
+
+
+
+
+/* second CSS file */
+
+#wrapper_featured_stripe{
+background: #fff url("bg_gradj.png") repeat-x 0 0;
+border-bottom: 1px solid #ddd;
+}
+
+.wrapper_shadow .center{
+background: transparent url("bg_shado.png") no-repeat center center;
+}
+
+#wrapper_featured_area, #wrapper_footer_top{
+background: transparent url("bg_grain.png") repeat-x bottom center;
+}
+
+/************************************************************************
+FEATURED
+*************************************************************************/
+.slideshow{
+background: #fff url("bg_gradj.png") repeat-x 0 0;
+}
+
+.slideThumb{
+background: transparent url("thumb_sh.png") repeat-x bottom center;
+}
+
+.slideThumWrap{
+border:1px solid #ccc;
+}
+
+.slideThumWrap span{
+border-width: 3px;
+border-color: #fff;
+border-style: solid;
+}
+
+.slideThumbTitle{
+background:url("arrow_do.png") no-repeat scroll bottom center transparent;
+
+}
+
+#top .slideThumbHeading{
+background: #000;
+color:#fff;
+}
+
+#top .slidecontrolls a{
+background:transparent url(slide_co.png) no-repeat  -28px top;
+}
+
+#top .slidecontrolls .active_item, #top .slidecontrolls a:hover{
+background:transparent url(slide_co.png) no-repeat 2px top ;
+}
+
+.feature_excerpt, .sliderheading{
+background: #000;
+color:#fff;
+}
+
+#top div .feature_excerpt .excerpt_button{
+background: #fff url("bg_gradj.png") repeat-x -1px -1px;
+border:1px solid #FFFFFF;
+color:#333
+}
+
+#top div .feature_excerpt .excerpt_button:hover{
+background: #fff;
+color:#444;
+}

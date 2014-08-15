@@ -1,0 +1,44 @@
+body {
+background: #528037 url(../images/igrou.jpg) no-repeat scroll 0 0;
+}
+
+.button {
+border : solid 1px #cccccc;
+background: #f3f3f3;
+color : #444444;
+font-weight : bold;
+font-size : 12px;
+padding: 2px;
+}
+
+.ilogcofrm {
+padding-top: 87px;
+padding-left: 30px;
+padding-bottom: 70px;
+padding-right: 30px;
+text-align:left;
+}
+
+.tr_login{ background:url(../images/white.png); text-align:center; border-top:1px solid #dddddd; border-bottom:1px solid #dddddd; }
+
+.inputlabel {
+text-align: left;
+color:#777777;
+font-size:14px;
+}
+
+.inputbox {
+width: 150px;
+font-size:16px;
+height:24px;
+vertical-align:middle;
+margin: 0 0 1em 0;
+border: 1px dotted #cccccc;
+}
+
+.subbutton{
+border:0px none;
+background:none;
+width:0px;
+height:0px;
+}

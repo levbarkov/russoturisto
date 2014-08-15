@@ -1,0 +1,298 @@
+/* ThemeOffice2003Menu Style Sheet */
+
+.ThemeOffice2003MenuH,
+.ThemeOffice2003MenuV,
+.ThemeOffice2003SubMenuTable {
+	font-family:	verdana, arial, sans-serif;
+	font-size:	13px;
+	padding:	0;
+	white-space:	nowrap;
+	cursor:		default;
+}
+
+.ThemeOffice2003MenuV {
+	width: 100%;
+}
+
+.ThemeOffice2003MenuH span {
+   vertical-align:bottom;
+}
+
+.ThemeOffice2003SubMenu {
+	position:	absolute;
+	visibility:	hidden;
+
+	padding-top:	2px;
+	padding-bottom:	2px;
+	padding-left:	1px;
+	padding-right:	1px;
+
+	/*
+	   Netscape/Mozilla renders borders by increasing
+	   their z-index.  The following line is necessary
+	   to cover any borders underneath
+	*/
+	z-index:	100;
+	border:		0;
+	background:	#F5F5F5 url(menubg.gif) repeat scroll 0%;
+
+	overflow:	visible;
+	border:		1px solid #002D96;
+}
+
+.ThemeOffice2003SubMenuTable {
+	overflow:	visible;
+}
+
+.ThemeOffice2003MainItem,
+.ThemeOffice2003MainItemHover,
+.ThemeOffice2003MainItemActive,
+.ThemeOffice2003MenuItem,
+.ThemeOffice2003MenuItemHover,
+.ThemeOffice2003MenuItemActive {
+	border:		0;
+	cursor:		default;
+	white-space:	nowrap;
+}
+
+.ThemeOffice2003MainItem {
+	background-color:	#A1C0F5;
+}
+
+.ThemeOffice2003MainItemHover,
+.ThemeOffice2003MainItemActive {
+	background:		url(mainmenubg.gif);
+}
+
+.ThemeOffice2003MenuItem {
+	background-color:	transparent;
+}
+
+.ThemeOffice2003MenuItemHover,
+.ThemeOffice2003MenuItemActive {
+	background-color:	#FFEEC2;
+}
+
+
+/* horizontal main menu */
+
+.ThemeOffice2003MenuH .ThemeOffice2003MainItem {
+	padding:	3px 3px 4px 3px;
+	border:		0;
+}
+
+.ThemeOffice2003MenuH td.ThemeOffice2003MainItemHover,
+.ThemeOffice2003MenuH td.ThemeOffice2003MainItemActive {
+	padding:	2px 2px 3px 2px;
+	border: 1px solid #000080;
+}
+
+.ThemeOffice2003MainFolderLeft,
+.ThemeOffice2003MainItemLeft,
+.ThemeOffice2003MainFolderText,
+.ThemeOffice2003MainItemText,
+.ThemeOffice2003MainFolderRight,
+.ThemeOffice2003MainItemRight {
+	background-color:	inherit;
+}
+
+/* vertical main menu sub components */
+
+.ThemeOffice2003MenuV td.ThemeOffice2003MainFolderLeft,
+.ThemeOffice2003MenuV td.ThemeOffice2003MainItemLeft {
+	padding-top:	3px;
+	padding-bottom:	3px;
+	padding-left:	0px;
+	padding-right:	2px;
+
+	border-top:	1px solid #000080;
+	border-bottom:	1px solid #000080;
+	border-left:	1px solid #000080;
+
+	background-color:	inherit;
+}
+
+.ThemeOffice2003MenuV td.ThemeOffice2003MainFolderText,
+.ThemeOffice2003MenuV td.ThemeOffice2003MainItemText {
+	padding-top:	3px;
+	padding-bottom:	3px;
+	padding-left:	5px;
+	padding-right:	5px;
+
+	border-top:	1px solid #000080;
+	border-bottom:	1px solid #000080;
+
+	background-color:	inherit;
+	white-space:	nowrap;
+}
+
+.ThemeOffice2003MenuV td.ThemeOffice2003MainFolderRight,
+.ThemeOffice2003MenuV td.ThemeOffice2003MainItemRight {
+	padding-top:	3px;
+	padding-bottom:	3px;
+	padding-left:	0px;
+
+	border-top:	1px solid #000080;
+	border-bottom:	1px solid #000080;
+	border-right:	1px solid #000080;
+
+	background-color:	inherit;
+}
+
+.ThemeOffice2003MenuV tr.ThemeOffice2003MainItem td.ThemeOffice2003MainFolderLeft,
+.ThemeOffice2003MenuV tr.ThemeOffice2003MainItem td.ThemeOffice2003MainItemLeft {
+	padding-top:	4px;
+	padding-bottom:	4px;
+	padding-left:	1px;
+	padding-right:	2px;
+
+	white-space:	nowrap;
+
+	border:		0;
+	background-color:	inherit;
+}
+
+.ThemeOffice2003MenuV tr.ThemeOffice2003MainItem td.ThemeOffice2003MainFolderText,
+.ThemeOffice2003MenuV tr.ThemeOffice2003MainItem td.ThemeOffice2003MainItemText {
+	padding-top:	4px;
+	padding-bottom:	4px;
+	padding-left:	5px;
+	padding-right:	5px;
+
+	border:		0;
+	background-color:	inherit;
+}
+
+.ThemeOffice2003MenuV tr.ThemeOffice2003MainItem td.ThemeOffice2003MainItemRight,
+.ThemeOffice2003MenuV tr.ThemeOffice2003MainItem td.ThemeOffice2003MainFolderRight {
+	padding-top:	4px;
+	padding-bottom:	4px;
+	padding-left:	0px;
+	padding-right:	1px;
+
+	border:		0;
+	background-color:	inherit;
+}
+
+/* sub menu sub components */
+
+.ThemeOffice2003SubMenu .ThemeOffice2003MenuFolderLeft,
+.ThemeOffice2003SubMenu .ThemeOffice2003MenuItemLeft {
+	padding-top:	2px;
+	padding-bottom:	2px;
+	padding-left:	1px;
+	padding-right:	3px;
+
+	border-top:	1px solid #000080;
+	border-bottom:	1px solid #000080;
+	border-left:	1px solid #000080;
+
+	background-color:	inherit;
+	white-space:	nowrap;
+}
+
+.ThemeOffice2003SubMenu .ThemeOffice2003MenuFolderText,
+.ThemeOffice2003SubMenu .ThemeOffice2003MenuItemText {
+	padding-top:	2px;
+	padding-bottom:	2px;
+	padding-left:	5px;
+	padding-right:	5px;
+
+	border-top:	1px solid #000080;
+	border-bottom:	1px solid #000080;
+
+	background-color:	inherit;
+	white-space:	nowrap;
+}
+
+.ThemeOffice2003SubMenu .ThemeOffice2003MenuFolderRight,
+.ThemeOffice2003SubMenu .ThemeOffice2003MenuItemRight {
+	padding-top:	2px;
+	padding-bottom:	2px;
+	padding-left:	0px;
+	padding-right:	0px;
+
+	border-top:	1px solid #000080;
+	border-bottom:	1px solid #000080;
+	border-right:	1px solid #000080;
+
+	background-color:	inherit;
+	white-space:	nowrap;
+}
+
+.ThemeOffice2003SubMenu .ThemeOffice2003MenuItem .ThemeOffice2003MenuFolderLeft,
+.ThemeOffice2003SubMenu .ThemeOffice2003MenuItem .ThemeOffice2003MenuItemLeft {
+	padding-top:	3px;
+	padding-bottom:	3px;
+	padding-left:	2px;
+	padding-right:	3px;
+
+	white-space:	nowrap;
+
+	border:		0;
+	/* background-color:	transparent; */
+	background-color:	transparent;
+}
+
+.ThemeOffice2003SubMenu .ThemeOffice2003MenuItem .ThemeOffice2003MenuFolderText,
+.ThemeOffice2003SubMenu .ThemeOffice2003MenuItem .ThemeOffice2003MenuItemText {
+	padding-top:	3px;
+	padding-bottom:	3px;
+	padding-left:	5px;
+	padding-right:	5px;
+
+	border:		0;
+	background-color:	inherit;
+}
+
+.ThemeOffice2003SubMenu .ThemeOffice2003MenuItem .ThemeOffice2003MenuFolderRight,
+.ThemeOffice2003SubMenu .ThemeOffice2003MenuItem .ThemeOffice2003MenuItemRight {
+	padding-top:	3px;
+	padding-bottom:	3px;
+	padding-left:	0px;
+	padding-right:	1px;
+
+	border:		0;
+	background-color:	inherit;
+}
+
+/* menu splits */
+
+.ThemeOffice2003MenuSplit {
+	margin:		2px;
+	height:		1px;
+	overflow:	hidden;
+	background-color:	inherit;
+	border-top:	1px solid #6A8CCB;
+}
+
+/* image shadow animation */
+
+/*
+	seq1:	image for normal
+	seq2:	image for hover and active
+
+	To use, in the icon field, input the following:
+	<img class="seq1" src="normal.gif" /><img class="seq2" src="hover.gif" />
+*/
+
+.ThemeOffice2003MainItem img.seq1,
+.ThemeOffice2003MenuItem img.seq1 {
+	display:	inline;
+}
+
+.ThemeOffice2003MainItemHover img.seq2,
+.ThemeOffice2003MainItemActive img.seq2,
+.ThemeOffice2003MenuItemHover img.seq2,
+.ThemeOffice2003MenuItemActive img.seq2 {
+	display:	inline;
+}
+
+.ThemeOffice2003MainItem img.seq2,
+.ThemeOffice2003MainItemHover img.seq1,
+.ThemeOffice2003MainItemActive img.seq1,
+.ThemeOffice2003MenuItem img.seq2,
+.ThemeOffice2003MenuItemHover img.seq1,
+.ThemeOffice2003MenuItemActive img.seq1 {
+	display:	none;
+}

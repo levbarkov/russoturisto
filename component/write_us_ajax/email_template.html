@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Your Order Confirmation</title>
+<style type="text/css">
+<!--
+.Stil1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.Stil2 {font-family: Verdana, Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+<body>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="top"> 
+    <td width=53% align="left"><h3 class="Stil2">{backlinkOrderHeader}</h3></td>
+    <td width="47%" align="right">{exVendorImage}</td>
+  </tr>
+      
+</table>
+ 
+<table border=0 cellspacing=0 cellpadding=2 width=100%>
+  <!-- begin customer information --> 
+  <tr bgcolor="#CCCCCC" class="sectiontableheader"> 
+    <td colspan=2 class="Stil2"><b>Контактная информация</b></td>
+  </tr>
+   
+  <tr class="Stil1"> 
+    <td>Имя отправителя:</td>
+    <td>{backlinkName}</td>
+  </tr>
+  <tr class="Stil1"> 
+    <td align="left">E-mail отправителя:</td>
+    <td align="left">{backlinkEmail}</td>
+  </tr>
+  <tr class="Stil1"> 
+    <td align="left">Телефон отправителя:</td>
+    <td align="left">{backlinkTel}</td>
+  </tr>
+
+  <!-- end customer information --> 
+  <!-- begin 2 column bill-ship to --> 
+  <tr valign=top> 
+    <td colspan=2>&nbsp;</td>
+  </tr>
+
+  <tr bgcolor="#CCCCCC" class="sectiontableheader"> 
+    <td colspan=2><b class="Stil2">Текст письма</b></td>
+  </tr>
+  <tr valign=top> 
+    <td colspan=2>&nbsp;</td>
+  </tr>
+
+  <tr valign=top> 
+    <td colspan=2>{backlinkMailText}</td>
+  </tr>
+  <tr> 
+    <td colspan=2> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="1">
+      </table>    </td>
+  </tr>
+  <!-- begin order items information -->
+  <!-- end order items information --> 
+  <!-- begin customer note -->
+</table>
+<br>
+<p class="Stil2"></p>
+<p class="Stil2">
+{backlinkCopyNote}</p>
+</body>
+</html>

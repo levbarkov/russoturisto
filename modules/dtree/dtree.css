@@ -1,0 +1,141 @@
+/*--------------------------------------------------|
+| dTree 2.05 | www.destroydrop.com/javascript/tree/ |
+|---------------------------------------------------|
+| Copyright (c) 2002-2003 Geir Landrц               |
+|--------------------------------------------------*/
+
+.dtree {
+	font-family: Arial;
+	font-size: 16px;
+	/*color: #666;*/
+	width:180px;
+	background:url(/images/mbg.gif) repeat-y;
+	display:block; 
+	/*white-space: nowrap;*/
+}
+.dtree img {
+	border: 0px;
+	vertical-align: middle;
+}
+.dtree a.node:link, .dtree a.node:visited {
+	display: block;
+	background: url(/images/house.gif) no-repeat;
+	background-position:center right;
+	vertical-align: middle;
+	font-size: 17px;
+	font-weight: bold;
+	color: #8b7949;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom:3px;
+	padding-left: 7px;
+	padding-right: 0px;
+	/*height: 29px !important;*/
+/*	height: 29px;*/
+	line-height:20px;
+	text-decoration: none;
+}
+
+.dtree div {
+background: url(/images/line.gif) no-repeat;
+background-position:bottom;
+/*background-color:#001d5a;*/
+}
+
+.dtree a.node:hover {
+	/*background-position: 0px -32px;*/
+	text-decoration: none;
+	color:#001d5a;
+
+}
+.dtree a.nodeSel:link, .dtree a.nodeSel:visited {
+	display: block;
+	/*background: url(/images/house2.gif) no-repeat;*/
+	background: url(/images/house.gif) no-repeat;
+	background-position:center right;
+	/*background-color:#54a1cd;*/
+	vertical-align: middle;
+	font-size: 17px;
+	font-weight: bold;
+color:#001d5a;	text-align: left;
+	padding-top: 5px;
+	padding-bottom:3px;
+	padding-left: 15px;
+	padding-right: 2px;
+	/*height: 29px !important;*/
+/*	height: 29px;*/
+	line-height:20px;
+	text-decoration: none;
+}
+.dtree a.nodeSel:hover {
+/*	background-position: 0px -32px;*/
+	text-decoration: none;
+	color:#001d5a;
+}
+
+
+.dtree a.nodeSelSub:link, .dtree a.nodeSelSub:visited {
+		display: block;
+	background: url(/theme/insite/but3.jpg) no-repeat;
+	/*background-color:#a7d7f3;*/
+	background-color:#faecc8;
+	vertical-align: top;
+	font-size: 13px;
+	font-weight:normal;
+	color: #8b7949;
+	text-align: left;
+/*	padding-top: 7px;*/
+	padding-left: 8px;
+	padding-top:5px;
+	padding-right:3px;
+	font-weight:bold;
+	/*height: 20px !important;*/
+	/*height: 32px;*/
+	width: 180px;
+	text-decoration: none;
+	line-height:normal;
+}
+.dtree a.nodeSelSub:hover {
+	/*background-position: -15px -32px;*/
+/*	background-position: 0px -32px;*/
+	text-decoration: none;
+	color: #001d5a;
+	padding-top: 5px;
+	padding-left: 8px;
+		padding-right:3px;
+/*	padding-bottom:5px;*/
+}
+
+
+
+.dtree a.nodeSub:link, .dtree a.nodeSub:visited {
+	display: block;
+	background: url(/theme/insite/but3.jpg) no-repeat;
+	/*background-color:#a7d7f3;*/
+		background-color:#faecc8;
+	vertical-align: top;
+	font-size: 13px;
+	font-weight:normal;
+	color: #8b7949;
+	text-align: left;
+	padding-top: 5px;
+	padding-left: 8px;
+	padding-right:3px;
+	font-weight:bold;
+/*	padding-bottom:5px;*/
+	/*height: 20px !important;*/
+	/*height: 32px;*/
+	width: 180px;
+	text-decoration: none;
+	line-height:normal;
+	/*background-position: -15px -0px;*/
+}
+.dtree a.nodeSub:hover {
+	/*background-position: -15px -32px;*/
+	text-decoration: none;
+	color: #001d5a;
+	padding-top: 5px;
+	padding-left: 8px;
+		padding-right:3px;
+/*	padding-bottom:5px;*/
+}

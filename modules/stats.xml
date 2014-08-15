@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mosinstall type="module" version="1.0.0">
+	<name>Статистика</name>
+	<creationDate>Март 2008</creationDate>
+	<version>1.0.0</version>
+	<description>Модуль статистики показывает информацию о Вашем сервере, статистику пользователей сайта, количество содержимого в базе данных и количество веб-ссылок.</description>
+	<files>
+		<filename module="mod_stats">stats.php</filename>
+	</files>
+	<params>
+	</params>
+</mosinstall>

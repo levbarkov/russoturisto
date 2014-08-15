@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mosinstall version="1.0.0" type="mambot" group="search">
+	<name>Бот поиска в содержимом</name>
+	<author>Joomla! Project</author>
+	<creationDate>Август 2004</creationDate>
+	<copyright>(C) 2005 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>1.0.0 RE</version>
+	<description>Позволяет искать во всех объектах содержимого</description>
+	<files>
+		<filename mambot="content.searchbot">content.searchbot.php</filename>
+	</files>
+	<params>
+		<param name="search_limit" type="text" size="5" default="50" label="Ограничить поиск" description="Ограничение количества найденных объектов"/>		
+		<param name="nonmenu" type="radio" default="1" label="Статичное содержимое без ссылки" description="Искать статичное содержимое, не связанное с пунктом меню?">
+			<option value="0">Нет</option>
+			<option value="1">Да</option>
+		</param>
+	</params>
+</mosinstall>

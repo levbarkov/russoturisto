@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+  <mosinstall type="module">
+    <name>dTree Menu</name>
+    <creationDate>Aug 2004</creationDate>
+    <author>Winfred van Kuijk</author>
+    <copyright>This module is released under the GNU/GPL License</copyright>
+    <authorEmail>winfred@vankuijk.net</authorEmail>
+    <version>1.11</version>
+    <description>Shows menu's (main, user, MyMenu) in Explorer style in Javascript. Uses dTree, created by Geir Landro, Mambo integration by Winfred van Kuijk. See readme.txt in .zip distribution for more details and options</description>
+    <files>
+      <filename module="mod_dtreemenu">mod_dtreemenu.php</filename>
+      <filename>dtree/dtree.css</filename>
+      <filename>dtree/example01.html</filename>
+      <filename>dtree/dtree.js</filename>
+      <filename>dtree/api.html</filename>
+    </files>
+    <images>
+      <filename>dtree/img/base.gif</filename>
+      <filename>dtree/img/cd.gif</filename>
+      <filename>dtree/img/empty.gif</filename>
+      <filename>dtree/img/folder.gif</filename>
+      <filename>dtree/img/folderopen.gif</filename>
+      <filename>dtree/img/globe.gif</filename>
+      <filename>dtree/img/imgfolder.gif</filename>
+      <filename>dtree/img/join.gif</filename>
+      <filename>dtree/img/joinbottom.gif</filename>
+      <filename>dtree/img/line.gif</filename>
+      <filename>dtree/img/minus.gif</filename>
+      <filename>dtree/img/minusbottom.gif</filename>
+      <filename>dtree/img/musicfolder.gif</filename>
+      <filename>dtree/img/nolines_minus.gif</filename>
+      <filename>dtree/img/nolines_plus.gif</filename>
+      <filename>dtree/img/page.gif</filename>
+      <filename>dtree/img/plus.gif</filename>
+      <filename>dtree/img/plusbottom.gif</filename>
+      <filename>dtree/img/question.gif</filename>
+      <filename>dtree/img/trash.gif</filename>
+    </images>
+    <params>
+	<param name="menutype" type="text" default="mainmenu" 
+		label="Menu(s)"
+		description="List of menus to display (comma separated)" />
+	<param name="menutype_internal" type="mos_menu" default="mainmenu" 
+		label="[Choose from]"
+		description="List of menus (not used, for reference only!)" />
+	<param name="base" type="list" default="menu" 
+		label="Base" 
+		description="What should be used as the base of each menu tree? Options: first, menu, module, site, text" >
+	<option value="first">first</option>
+	<option value="menu">menu</option>
+	<option value="module">module</option>
+	<option value="site">site</option>
+	<option value="text">text</option>
+	</param>
+	<param name="basetext" type="text" default="" 
+		label="Basetext" 
+		description="If Base=text, specify the text to use" />
+	<param name="use_separator" type="radio" default="1" 
+		label="Use separator" 
+		description="In case of multiple menu\'s: show separator between menu\'s (default), or not?" >
+	<option value="1">True</option>
+	<option value="0">False</option>
+	</param>
+	<param name="separator" type="text" default="" 
+		label="Separator" 
+		description="By default a moduleheading is shown (if Show title=yes in the module config), it can be set to other HTML code" />
+	<param name="generate_category_items" type="text" default="" 
+		label="Category IDs" 
+		description="A comma separated list of Category ID\'s. A dynamic sub-menu of Content Items will be generated for menu items of type \'Table - Content Category\' that link to the Category ID\'s in this list. (Set to \'All\' to generate sub-menus for all menu items of type \'Table - Content Category\')" />
+	<param name="openAll" type="radio" default="0" 
+		label="openAll" 
+		description="By default a menu tree is shown with all folders closed, except the one of the selected node. With this parameter all folders are open. Overrides closeSameLevel" >
+	<option value="1">True</option>
+	<option value="0">False</option>
+	</param>
+	<param name="useSelection" type="radio" default="1" 
+		label="useSelection" 
+		description="Nodes can be selected(highlighted)." >
+	<option value="1">True</option>
+	<option value="0">False</option>
+	</param>
+	<param name="useLines" type="radio" default="1" 
+		label="useLines" 
+		description="Tree is drawn with lines." >
+	<option value="1">True</option>
+	<option value="0">False</option>
+	</param>
+	<param name="useIcons" type="radio" default="1" 
+		label="useIcons" 
+		description="Tree is drawn with icons." >
+	<option value="1">True</option>
+	<option value="0">False</option>
+	</param>
+	<param name="useStatusText" type="radio" default="0" 
+		label="useStatusText" 
+		description="Displays node names in the statusbar instead of the url." >
+	<option value="1">True</option>
+	<option value="0">False</option>
+	</param>
+	<param name="closeSameLevel" type="radio" default="0" 
+		label="closeSameLevel" 
+		description="Only one node within a parent can be expanded at the same time." >
+	<option value="1">True</option>
+	<option value="0">False</option>
+	</param>
+    </params>
+    <EXTRAparams>
+    </EXTRAparams>
+  </mosinstall>

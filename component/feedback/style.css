@@ -1,0 +1,22 @@
+.feedback_frame {border: #ededed solid 1px; background-color:#FFFFFF;}
+.feedback_top {background-color:#f7f7f6; height: 30px;}
+.feedback_top_left {padding-left: 10px; padding-top: 5px; padding-bottom: 10px; float: left;}
+.feedback_top_right {float: right; padding-right: 10px; padding-top: 5px; padding-bottom: 5px;}
+.feedback_big {font-size: 15px; vertical-align: middle; font-weight:bold; color:#0655b1; line-height:normal; }
+.feedback_small {font-size: 9px; vertical-align: middle; }
+.feedback_content {margin-left: 10px; text-align:left; margin-right: 10px; margin-top: 8px; padding: 10px; padding-bottom: 15px; margin-bottom: 8px; background-color:#fafafa; border-right: #ededed solid 5px; border-left: #ededed solid 5px; background-image: url(entry_bg.gif); background-position:bottom; background-repeat:repeat-x;}
+#easybook p.clr {clear: both; }
+
+#easybook fieldset#form { border: 0; width: 460px; }
+#easybook fieldset#form legend { display: none; }
+#easybook fieldset#form p{ margin: 0; font-size: 13px; margin: 18px; }
+#easybook fieldset#form label{ display: block; width: 7em; float: left; }
+#easybook fieldset#form input { width:245px; }
+#easybook fieldset#form textarea { width: 245px; }
+#easybook fieldset#form input.button {padding: 0; width: 60px; cursor: pointer; }
+
+.feedback_write_feed{
+	color:#363636;
+	font-size:16px;
+	font-family:Arial;
+}

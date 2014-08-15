@@ -1,0 +1,39 @@
+<!-- Template contents HTML outside the DIV will not be inserted -->
+
+<div class="mceTmpl">
+	<h1>Счёт-фактура # [номер счёт-фактуры] </h1>
+	<p>
+		[данные о клиенте]
+	</p>
+
+	<h2>позиции</h2>
+
+	<table class="invoice-items">
+		<thead>
+			<tr>
+			  <th class="col1">Название</th>
+			  <th class="col2">Кол</th>
+			  <th class="col3">Стоимость</th>
+			  <th class="col4">Итого</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+			  <td>Описание 1 </td>
+			  <td>1</td><td>$0.00</td><td>$0.00</td></tr>
+			<tr>
+			  <td>Описание 2 </td>
+			  <td>1</td><td>$0.00</td><td>$0.00</td></tr>
+			<tr>
+			  <td>Описание 3 </td>
+			  <td>1</td><td>$0.00</td><td>$0.00</td></tr>
+		</tbody>
+
+		<tfoot>
+			<tr>
+			  <td colspan="3">Итого</td>
+			  <td id="invoice-total"></td></tr>
+		</tfoot>
+	</table>
+</div>

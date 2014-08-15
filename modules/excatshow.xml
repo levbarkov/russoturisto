@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mosinstall type="module" version="1.0.0">
+	<name>excatt_show</name>
+	<author>KrasInsite Project</author>
+	<creationDate>Июль 2008</creationDate>
+	<copyright>(C) 2008 All rights reserved.</copyright>
+	<authorEmail>info@krasinsite.ru</authorEmail>
+	<authorUrl>www.krasinsite.ru</authorUrl>
+	<version>1.0</version>
+	<description>Отображение объектов каталога выбранной категории</description>
+	<files>
+		<filename module="mod_excatshow">mod_excatshow.php</filename>
+	</files>
+	<params>
+		
+    <param name="cat_id" type="text" default="1" label="Категория" description="Выберите категорию из которой будут выбираться объекты" />
+	<param name="limit" type="text" default="1" label="Число объектов" description="Число отображаемых объектов" />
+	</params>
+</mosinstall>

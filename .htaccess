@@ -1,0 +1,23 @@
+AddDefaultCharset UTF-8
+IndexIgnore */*
+Options -Indexes +FollowSymlinks
+
+#  php_flag register_globals off
+#  php_value file_uploads 1
+#  php_value magic_quotes_runtime 0
+php_value short_open_tag 1
+php_value register_globals 0
+php_value display_errors 0
+php_value magic_quotes_gpc 1
+php_value upload_max_filesize 30M
+php_value post_max_size 30M
+
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^www.([^.]+.ru)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^(.*) /index.php?c=seo&sefname=$1

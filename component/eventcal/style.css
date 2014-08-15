@@ -1,0 +1,203 @@
+a.categorylink            {color:#000000;}
+a.categorylinkactive      {color:#000000;
+                           font-weight:bold;}
+
+table.month               {font-family:Arial;
+                           padding:5px;
+                           border:solid 1px #CFCFCF;
+                           border-collapse:collapse;
+                           margin-top: 10px}
+                        
+                        
+                        
+/* Zellen fьr Tage                        */
+table.month td.lastd,
+table.month td.currentd,
+table.month td.nextd,
+table.month td.today      {border:solid 1px #CFCFCF;
+                           padding:2px 5px 2px 5px;
+                           width:110px;
+                           height:60px;}
+table.month td.lastd      {text-align:center;
+                           color:#AAAAAA;
+                           background-color:#EFEFEF;}
+table.month td.currentd   {}
+table.month td.today      {background-color:#DDEEFF;}
+table.month td.nextd      {text-align:center;
+                           color:#AAAAAA;
+                           background-color:#EFEFEF;}
+                           
+table.month td.weekd      {font:10pt Arial;
+                           text-align:center;
+                           padding:7px 2px 2px 4px;}                           
+table.month td.weeknr     {font:bold 12pt Arial;
+                           color:#CFCFCF;
+                           padding:0px 2px 0px 2px;
+                           border:solid 1px #CFCFCF;}
+a.weeknr                  {font:bold 12pt Arial;
+                           color:#CFCFCF;} 
+table.month span.mday     {font-family:Arial;
+                           font-weight:bold;
+                           color:#5F5F5F;}
+table.month span.sunday   {font-family:Arial;
+                           font-weight:bold;
+                           color:#5F5F5F;}													 
+table.month div.events    {border-left:solid 6px;
+                           padding-left:3px;
+                           margin-top:2px;}                           
+                           
+                           
+/* Zellen fьr Monate */                           
+
+table.month td.lastm, 
+table.month td.currentm,
+table.month td.nextm      {font:bold 10pt Arial;
+                           letter-spacing:3px;
+                           border:solid 1px #CFCFCF;
+                           padding:2px 5px 2px 5px;
+                           height:30px;
+                           text-align:center;}
+table.month td.lastm a, 
+table.month td.currentm a,
+table.month td.nextm a    {font-weight:bold;}                           
+                           
+table.month td.lastm      {}
+table.month td.currentm   {background-color:#99DDFF}
+table.month td.nextm      {}
+
+
+
+
+table.event               {border:solid 1px #99ddff;
+                           border-collapse:collapse;
+									margin-top: 10px;}
+table.event th            {border-top: solid 1px #99ddff;
+                           border-bottom: solid 1px #99ddff;
+                           background-color:#99ddff;
+                           padding:5px;}
+table.event th.date       {text-align:right;}                           
+
+table.event td.description {padding:5px;}
+table.event td.contactdesc {padding-left:5px;}
+table.event td.contacttext {padding-left:5px;}
+
+
+td.backbutton,
+td.submitbutton,
+td.resetbutton            {padding-top:15px;
+                           border-top:solid 1px #5F5F5F;}
+td.backbutton             {text-align:center;}
+td.resetbutton            {text-align:left;}
+td.submitbutton           {text-align:right;}
+                           
+                           
+                           
+                           
+table.form                {border:solid 1px #5F5F5F;
+                           border-collapse:collapse;
+                           margin-top: 10px;
+                           empty-cells:hide;}
+#recurse td               {white-space:nowrap;}                           
+table.form th             {border-top: solid 1px #5F5F5F;
+                           border-bottom: solid 1px #5F5F5F;
+                           background-color:#DFDFDF;
+                           padding:5px;}
+table.form td             {padding:5px;}  
+table.form td.excepts     {border-left:solid 1px #5F5F5F;
+                           padding-left:20px;}          
+table.form option.catlist {border-left:solid 16px;
+                           padding-left:3px;
+													 margin:3px 2px 3px 2px;}
+
+table.categories                   {margin:10px 0px 10px 0px;}													 
+table.categories td.category       {}													 
+table.categories td.categoryactive {}		
+
+
+table.week                {border:solid 1px #CCCCCC;
+                           border-collapse:collapse;
+									margin-top: 10px;}
+table.week th.caption,
+table.week th.captionlast,
+table.week th.captionnext {padding:2px 5px 2px 5px;
+                           height:30px;
+                           font:10pt Arial;
+													 font-weight:bold;
+													 text-align:center;
+                           border:solid 1px #CFCFCF;
+                           text-align:center;}
+table.week th.caption     {background-color:#99DDFF;}													 
+table.week th.captionlast { }
+table.week th.captionnext { }			
+table.week th a           {font-weight:bold;}			
+													 
+													 
+													 										 
+table.week th.timetable   {border-bottom:solid 1px #CCCCCC;}
+table.week th.weekday     {width:110px;
+                           text-align:center;
+													 border-bottom:solid 1px #CCCCCC;
+													 font-weight:normal;
+													 padding:10px 0px 2px 0px;}
+table.week td.weekday     {border-right:solid 1px #CCCCCC;
+                           padding:0px 4px 0px 4px;}
+table.week td.timetable   {border-right:solid 1px #CCCCCC;
+                           padding:4px 10px 4px 10px;
+                           text-align:right;
+													 color:#CCCCCC;}	
+table.week td.weekday div {padding:2px 0px 2px 0px;}													 
+table.week td.weekday img {padding:2px 1px 3px 1px;
+                           margin:0px 4px 0px 0px;}
+													 
+/* Select list  */													 
+a.selectlist_link img     {border-style:none;}
+
+.tooltip                  {font:normal 10pt Arial;}
+.selectlist_selectbox     {background-color:#FFFFFF;
+                           width:130px;}
+
+.selectlist_selectbox
+  optgroup                {font:bold 10pt Arial;
+	                         border-top:solid 1px #99DDFF;}
+.selectlist_selectbox
+  option                  {padding-left:2px;
+	                         border-top:dotted 1px #99DDFF;
+													}
+.selectlist_selectbox
+  .selected               {background-color:#DDEEFF;}  
+.selectlist_selectbox
+  .listitem               {}
+
+
+/* Day-View */
+table.day                 {border:solid 1px #CCCCCC;
+                           border-collapse:collapse;
+					                 margin-top: 10px;
+													 width:500px;}
+table.day th.caption,
+table.day th.captionlast,
+table.day th.captionnext  {padding:2px 5px 2px 5px;
+                           height:30px;
+                           font:10pt Arial;
+													 font-weight:bold;
+													 text-align:center;
+                           border:solid 1px #CFCFCF;
+                           text-align:center;}
+table.day th.caption      {background-color:#99DDFF;}													 
+table.day th.captionlast  { }
+table.day th.captionnext  { }
+table.day td.time         {font-weight:bold;
+                           text-align:center;
+													 border-bottom:solid 1px #CFCFCF;}
+table.day td.event        {border-bottom:solid 1px #CFCFCF;}	
+
+/* Category-list-View */
+table.catview             {border:solid 1px #CCCCCC;
+                           border-collapse:collapse;
+					                 margin-top: 10px;
+													 width:500px;}
+table.catview th          {padding:2px 5px 2px 5px;
+                           border:solid 1px #CFCFCF;}
+table.catview td          {padding:2px;}
+table.catview td.caption  {padding:2px 2px 4px 2px;
+                           font-weight:bold;}

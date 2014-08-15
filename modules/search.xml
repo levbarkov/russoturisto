@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mosinstall type="module" version="1.0.0">
+	<name>Модуль поиска</name>
+	<author>KrasInsite</author>
+	<creationDate>Июль 2004</creationDate>
+	<copyright>(C) 2005 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>1.0.0 RE</version>
+	<description>Этот модуль отображает поле поиска</description>
+	<files>
+		<filename module="search">search.php</filename>
+	</files>
+	<params>
+	</params>
+</mosinstall>

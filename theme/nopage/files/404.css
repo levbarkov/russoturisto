@@ -1,0 +1,128 @@
+/*=
+  = Elemente
+  ==============================*/
+
+body {
+  background: #FFFFFF;
+  width: 100%;
+  margin: 0em;
+  padding: 0em;
+  color: #000000;
+  font-size: 100.01%;
+  font-family: trebuchet ms, arial, verdana, helvetica, sans-serif;
+  text-align: center;
+}
+
+h1 {
+	margin: 0em;
+	padding: 0em;
+	font-size: 1em;
+}
+
+p {
+	margin: 0em;
+	padding: 0em;
+	font-size: 0.81em;
+}
+
+a:link,
+a:visited {
+	background-color: #FFFFFF;
+	color: #BF0000;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+	background-color: #FFFFFF;
+	color: #BF0000;
+	text-decoration: underline;
+}
+
+/*=
+  = Klassen
+  ==============================*/
+
+.clear {
+  width: 1px;
+  height: 1px;
+  margin: 0em;
+  padding: 0em;
+  font-size: 1px;
+  clear: both;
+}
+
+/*=
+  = Wrapper
+  ==============================*/
+
+div#wrapper {
+  position: relative;
+  background-color: #FFFFFF;
+  width: 100%;
+  margin: 0em;
+  padding: 4.688em 0em 0em 0em;
+  color: #404040;
+  text-align: left;
+}
+
+div#wrapper_inner {
+	position: relative;
+	width: 51.375em;
+	margin: 0em auto 0em auto;
+	padding: 0em;
+}
+
+div#wrapper_404 {
+	position: relative;
+	width: 27.688em;
+	margin: 0em;
+	padding: 0em;
+	float: left;
+}
+
+/*=
+  = Inhalt
+  ==============================*/
+
+div#wrapper_content {
+	position: relative;
+	width: 23.68em;
+	margin: 0em;
+	padding: 7.788em 0em 0em 0em;
+	float: right;
+}
+
+div#wrapper_content h1 {
+	margin: 0em;
+	padding: 0em;
+	font-size: 1.313em;
+}
+
+div#wrapper_content p {
+	margin: 0em;
+	padding: 0.714em 0em 0em 0em;
+	font-size: 0.780em;
+	font-weight: bold;
+}
+
+/*=
+  = Footer
+  ==============================*/
+
+div#wrapper_footer {
+	position: relative;
+	background-color: #FFFFFF;
+	width: 100%;
+	margin: 0em;
+	padding: 1.063em 0em 0em 0em;
+	color: #B3B3B3;
+	text-align: center;
+}
+
+div#wrapper_footer p {
+	margin: 0em;
+	padding: 1.636em 0em 0em 0em;
+	font-size: 0.69em;
+}

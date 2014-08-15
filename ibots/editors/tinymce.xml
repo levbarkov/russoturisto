@@ -1,0 +1,119 @@
+<?xml version="1.0" ?>
+<mosinstall version="1.0.0" type="mambot" group="editors">
+	<name>TinyMCE</name>
+	<version>2.0.8</version>
+	<creationDate>2005</creationDate>
+	<author>Moxiecode Systems AB</author>
+	<authorEmail>N/A</authorEmail>
+	<authorUrl>tinymce.moxiecode.com/</authorUrl>
+	<copyright>Moxiecode Systems AB</copyright>
+	<license>LGPL</license>
+	<description>TinyMCE - визуальный редактор HTML, основанный на Javascript.</description>
+	<params>
+		<param name="theme" type="list" default="advanced" label="Функциональность" description="Выберите функциональность">
+			<option value="simple">Простая</option>
+			<option value="advanced">Расширенная</option>
+		</param>
+ 		<param name="@spacer" type="spacer" default="" label="" description="" />
+ 		<param name="cleanup" type="radio" default="1" label="Очистка кода" description="По умолчанию TinyMCE будет очищать ваш код от html-элементов, таких как скрипты и теги выравнивания, для безопасности и совместимости с XHTML. Мы рекомендуем не выключать данную функцию">
+ 			<option value="0">Выкл.</option>
+ 			<option value="1">Вкл.</option>
+ 		</param> 
+ 		<param name="autosave" type="radio" default="0" label="Предупреждение сохранения" description="Предупреждение сохранения - показывается предупреждение, если Вы отменяете редактирование, не сохранив изменений">
+ 			<option value="0">Выкл.</option>
+ 			<option value="1">Вкл.</option>
+ 		</param>
+ 		<param name="compressed" type="radio" default="0" label="Сжатая версия" description="Tiny может работать в режиме сжатия данных, предназначенном для ускорения загрузки и работы. Однако, этот режим не всегда работает, особенно в IE, поэтому эта опция по умолчанию выключена. Будьте внимательны и убедитесь, что сжатие поддерживается вашей системой">
+ 			<option value="0">Выкл.</option>
+ 			<option value="1">Вкл.</option>
+ 		</param>
+ 		<param name="@spacer" type="spacer" default="" label="" description="" />
+ 		<param name="text_direction" type="list" default="ltr" label="Направление текста" description="Возможность выбора направления текста">
+ 			<option value="ltr">Слева направо</option>
+ 			<option value="rtl">Справа налево</option>
+ 		</param>
+  		<param name="relative_urls" type="list" default="0" label="URL-ы" description="Режим работы URL">
+ 			<option value="0">Абсолютные</option>
+ 			<option value="1">Относительные</option>
+ 		</param>
+ 		<param name="invalid_elements" type="text" default="applet" label="Запрещенные элементы" description="Элементы, удаляемые из текста"/>
+ 		<param name="content_css" type="radio" default="1" label="СSS-классы из шаблона" description="Загружать CSS-классы из файла template_css.css">
+ 			<option value="0">Нет</option>
+ 			<option value="1">Да</option>
+ 		</param>
+ 		<param name="content_css_custom" type="text" default="" label="Персональные классы CSS" description="В случае, если Вы хотите загрузить свой CSS-файл, введите ПОЛНЫЙ путь до файла, который хотите загрузить"/>
+  		<param name="newlines" type="list" default="0" label="Тэги новой строки" description="Разделители строк, используемые после выбора соответствующего параметра">
+ 			<option value="1">Элементы BR</option>
+ 			<option value="0">Элементы P</option>
+ 		</param>
+ 		<param name="@spacer" type="spacer" default="" label="" description="" />
+ 		<param name="toolbar" type="list" default="top" label="Панель инструментов" description="Расположение панели инструментов">
+ 			<option value="top">Вверху</option>
+ 			<option value="bottom">Внизу</option>
+ 		</param>
+ 		<param name="@spacer" type="spacer" default="" label="" description="" />
+ 		<param name="smilies" type="radio" default="1" label="Смайлики" description="Показать/Скрыть кнопки смайликов. Работает только в `Расширенном` режиме">
+ 			<option value="0">Скрыть</option>
+ 			<option value="1">Показать</option>
+ 		</param>
+ 		<param name="table" type="radio" default="1" label="Таблица" description="Показать/Скрыть кнопки управления таблицей. Работает только в `Расширенном` режиме">
+ 			<option value="0">Скрыть</option>
+ 			<option value="1">Показать</option>
+ 		</param>
+ 		<param name="flash" type="radio" default="1" label="Flash" description="Показать/Скрыть кнопку вставки Flash. Работает только в `Расширенном` режиме">
+ 			<option value="0">Скрыть</option>
+ 			<option value="1">Показать</option>
+ 		</param>
+ 		<param name="media" type="radio" default="1" label="Медиа" description="Показать/Скрыть кнопку Медиа. Позволяет вставлять медиа-объекты типа QuickTime, Flash, ShockWave, RealPlayer или Windows Media Player. Работает только в `Расширенном` режиме">
+ 			<option value="0">Скрыть</option>
+ 			<option value="1">Показать</option>
+ 		</param>
+ 		<param name="hr" type="radio" default="1" label="Горизонтальная линия" description="Показать/Скрыть кнопку горизонтальной линии">
+ 			<option value="0">Скрыть</option>
+ 			<option value="1">Показать</option>
+ 		</param> 
+ 		<param name="style" type="radio" default="1" label="Стиль" description="Показать/Скрыть кнопку управления стилями CSS. Работает только `Расширенном` режиме">
+ 			<option value="0">Скрыть</option>
+ 			<option value="1">Показать</option>
+ 		</param>
+ 		<param name="layer" type="radio" default="1" label="Слои" description="Показать/Скрыть кнопку управления слоями. Работает только `Расширенном` режиме">
+ 			<option value="0">Скрыть</option>
+ 			<option value="1">Показать</option>
+ 		</param>
+ 		<param name="visualchars" type="radio" default="1" label="Просмотр невидимых символов" description="Показать/Скрыть кнопку просмотра невидимыех символов. Позволяет видеть невидимые символы типа неразрывных пробелов. Работает только `Расширенном` режиме">
+ 			<option value="0">Скрыть</option>
+ 			<option value="1">Показать</option>
+ 		</param>
+ 		<param name="nonbreaking" type="radio" default="1" label="Неразрывный пробел" description="Показать/Скрыть кнопку вставки неразрывного пробела. Вставляет символ неразрывного пробела. Работает только `Расширенном` режиме">
+ 			<option value="0">Скрыть</option>
+ 			<option value="1">Показать</option>
+ 		</param>
+  		<param name="@spacer" type="spacer" default="" label="" description="" />
+ 		<param name="fullscreen" type="radio" default="1" label="Полноэкранный режим" description="Показать/Скрыть кнопку Полноэкранного режима. Работает только в `Расширенном` режиме">
+ 			<option value="0">Скрыть</option>
+ 			<option value="1">Показать</option>
+ 		</param>
+ 		<param name="html_height" type="text" default="550" label="Высота HTML" description="Высота всплывающего окна в режиме HTML. Работает только в `Расширенном` режиме"/>
+ 		<param name="html_width" type="text" default="750" label="Ширина HTML" description="Ширина всплывающего окна в режиме HTML. Работает только в `Расширенном` режиме"/>
+ 		<param name="preview" type="radio" default="1" label="Предпросмотр" description="Показать/Скрыть кнопку предпросмотра. Работает только в `Расширенном` режиме">
+ 			<option value="0">Скрыть</option>
+ 			<option value="1">Показать</option>
+ 		</param>
+ 		<param name="preview_height" type="text" default="550" label="Высота при предпросмотре" description="Высота всплывающего окна в режиме предпросмотра. Работает только в `Расширенном` режиме"/>
+ 		<param name="preview_width" type="text" default="750" label="Ширина при предпросмотре" description="Ширина всплывающего окна в режиме предпросмотра. Работает только в `Расширенном` режиме"/>
+ 		<param name="searchreplace" type="radio" default="1" label="Поиск и замена" description="Показать/Скрыть кнопку Поиска и замены. Работает только в `Расширенном` режиме">
+ 			<option value="0">Скрыть</option>
+ 			<option value="1">Показать</option>
+ 		</param>
+ 		<param name="insertdate" type="radio" default="1" label="Вставка даты" description="Показать/Скрыть кнопку вставки даты. Работает только в `Расширенном` режиме">
+ 			<option value="0">Скрыть</option>
+ 			<option value="1">Показать</option>
+ 		</param>
+  		<param name="format_date" type="text" default="%d.%m.%Y" label="Формат даты" description="Формат вставляемой даты. Работает только в `Расширенном` режиме"/>
+		<param name="inserttime" type="radio" default="1" label="Вставка времени" description="Показать/Скрыть кнопку вставки времени. Работает только в `Расширенном` режиме">
+ 			<option value="0">Скрыть</option>
+ 			<option value="1">Показать</option>
+ 		</param>
+  		<param name="format_time" type="text" default="%H:%M:%S" label="Формат времени" description="Формат вставляемого времени. Работает только в `Расширенном` режиме"/>
+   	</params>
+</mosinstall>

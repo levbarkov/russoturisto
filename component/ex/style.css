@@ -1,0 +1,204 @@
+
+/* EX * EX * EX * EX * EX * EX * EX * EX * EX * EX */
+
+
+
+a.good_ih2newtitle:link, a.good_ih2newtitle:visited{
+color:#F7941D;
+font-family:Georgia,sans-serif;
+font-size:14px;
+font-weight:normal;
+font-style:italic;
+line-height:18px;
+text-decoration:underline;
+padding-right:14px;
+}
+a.good_ih2newtitle:hover{
+text-decoration:none;
+}
+span.good_ih2newtext{
+color:#7D7D7D;
+font-family:Tahoma,sans-serif;
+font-size:12px;
+font-weight:normal;
+height:14px;
+text-decoration:none;
+line-height:18px;
+}
+
+.good_ih2newprice{
+	color:#7D7D7D;
+	font-style:italic;
+	font-weight:normal;
+	text-decoration:none;
+	font-size:14px;
+	background:url(/component/ex/price.gif) no-repeat;
+	background-position:center left;
+	height:14px;
+	display:block;
+	padding-left:20px;
+	height:20px;
+	vertical-align:middle
+}
+.goodfoto_view{
+text-align:center;
+}
+
+table.ex_trush,
+table.ex_order{
+}
+
+.ex_order_row_title,
+.ex_trush_row_buttons,
+.ex_trush_row_title{
+height:31px;
+}
+tr.ex_trush_row_title th.trush_left,
+tr.ex_trush_row_title th.trush_right,
+tr.ex_order_row_title th,
+tr.ex_trush_row_title th{
+color:#7D7D7D;
+font-size:12px;
+font-weight:normal;
+text-align:center; 
+background-color:#f9f9f9;
+border-bottom:1px solid #e8e8e8;
+border-top:1px solid #e8e8e8;
+}
+tr.ex_order_row_title th{	border-left:1px solid #e8e8e8; border-right:1px solid #e8e8e8; }
+tr.ex_trush_row_title th.trush_left{	border-left:1px solid #e8e8e8;	}
+tr.ex_trush_row_title th.trush_right{	border-right:1px solid #e8e8e8;	}
+
+tr.ex_trush_row td.trush_left{
+border-bottom:1px solid #e8e8e8;
+border-left:1px solid #e8e8e8;
+text-align:center;
+}
+
+tr.ex_trush_row td.trush_row_img,
+tr.ex_trush_row td.trush_row_desc,
+tr.ex_trush_row td.trush_row{
+padding-top:7px; padding-bottom:7px;
+border-bottom:1px solid #e8e8e8;
+text-align:center;
+}
+tr.ex_trush_row td.trush_row_desc{
+text-align:left;
+vertical-align:top;
+}
+tr.ex_trush_row td.trush_row_img{
+padding-right:14px;
+vertical-align:middle;
+}
+
+tr.ex_trush_row td.trush_right{
+border-bottom:1px solid #e8e8e8;
+border-right:1px solid #e8e8e8;
+text-align:center;
+}
+.ex_trush_count{	
+width:36px;
+float:none;
+}
+.ex_order_input{	width:430px;	}
+.ex_order_select{ padding-right:0px;  }
+.ex_trush_row_total{	height:38px;	}
+
+tr.ex_trush_row_total td.trush_row{
+background-color:#f9f9f9;
+border-bottom:1px solid #e8e8e8;
+text-align:center;
+}
+tr.ex_trush_row_total td.trush_left{	border-left:1px solid #e8e8e8;	}
+tr.ex_trush_row_total td.trush_right{	border-right:1px solid #e8e8e8;	}
+
+table.ex_order tr td.left{
+border-left:1px solid #e8e8e8;
+text-align:left;
+padding-left:10px;
+font: italic normal normal 14px/16px Georgia, sans-serif;
+}
+table.ex_order tr td.right{	border-right:1px solid #e8e8e8;	}
+table.ex_order tr td.right{ padding-bottom:4px;	}
+table.ex_order tr.order_button{	height:31px;	}
+table.ex_order tr td.order_button{
+border-top:1px solid #e8e8e8;
+vertical-align:middle;
+}
+
+
+.trush_checkbox{
+cursor:pointer;
+}
+
+
+
+.cnt-cart-chboximg
+{
+	width: 27px;
+	height: 0px;
+	padding-top: 27px;
+	overflow: hidden;
+}
+.cnt-cart-chboximg input
+{
+	width: 27px;
+	height: 27px;
+}
+
+.cnt-cart-chboximg-y
+{
+	background: url(checkbox.gif);
+	background-repeat: no-repeat;
+	cursor:pointer;
+}
+
+.cnt-cart-chboximg-n
+{
+	background: url(checkbox-empty.gif);
+	background-repeat: no-repeat;
+	cursor:pointer;
+}
+
+a.order_note:link, a.order_note:visited{
+text-decoration:none;
+padding-bottom:1px;
+border-bottom:1px dashed #F7941D;
+}
+a.order_note:hover{
+text-decoration:none;
+border-bottom:0px none;
+padding-bottom:2px;
+}
+
+
+
+/* == ��������� ������ (��������� �������) =============================================== */
+ul {
+	padding:0px;
+	margin: 0px;
+}
+#response {
+	padding:10px;
+	background-color:#9F9;
+	border:2px solid #396;
+	margin-bottom:20px;
+}
+#list li {
+	margin: 5px;
+	padding:18px;
+	background-color:#F0F2F4;
+	border:1px solid #D7D7D7;
+	color:#fff;
+	list-style: none;
+	float:left; 
+	cursor:move;
+	width:230px;
+	height:180px;
+}
+a.mylist_link:link, a.mylist_link:visited{
+	color:#7d7d7d;
+	font-size:12px;
+	font-style:italic;
+}
+/* == END//��������� ������ (��������� �������) =============================================== */

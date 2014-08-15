@@ -1,0 +1,35 @@
+/* необходимо подключить css каталога, чтобы корректно отображалась страница заказа */
+@import url("/component/ex/ex.css") screen;
+
+.zakazi_row_title{
+height:31px;
+}
+tr.zakazi_row_title th{
+color:#7D7D7D;
+font-size:12px;
+font-weight:normal;
+text-align:left; 
+font-size:18px;
+}
+
+table.zakazi tr{
+height:24px;
+}
+
+
+table.zakazi tr td.left{
+text-align:left;
+padding-right:15px;
+font: italic normal normal 14px/16px Georgia, sans-serif;
+white-space:nowrap;
+}
+
+table.zakazi tr td{	 
+font: italic normal normal 14px/16px Georgia, sans-serif;
+padding-right:15px;
+white-space:nowrap;
+}
+
+table.zakazi tr td.right{	
+white-space:nowrap;
+}

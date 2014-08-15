@@ -1,0 +1,812 @@
+t/* == DEFAULT BEHAVIOR OVERRIDE ===================================== */
+* {
+	cursor: default;
+}
+
+a, a * {
+	cursor: pointer;
+}
+
+input, textarea {
+	cursor: text;
+}
+
+a img {
+	border: none 0px;
+	outline: none 0px;
+}
+
+a {
+	color: #F7941D;
+	text-decoration: underline;
+	outline: none 0px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+form {
+	margin: 0px;
+}
+/* == END OF DEFAULT BEHAVIOR OVERRIDE ============================== */
+
+/* == MARKUP HELPERS ================================================ */
+.tpl-clear {
+	height: 0px;
+	width: 0px;
+	overflow: hidden;
+	clear: both;
+}
+
+.tpl-italic-clear {
+	font-size: 0px;
+	line-height: 0px;
+	position: absolute;
+	display: none;
+}
+
+.tpl-hidden {
+	display: none;
+}
+
+.tpl-spacer {
+	width: 1000px;
+	height: 0px;
+	overflow: hidden;
+}
+
+.tpl-hang {
+	display: inline-block;
+	width: 5em;
+	margin-right: -5em;
+	position: relative;
+	left: -5em;
+	text-align: right;
+}
+/* == END OF MARKUP HELPERS ========================================= */
+
+html, body {
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+	background: white;
+	color: #7d7d7d;
+	font: normal normal normal 16px Georgia, sans-serif;
+}
+
+#tpl-alloverwrap {
+	position: relative;
+	height: 100%;
+	width: auto;
+	max-width: 1280px;
+	margin: 0px auto;
+}
+
+#content-text
+{
+	margin: 30px 30px 50px 0px;
+}
+
+#tpl-carcass {
+	height: 100%;
+	width: 100%;
+	border-collapse: collapse;
+	border: none 0px;
+}
+
+#tpl-carcass-inner {
+	border-collapse: collapse;
+	border: none 0px;
+}
+
+#tpl-carcass-top, 
+#tpl-carcass-top-left, 
+#tpl-carcass-bottom {
+	padding: 0px;
+} 
+#tpl-carcass-top-right{
+padding-bottom:0px;
+padding-left:0px;
+padding-right:14px;
+padding-top:0px;
+}
+#tpl-carcass-top {
+	vertical-align: top;
+	width: 100%;
+	height: 80%;
+}
+
+#tpl-carcass-top-left {
+	vertical-align: top;
+	width: 0px;
+}
+
+#tpl-carcass-top-right {
+	vertical-align: top;
+	width: 100%;
+}
+
+#tpl-carcass-bottom {
+	width: 100%;
+	vertical-align: bottom;
+}
+
+/* == AVA ========================================================== */
+#tpl-header-logo {
+	padding: 29px 40px 0px 30px;
+	margin: 0px 0px 42px 0px;
+}
+/* == END OF AVA =================================================== */
+
+
+/* == HEADER ======================================================== */
+#tpl-header {
+	position: relative;
+	padding: 3px 0px 0px 0px;
+}
+
+/* ================================================================== */
+
+#tpl-header-search-form {
+	position: absolute;
+	margin: 0px;
+	padding: 0px;
+	width: 275px;
+	height: 23px;
+	top: 29px;
+	right: 25px;
+}
+#tpl-header-search-form-input {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 257px;
+	height:20px;
+	background: white;
+	border: solid #F7941D 1px;
+	font: italic normal normal 14px/16px Georgia, sans-serif;
+	padding-left:7px;
+	color:#C2C2C2;
+
+}
+
+/* ================================================================== */
+
+#tpl-header-phones {
+	position: absolute;
+	width: 167px;
+	top: 75px;
+	right: 0px;
+	color: #464646;
+	font-size: 30px;
+	line-height: 36px;
+	font-style: italic;
+	text-align: left;
+}
+
+#tpl-header-phones small {
+	color: #7A7A7A;
+	font-size: 18px;
+	line-height: normal;
+	vertical-align: baseline;
+}
+
+#tpl-header-phones .tpl-hang {
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	left: -100px;
+	margin-right: -100px;
+	text-align: right;
+}
+
+/* ================================================================== */
+
+#tpl-header-links {
+	position: absolute;
+	width: 167px;
+	top: 110px;
+	right: 0px;
+	color: #c2c2c2;
+	font-size: 12px;
+	line-height: 24px;
+	font-style: italic;
+	text-align: left;
+}
+
+#tpl-header-links2 {
+	position: absolute;
+	width: 167px;
+	top: 158px;
+	right: 0px;
+	color: #c2c2c2;
+	font-size: 14px;
+	line-height: 24px;
+	font-style: italic;
+	text-align: left;
+}
+
+#tpl-header-links a {
+	color: #c2c2c2;
+	padding: 0px 0px 1px 0px;
+	border: dashed #c2c2c2;
+	text-decoration: none;
+	border-width: 0px 0px 1px 0px;
+}
+#tpl-header-links2 a {
+	color: #F7941D;
+	padding: 0px 0px 1px 0px;
+	border: dashed #c2c2c2;
+	text-decoration: none;
+	border-width: 0px 0px 1px 0px;
+}
+
+#tpl-header-links a:hover {
+	border-color: white;
+}
+
+#tpl-header-links2 a:hover {
+	border-color: white;
+}
+/* == END OF HEADER ================================================= */
+
+/* == CART ========================================================== */
+#mylist {
+	display: block;
+	overflow: hidden;
+	margin: 13px 317px 0px auto;
+	height: 28px;
+	width: 135px;
+	padding: 4px;
+	font-size: 14px;
+	line-height: 14px;
+	color: #a1a1a1;
+	text-decoration: none;
+	font-style: italic;
+	vertical-align: top;
+}
+
+#mylist-amount {
+	display: block;
+	color: #F7941D;
+	text-decoration: underline;
+}
+
+#mylist:hover {
+	background-position: 100% 10px;
+}
+
+#mylist:hover #mylist-amount {
+	text-decoration: none;
+}
+
+/* == END OF CART =================================================== */
+
+/* == BREADCRUMBS =================================================== */
+#tpl-breadcrumbs {
+	font-style: italic;
+	font-size: 14px;
+	line-height: 14px;
+	color: #bfbfbf;
+	margin: 24px 320px 17px 0px;
+	vertical-align: top;
+}
+
+#tpl-breadcrumbs-min-height {
+	display: inline;
+	float: left;
+	width: 0px;
+	height: 28px;
+}
+
+#tpl-breadcrumbs a {
+	color: #bfbfbf;
+	text-decoration: none;
+}
+
+#tpl-breadcrumbs .active {
+	color: #F7941D;
+}
+/* == END OF BREADCRUMBS ============================================ */
+
+/* == FOOTER ======================================================== */
+#tpl-footer-stroke {
+	height: 0px;
+	overflow: hidden;
+	padding-top: 1px;
+	border: none 0px;
+	background: #F7941D;
+	margin: 0px 30px;
+}
+
+#tpl-footer {
+	height: 51px;
+	padding: 22px 0px 0px 0px;
+	color: #464646;
+	font: normal normal normal 12px/15px Arial, sans-serif;
+	vertical-align: baseline;
+}
+
+#tpl-footer-right {
+	display: inline;
+	float: right;
+	margin: -1px 30px 0px 0px;
+}
+
+.tpl-footer-left {
+	display: inline;
+	float: left;
+	margin: 0px 20px 0px 30px;
+}
+
+
+#tpl-footer p {
+	margin: 3px 0px;
+}
+
+#tpl-footer-right {
+	color: #A1A1A1;
+	font: italic normal normal 10px/12px Georgia, sans-serif;
+}
+
+/*#tpl-footer-right a {
+	font: italic normal normal 12px/15px Georgia, sans-serif; */
+}
+
+.tpl-footer-text-spacer {
+	display: inline-block;
+	width: 170px;
+}
+
+
+#tpl-footer .tpl-footer-address-wrapper {
+	height: 15px;
+	position: relative;
+	margin: 3px 0px;
+}
+
+#tpl-footer address {
+	position: absolute;
+	font: italic normal normal 24px/27px Georgia, sans-serif;
+	vertical-align: bottom;
+	height: 27px;
+	margin: 0px;
+	top: -9px;
+	white-space: nowrap;
+	z-index: 1;
+}
+
+
+#tpl-footer address small {
+	font-size: 12px;
+	color: #7D7D7D
+}
+
+#tpl-footer-immlogo
+{
+	display: inline;
+	float: right;
+}
+
+
+/*======= Карта сайта=============*/
+
+#cnt-map
+{
+	position: relative;
+	bottom: 0;
+	top: -30px;
+	height: 0px;
+	margin: 0px;
+}
+
+.grow {
+	width: 100%;
+	z-index: 2;
+	bottom: -30px;
+}
+
+#tpl-bottom-overwrap {
+	position: absolute;
+	left: 0px;
+	border-collapse: collapse;
+}
+
+#tpl-bottom-overwrap td{
+	padding: 0px;
+	vertical-align: bottom;
+	width: 100%;
+}
+
+   #tpl-bottomline,
+#tpl-bottomline-wrapper {
+	background: #e7e7e7;
+}  
+
+#tpl-bottomline-wrapper {
+	display: none;
+	padding: 0px;
+	z-index: 200;
+}
+
+#tpl-map-pixline {
+	height: 1px;
+	overflow: hidden;
+	background: #cacaca;
+	display: none;
+}
+
+#tpl-bottomline-label
+{
+	font: normal normal normal 12px Arial, sans-serif;
+	color: #fff;
+	margin-left: 30px;
+	padding-top: 5px;
+	text-decoration: none;
+	border: dashed #fff;
+	border-width: 0px 0px 1px 0px;
+}
+
+#tpl-bottomline-label:hover
+{
+	border: none;
+}
+
+#tpl-bottomline {
+	position: relative;
+}
+
+#tpl-counter
+ {
+	font-size: 8px;
+	vertical-align: baseline;
+	color: #464646;
+	height: 500px;
+	overflow: auto;
+}
+
+#tpl-counter table
+ {
+	width: 100%;
+}
+
+#tpl-counter table td
+ {
+	width: 33%;
+	vertical-align: top;
+	padding: 30px;
+}
+
+#tpl-counter table td div
+ {
+	margin-top: 10px;
+}
+
+#tpl-counter table td li a
+{
+	font: italic normal normal 14px Georgia, sans-serif;
+	color: #7d7d7d;
+	margin-left: 0px;
+}
+
+#tpl-counter table td .cnt-map-menu-item li  a
+{
+	font: italic normal normal 14px Georgia, sans-serif;
+	color: #a1a1a1;
+	margin-left: 0px;
+}
+
+#tpl-counter table td .cnt-map-menu a
+{
+	margin: 10px 0 10px 0px;
+}
+
+#tpl-counter table td .cnt-map-menu-item .cnt-map-menu-item li  a
+{
+	font: normal normal normal 12px Arial, sans-serif;
+	color: #f7941d;
+}
+
+#tpl-counter table td ul
+{
+	list-style-type: none;
+	margin: 10px 0 10px -40px;
+}
+
+#tpl-counter table td ul li
+{
+	margin: 10px 0 10px 0px;
+}
+
+#tpl-counter table td .cnt-map-menu-item li
+{
+	margin: 10px 0 10px 0px;
+}
+
+#tpl-counter table td .cnt-map-menu-item .cnt-map-menu-item li
+{
+	margin: 10px 0 10px 0px;
+}
+
+#tpl-counter table td .cnt-map-menu-item ul
+{
+	margin: 10px 0 10px -40px;
+}
+
+.tpl-map-brands ul
+{
+	clear: both;
+}
+
+.tpl-map-brands li
+{
+	float: left;
+}
+
+.tpl-map-brands li a
+{
+	display: inline;
+}
+
+.tpl-map-brands a
+{
+	font: italic normal normal 14px Georgia, sans-serif;
+	padding-right: 20px;
+}
+
+#tpl-counter table td .tpl-map-head ul li a
+{
+	font: normal normal normal 18px Georgia, sans-serif;
+	color: #464646;
+}
+
+.tpl-map-head ul
+{
+	clear: both;
+}
+
+
+/* == END OF FOOTER ================================================= */
+
+/* == MENU ========================================================== */
+ul#tpl-menu,
+ul#tpl-menu ul,
+ul#tpl-menu li {
+	display: block;
+	list-style: none outside;
+	margin: 0px;
+	padding: 0px;
+	width: 150px;
+	overflow: visible;
+}
+
+ul#tpl-menu li li 
+{
+	text-indent: -14px;
+	padding: 15px 0 0 0;
+	overflow: visible;
+}
+
+ul#tpl-menu li
+{
+	padding: 15px 0 0 0;
+}
+
+ul#tpl-menu {
+	margin: 90px 0px 30px 30px;
+}
+
+ul#tpl-menu a {
+	color: #464646;
+	font-size: 18px;
+	font-style: italic;
+}
+
+ul#tpl-menu li li a {
+	font-size: 12px;
+	color: #7d7d7d;
+	margin-left: 14px;
+}
+/* == END OF MENU =================================================== */
+
+/* == PRICE ========================================================= */
+.tpl-price-block {
+	margin: 18px 0px 30px 30px;
+	line-height: 18px;
+}
+
+.cnt-product-downloadables .tpl-price-block 
+{
+	margin: 0px;
+}
+
+.cnt-product-downloadables .tpl-price-block  h2
+{
+	margin-left: 65px;
+}
+
+.cnt-product-downloadables .tpl-downloadables-title
+{
+	margin: 10px 0px 0px 20px;
+}
+
+.cnt-product-downloadables .tpl-downloadables-properties
+{
+	margin-left: 20px;
+}
+
+.tpl-price-block h6 a {
+	color: #464646;
+	font: italic normal normal 18px/30px Georgia, sans-serif;
+	padding:0;
+	text-decoration: underline;
+}
+
+.tpl-price-block h6
+{
+	margin: 0px;
+}
+
+.tpl-price-block h6 a:hover {
+	text-decoration: none;
+}
+
+.tpl-price-block a {
+	display: block;
+	color: #464646;
+	height: 36px;
+	line-height: 18px;
+	text-decoration: none;
+	padding: 0px 0px 0px 46px;
+	background-position: 0px -98px;
+	background-repeat: no-repeat;
+}
+
+.tpl-price-block a
+{
+margin-top: 20px;
+}
+
+.tpl-price-block a .tpl-downloadables-title {
+	display: block;
+	font-style: italic;
+	color: #7D7D7D;
+	font-size: 12px;
+	text-decoration: underline;
+}
+
+.tpl-price-block a .tpl-downloadables-properties {
+	display: block;
+	font-style: italic;
+	color: #C2C2C2;
+	font-size: 12px;
+	text-decoration: none;
+	text-transform: uppercase
+}
+
+.tpl-price-block a:hover {
+	background-position: 0px 2px;
+}
+
+.tpl-price-block a:hover .tpl-downloadables-title {
+	text-decoration: none;
+}
+
+.tpl-downloadables-xls {
+	background-image: url(../img/filetypes/xls.gif);
+}
+
+.tpl-downloadables-doc {
+	background-image: url(../img/filetypes/doc.gif);
+}
+.tpl-downloadables-pdf {
+	background-image: url(../img/filetypes/pdf.gif);
+}
+
+.tpl-downloadables-zip {
+	background-image: url(../img/filetypes/zip.gif);
+}
+
+.tpl-downloadables- {
+	background-image: url(../img/filetypes/undef.gif);
+}
+
+/* == END OF PRICE ================================================== */
+
+/* == ADDITIONAL LINE =============================================== */
+#faq-additional {
+	border-collapse: collapse;
+	border: none 0px;
+	width: 100%;
+	table-layout: fixed;
+	font: normal normal normal 12px/18px Tahoma, sans-serif;
+	margin: 0px 0px 12px 0px;
+}
+#faq-additional p {	margin: 0px 0px; }
+#faq-additional a {	font: italic normal normal 14px/18px Georgia, sans-serif; }
+#faq-additional .faq-additional-item {	margin: 0px 0px 17px 0px;	color: #7D7D7D;	}
+#faq-additional h3 a {	font: italic normal normal 18px/29px Georgia, sans-serif;	color: #464646;	padding: 0px 0px 0px 0px;	margin: 0px 0px 0px 0px;	}
+
+#home-additional {
+	border-collapse: collapse;
+	border: none 0px;
+	width: 100%;
+	table-layout: fixed;
+	font: normal normal normal 12px/18px Tahoma, sans-serif;
+	margin: 0px 0px 12px 0px;
+}
+
+#home-additional-news,
+#home-additional-brands {
+	width: 25%;
+	padding: 0px 0px 0px 30px;
+	vertical-align: top;
+}
+
+#home-additional-logos {
+	vertical-align: top;
+}
+
+#home-additional p {
+	margin: 18px 0px;
+}
+
+#home-additional a {
+	font: italic normal normal 14px/18px Georgia, sans-serif;
+}
+
+#home-additional .home-additional-news-item {
+	margin: 18px 0px;
+	color: #7D7D7D;
+}
+
+#home-additional #home-additional-news h3  a {
+	font: italic normal normal 30px/35px Georgia, sans-serif;
+	color: #464646;
+	margin: 0px 0px 18px 0px;
+}
+
+#home-additional .home-additional-news-item * {
+	margin: 0px;
+}
+#home-additional #home-additional-logos h3 a,
+#home-additional #home-additional-brands h3 a {
+	font: italic normal normal 24px/29px Georgia, sans-serif;
+	color: #464646;
+	padding: 5px 0px 0px 0px;
+	margin: 0px 0px 18px 0px;
+}
+
+#home-additional-logos-table {
+	border-collapse: collapse;
+	text-align: center;
+	width: 100%;
+}
+
+#home-additional-logos-table td {
+	height: 78px;
+	padding: 0px 0px 0px 0px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.home-additional-wrapper-left { padding: 0px 0px 0px 0px }
+.home-additional-wrapper-middle { padding: 0px 0px 18px 0px}
+.home-additional-wrapper-right { padding: 0px 30px 18px 0px }
+
+/* == END OF ADDITIONAL LINE ======================================== */
+
+.main-content-wrapper{
+padding-left:40px;
+padding-top:0px;
+}
+
+span.name_ldesc{
+	font-size:11px;
+	line-height:8px;
+}
+.name_name{
+	font-size:12px;
+	font-weight:bold;
+}

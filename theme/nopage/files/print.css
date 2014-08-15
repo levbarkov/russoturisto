@@ -1,0 +1,744 @@
+/*=
+  = Elemente
+  ==============================*/
+
+body {
+  background: #FFFFFF;
+  width: 37em;
+  margin: 0em;
+  padding: 0em;
+  color: #000000;
+  font-size: 100.01%;
+  font-family: trebuchet ms, arial, verdana, helvetica, sans-serif;
+}
+
+h1 {
+	margin: 0em;
+	padding: 0em;
+	font-size: 1em;
+}
+
+h2 {
+	margin: 0em;
+	padding: 0em;
+	font-size: 0.91em;
+}
+
+h3 {
+	margin: 0em;
+	padding: 0em;
+	font-size: 0.81em;
+}
+
+p {
+	margin: 0em;
+	padding: 0em;
+	font-size: 0.81em;
+}
+
+a:link,
+a:visited {
+	background-color: #FFFFFF;
+	color: #BF0000;
+	text-decoration: none;
+}
+
+a img {
+	border: 0em solid #FFFFFF;
+}
+
+hr {
+	border: 0em solid #FFFFFF;
+	background-color: #4C5B56;
+	width: 100%;
+	height: 0.07em;
+	margin: 1em 0em 1em 0em;
+	padding: 0em;
+	color: #FFFFFF;
+}
+
+form {
+	margin: 0em;
+	padding: 0em;
+}
+
+fieldset {
+	border: 0em solid #FFFFFF;
+	margin: 0em;
+	padding: 0em;
+}
+
+legend {
+	display: none;
+}
+
+input,
+select,
+textarea {
+	margin: 0em;
+	padding: 0em;
+	font-size: 1em;
+  font-family: trebuchet ms, arial, verdana, helvetica, sans-serif;
+}
+
+input,
+textarea {
+	padding: 0.2em;
+}
+
+/*=
+  = Klassen
+  ==============================*/
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: -1000px;
+  left: -1000px;
+  margin: 0em;
+  padding: 0em;
+  font-size: 1px;
+}
+
+.clear {
+  width: 1px;
+  height: 1px;
+  margin: 0em;
+  padding: 0em;
+  font-size: 1px;
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.red {
+	background-color: #FFFFFF;
+	color: #BF0000;
+}
+
+/*=
+  = Wrapper
+  ==============================*/
+
+div#wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0em;
+  padding: 0em;
+}
+
+div#wrapper_inner {
+  position: relative;
+  width: 100%;
+  margin: 0em;
+	padding: 0em;
+}
+
+/*=
+  = Sprungmarken
+  ==================================================*/
+
+div#wrapper_jumps {
+	display: none;
+}
+
+/*=
+  = Header
+  ==============================*/
+
+div#wrapper_header {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+div#header_inner {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+div#top_image {
+	display: none;
+}
+
+div#header_logo {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+	text-align: right;
+}
+
+div#header_logo h1 img {
+	width: 11.25em;
+	height: 6.75em;
+}
+
+/*=
+  = Mainnavigation
+  ==============================*/
+
+div#wrapper_mainnav {
+	display: none;
+}
+
+/*=
+  = Servicenavigation
+  ==============================*/
+
+div#wrapper_servicenav {
+	display: none;
+}
+
+div#bottom_image {
+	display: none;
+}
+
+/*=
+  = Inhalt
+  ==============================*/
+
+div#wrapper_content {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+div#content_outer {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+div#content_inner {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+div#content_inner2 {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+div#content_inner h1 {
+	background-color: #FFFFFF;
+	margin: 2.33em 0em 0em 0em;
+	padding: 0em;
+	color: #BF0000;
+	font-size: 1.13em;
+	line-height: 1.31em;
+}
+
+div#content_inner h2 {
+	background-color: #FFFFFF;
+	margin: 2.33em 0em -2.31em 0em;
+	padding: 0em;
+	color: #BF0000;
+	font-size: 0.81em;
+	line-height: 1.31em;
+}
+
+div#content_inner p {
+	margin: 2.31em 0em 0em 0em;
+	padding: 0em;
+	font-size: 0.81em;
+	line-height: 1.62em;
+}
+
+div#content_inner p img {
+	border: 0.075em solid #3E403F;
+}
+
+div#content_inner p img.img_left {
+	margin: 0.5em 1em 0em 0em;
+	float: left;
+}
+
+div#content_inner p img.img_right {
+	margin: 0.5em 0em 0em 1em;
+	float: right;
+}
+
+div#content_inner ol,
+div#content_inner ul {
+	margin: 2.31em 0em 0em 3em;
+	padding: 0em;
+	font-size: 0.81em;
+}
+
+/**************** KURSЬBERSICHT ****************/
+
+div#content_inner div.wrapper_course {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+div#content_inner div.wrapper_course p span.course_spacer {
+	padding: 0em 1.58em 0em 1.25em;
+}
+
+div#content_inner div.wrapper_course p span.course_day,
+div#content_inner div.wrapper_course p span.course_date,
+div#content_inner div.wrapper_course p span.course_time {
+	display: block;
+}
+
+div#content_inner div.wrapper_course p span.course_price {
+	margin: 2em 0em 0em 0em;
+	display: block;
+}
+
+div#content_inner div.wrapper_course p.course_closed {
+	position: absolute;
+	top: 50%;
+	left: 0em;
+	width: 100%;
+	height: 100%;
+	margin: -3.5em 0em 0em 0em;
+	padding: 0em;
+	text-align: center;
+	z-index: 9;
+}
+
+div#content_inner div.wrapper_course p.course_closed img {
+	border: 0em solid #FFFFFF;
+	width: 8.9em;
+	height: 5.4em;
+}
+
+div#content_inner div.wrapper_course div.course_inner {
+	position: relative;
+	width: 100%;
+	margin: 0.5em 0em 0em 0em;
+	padding: 0em;
+}
+
+div#content_inner div.wrapper_course div.course_inner p {
+	margin: 0em;
+	padding: 0em;
+}
+
+div#content_inner div.wrapper_course div.course_inner p.course_left {
+	background-color: #FFFFFF;
+	width: 7.09em;
+	float: left;
+	color: #666666;
+	font-size: 0.69em;
+}
+
+div#content_inner div.wrapper_course div.course_inner p.course_right {
+	width: 34em;
+	float: left;
+}
+
+/**************** ANMELDUNG ****************/
+
+div#wrapper_register {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+div#wrapper_register p,
+div#wrapper_register p.red {
+	margin: 0em;
+	padding: 0em;
+}
+
+div#wrapper_register hr {
+	margin: 1em 0em 1em 0em;
+}
+
+div#wrapper_register input {
+	border: 0.1em solid #B7BDBB;
+}
+
+div#wrapper_register input:focus {
+	border: 0.1em solid #BF0000;
+}
+
+div#wrapper_register input#button_register {
+	border: 0em solid #FFFFFF;
+	width: 6.77em;
+	height: 1.77em;
+}
+
+div#register_personal_data {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+div#register_personal_data h2 {
+	margin: 2.33em 0em 1em 0em;
+	padding: 0em;
+}
+
+div#register_personal_data p {
+	width: 24.5em;
+	margin: 0em 0em 1em 0em;
+	padding: 0em;
+	font-size: 0.63em;
+}
+
+div#register_personal_data p input {
+	border: 0.1em solid #B7BDBB;
+	width: 24em;
+}
+
+div#register_personal_data p input:focus {
+	border: 0.1em solid #BF0000;
+}
+
+div#register_personal_data p input#number,
+div#register_personal_data p input#zip {
+	width: 6.3em;
+}
+
+div#register_personal_data p input#dd,
+div#register_personal_data p input#mm {
+	width: 2.4em;
+}
+
+div#register_personal_data p input#yyyy {
+	width: 3.8em;
+}
+
+div#register_course_data {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+div#register_course_data h2 {
+	margin: 0em 0em 1em 0em;
+	padding: 0em;
+}
+
+div#register_course_data p {
+	margin: 0em 4em 0em 0em;
+	padding: 0em;
+	font-size: 0.63em;
+}
+
+div#register_course_data p input,
+div#register_course_data p select {
+	width: 8.5em;
+}
+
+div#register_confirmation {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+/**************** GUTSCHEINFORMULAR ****************/
+
+div#wrapper_voucher {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+div#wrapper_voucher p,
+div#wrapper_voucher p.red {
+	margin: 0em;
+	padding: 0em;
+}
+
+div#wrapper_voucher hr {
+	margin: 1em 0em 1em 0em;
+}
+
+div#wrapper_voucher input {
+	border: 0.1em solid #B7BDBB;
+}
+
+div#wrapper_voucher input:focus {
+	border: 0.1em solid #BF0000;
+}
+
+div#wrapper_voucher input#button_voucher {
+	border: 0em solid #FFFFFF;
+	width: 11.38em;
+	height: 1.77em;
+}
+
+div#voucher_personal_data {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+div#voucher_personal_data h2 {
+	margin: 2.33em 0em 1em 0em;
+	padding: 0em;
+}
+
+div#voucher_personal_data p {
+	width: 24.5em;
+	margin: 0em 0em 1em 0em;
+	padding: 0em;
+	font-size: 0.63em;
+}
+
+div#voucher_personal_data p input {
+	border: 0.1em solid #B7BDBB;
+	width: 24em;
+}
+
+div#voucher_personal_data p input:focus {
+	border: 0.1em solid #BF0000;
+}
+
+div#voucher_personal_data p input#number,
+div#voucher_personal_data p input#zip {
+	width: 6.3em;
+}
+
+div#voucher_personal_data p input#dd,
+div#voucher_personal_data p input#mm {
+	width: 2.4em;
+}
+
+div#voucher_personal_data p input#yyyy {
+	width: 3.8em;
+}
+
+div#voucher_recipient_data {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+div#voucher_recipient_data h2 {
+	margin: 2.33em 0em 1em 0em;
+	padding: 0em;
+}
+
+div#voucher_recipient_data p {
+	width: 24.5em;
+	margin: 0em 0em 1em 0em;
+	padding: 0em;
+	font-size: 0.63em;
+}
+
+div#voucher_recipient_data p input {
+	border: 0.1em solid #B7BDBB;
+	width: 24em;
+}
+
+div#voucher_recipient_data p input:focus {
+	border: 0.1em solid #BF0000;
+}
+
+div#voucher_recipient_data p input#number,
+div#voucher_recipient_data p input#zip {
+	width: 6.3em;
+}
+
+div#voucher_recipient_data p input#dd,
+div#voucher_recipient_data p input#mm {
+	width: 2.4em;
+}
+
+div#voucher_recipient_data p input#yyyy {
+	width: 3.8em;
+}
+
+div#voucher_course_data {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+div#voucher_course_data h2 {
+	margin: 0em 0em 1em 0em;
+	padding: 0em;
+}
+
+div#voucher_course_data p {
+	margin: 0em 4em 0em 0em;
+	padding: 0em;
+	font-size: 0.63em;
+}
+
+div#voucher_course_data p input,
+div#voucher_course_data p select {
+	width: 8.5em;
+}
+
+div#voucher_confirmation {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+div#voucher_confirmation textarea#information {
+	width: 98%;
+}
+
+/**************** SPECIALS ****************/
+
+div#content_inner div.wrapper_specials {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+div#content_inner div.wrapper_specials div.specials_headline {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+div#content_inner div.wrapper_specials div.specials_headline h1 {
+	margin: 2.31em 0em 0em 0em;
+	padding: 0em;
+	font-size: 0.81em;
+	line-height: 1.62em;
+}
+
+div#content_inner div.wrapper_specials div.specials_subheader {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+div#content_inner div.wrapper_specials div.specials_subheader p {
+	background-color: #FFFFFF;
+	margin: 0em;
+	color: #666666;
+}
+
+div#content_inner div.wrapper_specials div.specials_subheader p a:link,
+div#content_inner div.wrapper_specials div.specials_subheader p a:visited {
+	background-color: #FFFFFF;
+	color: #666666;
+	text-decoration: underline;
+}
+
+div#content_inner div.wrapper_specials div.specials_text p {
+	margin: 0em;
+	padding: 0em;
+}
+
+/**************** TEASER ****************/
+
+div#wrapper_teaser {
+	position: relative;
+	width: 100%;
+	margin: 1.69em 0em 0em 0em;
+	padding: 0em;
+}
+
+div#wrapper_teaser h2 {
+	margin: 0em 0em 0.38em 0em;
+	padding: 0em;
+}
+
+div#wrapper_teaser p {
+	margin: 0em 0em 0.54em 0em;
+	padding: 0em;
+}
+
+div#wrapper_teaser div.teaser_left {
+	position: relative;
+	width: 11.7em;
+	margin: 1.89em 0em 0em 0em;
+	padding: 0em;
+	float: left;
+}
+div#wrapper_teaser div.teaser_left p {
+	margin: 0em 2em 0.54em 0em;
+}
+
+div#wrapper_teaser div.teaser_right {
+	position: relative;
+	width: 9.88em;
+	margin: 1.89em 0em 0em 0em;
+	padding: 0em;
+	float: right;
+}
+
+/*=
+  = Marginalspalte
+  ==============================*/
+
+div#wrapper_marginal {
+	position: relative;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+	font-family: Georgia, Times, serif;
+	font-style: italic;
+}
+
+div#wrapper_marginal h1 {
+	background-color: #FFFFFF;
+	margin: 2.33em 0em 0em 0em;
+	color: #BF0000;
+	font-size: 0.75em;
+	line-height: 1.62em;
+}
+
+div#wrapper_marginal p {
+	font-size: 0.75em;
+	line-height: 1.62em;
+}
+
+div#wrapper_marginal ol,
+div#wrapper_marginal ul {
+	font-size: 0.75em;
+	line-height: 1.62em;
+}
+
+/*=
+  = Fusszeile
+  ==============================*/
+
+div#wrapper_footer {
+	display: none;
+}

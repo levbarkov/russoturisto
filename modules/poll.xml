@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mosinstall type="module" version="1.0.0">
+	<name>Опрос</name>
+	<author>Joomla! Project</author>
+	<creationDate>Июль 2004</creationDate>
+	<copyright>(C) 2005 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>1.0.0 RE</version>
+	<description>Это модуль компонента Опросы. Он используется для отображения сконфигурированных опросов. Модуль отличается от других модулей тем, что он обеспечивает связь компонента между пунктами меню и опросами. Модуль показывает опросы, настроенные для определенного пункта меню. </description>
+	<files>
+	<filename module="mod_poll">mod_poll.php</filename>
+	</files>
+	<params>
+		<param name="cache" type="radio" default="0" label="Разрешить кэширование" description="Выберите, кэшировать ли содержимое этого модуля">
+			<option value="0">Нет</option>
+			<option value="1">Да</option>
+		</param>
+		<param name="moduleclass_sfx" type="text" default="" label="CSS-cуффикс класса модуля" description="Суффикс, который будет использован в описании класса (table.moduletable) таблицы стилей (CSS) модуля. Это позволяет использовать индивидуальный стиль модуля." />
+	</params>
+</mosinstall>

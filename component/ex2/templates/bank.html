@@ -1,0 +1,127 @@
+<HTML><HEAD><META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>Счет в банк заказ №{orderID}</TITLE>
+<STYLE media="print" type="text/css">
+body {text-decoration: none;font: normal 11px x-small/normal Verdana, Arial, Helvetica, sans-serif;text-transform: none}
+TABLE {font: normal 11px Verdana, Arial, Helvetica, sans-serif;}
+p {font: normal 11px Verdana, Arial, Helvetica, sans-serif;word-spacing: normal;white-space: normal;margin: 5px 5px 5px 5px;letter-spacing : normal;} 
+TD {
+	font: normal 11px Verdana, Arial, Helvetica, sans-serif;
+	background: #FFFFFF;
+}
+H4 {
+	font: Verdana, Arial, Helvetica, sans-serif;
+	background: #FFFFFF;
+}
+.tablerow {
+	border: 0px;
+	border-top: 1px solid #000000;
+	border-left: 1px solid #000000;
+}
+.tableright {
+	border: 0px;
+	border-top: 1px solid #000000;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	text-align: right;
+}
+#d1 {
+	display: inline;
+	float: right;
+	width: 600px;
+	font-size: 10px;
+	margin-top: 100px;
+	margin-bottom: 10px;
+}
+
+#d2 {
+	font-size:18px;
+	text-transform:uppercase;
+	font-weight: bold;
+	
+}
+
+#d3 {
+	font-size:10px;
+	
+}
+.nonprint {
+	display: none;
+}
+ 
+</STYLE>
+</HEAD><BODY onload="window.focus()" bgcolor="#FFFFFF" text="#000000" marginwidth="5" leftmargin="5" style="padding: 2px;">
+<!-- <DIV align="right" class="nonprint"><A href="http://maneya.phpshopcms.com/phpshop/forms/1/forma.html?orderId=1&tip=2&datas=1277385951#" onclick="window.print();return false;" style="color: #0078BD;"><IMG border="0" align="absmiddle" hspace="3" vspace="3" src="./Счет в банк заказ № 101-35_files/action_print.gif">Распечатать</A> | <A href="http://maneya.phpshopcms.com/phpshop/forms/1/forma.html?orderId=1&tip=2&datas=1277385951#" onclick="document.execCommand(&#39;SaveAs&#39;);return false;" style="color: #0078BD;">Сохранить на диск<IMG border="0" align="absmiddle" hspace="3" vspace="3" src="./Счет в банк заказ № 101-35_files/action_save.gif"></A><BR><BR></DIV> -->
+<P align="left">{exVendorName}</P>
+<TABLE cellpadding="3" cellspacing="0" width="99%">
+	<TBODY><TR>
+		<TD>Юридический адрес:</TD>
+		<TD>{exVendorUrAddress}</TD>
+	</TR>
+	<TR>
+		<TD>Почтовый адрес:</TD>
+		<TD>{exVendorMailAddress}</TD>
+	</TR>
+</TBODY></TABLE>
+<H4 align="center">Образец&nbsp;заполнения&nbsp;платежного&nbsp;поручения</H4>
+<TABLE cellpadding="0" cellspacing="1" width="100%" border="0" align="center">
+	<TBODY><TR>
+		<TD nowrap="">ИНН&nbsp;{exVendorINN}</TD>
+		<TD nowrap="">КПП&nbsp;{exVendorKPP}</TD>
+		<TD rowspan="2" valign="bottom">Сч.№</TD>
+		<TD rowspan="2" valign="bottom">{exVendorAccount}</TD>
+	</TR>
+	<TR>
+		<TD colspan="2">Получатель<BR>ООО {exVendorName}</TD>
+	</TR>
+	<TR>
+		<TD rowspan="2" colspan="2" valign="top">Банк получателя<BR>{exVendorBank}</TD>
+		<TD>БИК</TD>
+		<TD nowrap="" rowspan="2">{exVendorBankReq}<BR>{exVendorKorAccount}</TD>
+	</TR>
+	<TR>
+		<TD>Сч.№</TD>
+	</TR>
+</TBODY></TABLE>
+<H2 align="center">{orderSign} </H2>
+<BR>
+<TABLE cellpadding="0" cellspacing="2">
+	<TBODY><TR>
+		<TD>Заказчик:</TD>
+		<TD>{exBTFIO}</TD>
+	</TR>
+	<TR>
+		<TD>Плательщик:</TD>
+		<TD>{exPayer}</TD>
+	</TR>
+</TBODY></TABLE>
+<TABLE width="100%" cellpadding="2" cellspacing="0" align="center" border="1">
+	<TBODY><TR class="tablerow">
+		<TD class="tablerow">№</TD>
+		<TD width="50%" class="tablerow">Наименование</TD>
+		<TD class="tablerow">Единица измерения&nbsp;</TD>
+		<TD class="tablerow">Количество</TD>
+		<TD class="tablerow">Цена</TD>
+		<TD class="tableright">Сумма</TD>
+	</TR>
+	{orderItems}
+         <TR>
+			<TD colspan="5" align="right" style="border:0; border-top: 1px solid #000000;border-left: 1px solid #000000;">Скидка:</TD>
+			<TD class="tableright" nowrap=""><B>{orderDiscount}%</B></TD>
+		</TR>
+		<TR>
+			<TD colspan="5" align="right" style="border:0; border-top: 1px solid #000000;border-left: 1px solid #000000;">Итого:</TD>
+			<TD class="tableright" nowrap=""><B>{orderSum} руб</B></TD>
+		</TR>
+			<TR >
+			<TD colspan="5" align="right" style="border: 0; border-top: 1px solid #000000;border-left: 1px solid #000000;">В т.ч. НДС: 18%</TD>
+			<TD class="tableright" nowrap=""><B>{orderNDS} руб</B></TD>
+		</TR>
+		
+</TBODY></TABLE>
+<P><B>Всего наименований {orderItemsCount}, на сумму {orderSum} руб<BR>
+{orderSumWords}</B></P><BR>
+<P>Руководитель предприятия<U>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</U></P>
+<P>Главный бухгалтер<U>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</U></P>
+
+
+</BODY></HTML>

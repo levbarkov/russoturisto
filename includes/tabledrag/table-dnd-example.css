@@ -1,0 +1,32 @@
+#table-1, #table-2, #ajax_table_drug {
+}
+
+tr.even-dnd{
+  background-color: #eee;
+}
+
+tr.odd-dnd{
+  background-color: #fff;
+}
+
+tr.myDragClass td{
+  background-color: #ddd;
+}
+
+tr.myDropClass td{
+    background-color: #ccc;
+}
+
+td.showDragHandle {
+	background-image: url(updown2.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: move; 
+}
+td.idrub_td{
+	background-image: url(updown2.gif);
+}
+
+td.dragHandle {
+  width: 20px;
+}

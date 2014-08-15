@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mosinstall type="module" version="1.0.0">
+	<name>Форма входа</name>
+	<creationDate>Март 2008</creationDate>
+	<version>1.0.0</version>
+	<description>Этот модуль показывает форму входа на сайт с возможностью ввода имени пользователя и пароля.</description>
+	<files>
+		<filename module="login">login.php</filename>
+	</files>
+	<params>
+	</params>
+</mosinstall>

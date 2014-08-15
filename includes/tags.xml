@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tags>
+ <tag exgood="1">
+	<id >80</id>
+	<name>mp3</name>
+	<size>1</size>
+	<bright>1</bright>
+	<cnt>1177</cnt>
+	<m_time>1276532417</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >63</id>
+	<name>iphone</name>
+	<size>0.93</size>
+	<bright>0.8</bright>
+	<cnt>1094</cnt>
+	<m_time>1276526484</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >90</id>
+	<name>коммуникатор</name>
+	<size>0.76</size>
+	<bright>0.4</bright>
+	<cnt>890</cnt>
+	<m_time>1276746022</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >78</id>
+	<name>3g</name>
+	<size>0.72</size>
+	<bright>0</bright>
+	<cnt>852</cnt>
+	<m_time>1276532317</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >98</id>
+	<name>android</name>
+	<size>0.68</size>
+	<bright>0</bright>
+	<cnt>800</cnt>
+	<m_time>1276746679</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >51</id>
+	<name>джип</name>
+	<size>0.66</size>
+	<bright>0.8</bright>
+	<cnt>782</cnt>
+	<m_time>1275144674</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >59</id>
+	<name>универсал</name>
+	<size>0.61</size>
+	<bright>1</bright>
+	<cnt>718</cnt>
+	<m_time>1275146318</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >52</id>
+	<name>toyota</name>
+	<size>0.57</size>
+	<bright>1</bright>
+	<cnt>669</cnt>
+	<m_time>1275144674</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >53</id>
+	<name>вездеход</name>
+	<size>0.46</size>
+	<bright>0</bright>
+	<cnt>545</cnt>
+	<m_time>1275144674</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >54</id>
+	<name>престиж</name>
+	<size>0.46</size>
+	<bright>0</bright>
+	<cnt>545</cnt>
+	<m_time>1275144674</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >79</id>
+	<name>плеер</name>
+	<size>0.2</size>
+	<bright>0.4</bright>
+	<cnt>235</cnt>
+	<m_time>1276532417</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >61</id>
+	<name>subaru</name>
+	<size>0.14</size>
+	<bright>0.8</bright>
+	<cnt>171</cnt>
+	<m_time>1275146720</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >62</id>
+	<name>авто</name>
+	<size>0.1</size>
+	<bright>0.2</bright>
+	<cnt>114</cnt>
+	<m_time>1275146720</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >87</id>
+	<name>rover</name>
+	<size>0.07</size>
+	<bright>0.2</bright>
+	<cnt>90</cnt>
+	<m_time>1276744130</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >97</id>
+	<name>windows mobile</name>
+	<size>0.07</size>
+	<bright>0.2</bright>
+	<cnt>90</cnt>
+	<m_time>1276746662</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >55</id>
+	<name>грузовик</name>
+	<size>0.05</size>
+	<bright>0</bright>
+	<cnt>64</cnt>
+	<m_time>1275144726</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >60</id>
+	<name>хечбык</name>
+	<size>0.04</size>
+	<bright>0</bright>
+	<cnt>54</cnt>
+	<m_time>1275146663</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >56</id>
+	<name>3 двери</name>
+	<size>0.02</size>
+	<bright>0.2</bright>
+	<cnt>25</cnt>
+	<m_time>1275144784</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >81</id>
+	<name>lcd</name>
+	<size>0</size>
+	<bright>0</bright>
+	<cnt>7</cnt>
+	<m_time>1276532468</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >82</id>
+	<name>impreza</name>
+	<size>0</size>
+	<bright>0</bright>
+	<cnt>2</cnt>
+	<m_time>1276532580</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >58</id>
+	<name>эксклюзив</name>
+	<size>0</size>
+	<bright>0</bright>
+	<cnt>4</cnt>
+	<m_time>1275144784</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >96</id>
+	<name>marvell</name>
+	<size>0</size>
+	<bright>0</bright>
+	<cnt>6</cnt>
+	<m_time>1276746648</m_time>
+ </tag>
+ <tag exgood="1">
+	<id >57</id>
+	<name>мини</name>
+	<size>0</size>
+	<bright>0</bright>
+	<cnt>4</cnt>
+	<m_time>1275144784</m_time>
+ </tag>
+</tags>

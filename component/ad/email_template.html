@@ -1,0 +1,153 @@
+<html>
+<head>
+<title>Your Order Confirmation</title>
+<style type="text/css">
+<!--
+.Stil1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.Stil2 {font-family: Verdana, Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+<body>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+  <tr valign="top"> 
+    <td width=53% align="left" class="Stil1">{exVendorName}<br>
+    {exVendorStreet1}
+    <br>
+    {exVendorTel}</td>
+    <td width="47%" align="right">{exVendorImage}</td>
+  </tr>
+      
+  <tr bgcolor="white"> 
+    <td colspan=2>
+      <h3 class="Stil2">{exOrderHeader}</h3>    </td>
+  </tr>
+</table>
+ 
+<table border=0 cellspacing=0 cellpadding=2 width=100%>
+  <!-- begin customer information --> 
+  <tr bgcolor="#CCCCCC" class="sectiontableheader"> 
+    <td colspan=2 class="Stil2"><b>Информация о заказе</b></td>
+  </tr>
+   
+  <tr class="Stil1"> 
+    <td>Дата заказа:</td>
+    <td>{exOrderDate}</td>
+  </tr>
+  <tr class="Stil1"> 
+    <td>Статус заказа:</td>
+    <td>{exOrderStatus}</td>
+  </tr>
+  <!-- end customer information --> 
+  <!-- begin 2 column bill-ship to --> 
+  <tr class="sectiontableheader">
+    <td colspan=2>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#CCCCCC" class="sectiontableheader"> 
+    <td colspan=2><b class="Stil2">Информация о клиенте</b></td>
+  </tr>
+  <tr valign=top> 
+    <td width=50%> <!-- begin billto -->  
+      <table width=100% cellspacing=0 cellpadding=2 border=0>
+        <tr class="Stil1"> 
+          <td colspan=2><b class="Stil1">Реквизиты оплаты</b></td>
+        </tr>
+        <tr class="Stil1"> 
+          <td>Компания:</td>
+          <td>{exBTCompany}</td>
+        </tr>
+        <tr class="Stil1"> 
+          <td>Ф.И.О.:</td>
+          <td>{exBTFIO}</td>
+        </tr>
+        <tr class="Stil1"> 
+          <td>Телефон :</td>
+          <td>{exBTPhone}</td>
+        </tr>
+        <tr class="Stil1"> 
+          <td>Email :</td>
+          <td>{exBTEmail}</td>
+        </tr>
+      </table>
+      <!-- end billto -->    </td>
+    <td width=50%> 
+    <!-- begin shipto -->  
+      <table width=100% border=0 cellpadding=2 cellspacing=0 class="Stil1">
+        <tr> 
+          <td colspan=2><b>Реквизиты доставки</b></td>
+        </tr>
+         <tr> 
+          <td>Адрес:</td>
+          <td>{exBTAdrress}</td>
+        </tr>
+      </table>
+      <!-- end shipto --> 
+      <!-- end customer information --> </td>
+  </tr>
+  <tr> 
+    <td colspan=2>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td colspan=2> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="1">
+      </table>    </td>
+  </tr>
+  <tr>
+    <td colspan=2>&nbsp;</td>
+  </tr>
+  <!-- begin order items information --> 
+  <tr bgcolor="#CCCCCC" class="Stil2"> 
+    <td colspan=2><b>Позиции заказа</b></td>
+  </tr>
+  <tr> 
+    <td colspan=2> 
+      <table width=100% cellspacing=0 cellpadding=2 border=0>
+        <tr align=left class="Stil1"> 
+          <th>Кол-во</th>
+          <th>Наим.</th>
+          <th>Артикул</th>
+          <th>Цена</th>
+          <th>Стоимость</th>
+        </tr>
+		{exOrderList}
+        <tr class="Stil1"> 
+          <td colspan=4 align=right>Итог :</td>
+          <td>{exOrderSubtotal}</td>
+        </tr>
+      </table>    </td>
+  </tr>
+  <!-- end order items information --> 
+  <!-- begin customer note -->
+  <tr class="sectiontableheader">
+    <td colspan=2>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#CCCCCC" class="sectiontableheader">
+    <td colspan=2><b class="Stil2">Заметки клиента:</b></td>
+  </tr>
+  <tr>
+    <td colspan=2>
+        {exCustomerNote}    </td>
+  </tr>
+  <tr class="sectiontableheader">
+    <td colspan=2>&nbsp;</td>
+  </tr>
+  <tr bgcolor="#CCCCCC" class="sectiontableheader">
+    <td><b class="Stil2">Информация о оплате </b></td>
+    <td><b class="Stil2">Адрес доставки </b></td>
+  </tr>
+  <tr>
+    <td>{PAYMENT_INFO_DETAILS}</td>
+    <td>{SHIPPING_INFO_DETAILS}</td>
+  </tr>
+</table>
+<br>
+<p class="Stil2"></p>
+<p class="Stil2">
+{exOrderClosingMsg}
+</p>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mosinstall type="module" version="1.0.0">
+	<name>Main Menu</name>
+	<author>Joomla! Project</author>
+	<creationDate>Июль 2004</creationDate>
+	<copyright>(C) 2005 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>1.0.0 RE</version>
+	<description>Отображение меню.</description>
+	<files>
+		<filename module="mod_mainmenu">mod_mainmenu.php</filename>
+	</files>
+	<params>
+		<param name="menu" type="mos_menu" default="" label="Menu Name" description="The name of the menu (default is mainmenu)" />
+    <param name="theme" type="filelist" directory="/modules/jsCookMenu" filter="^Theme" default="ThemeIE" hide_none="1"  label="Theme" description="The Theme for the menu" />
+    <param name="orientation" type="list" default="vbr" label="Orientation" description="Top menu orientation and sub-menu positioning">
+      <option value="hbr">Horizontal - Below, Right</option>
+      <option value="hbl">Horizontal - Below, Left</option>
+      <option value="hur">Horizontal - Above, Right</option>
+      <option value="hul">Horizontal - Above, Left</option>
+      <option value="vbr">Vertical - Below, Right</option>
+      <option value="vbl">Vertical - Below, Left</option>
+      <option value="vur">Vertical - Above, Right</option>
+      <option value="vul">Vertical - Above, Left</option>
+    </param>
+    <param name="ordering" type="list" default="ordering" label="Order By" description="The order in which the menu options are listed">
+      <option value="ordering">Defined Order</option>
+      <option value="name">Name of Option</option>
+      <option value="id">Option ID</option>
+      <option value="type">Type of Option</option>
+    </param>
+		<param name="img_main" type="imagelist" directory="/modules/jsCookMenu/images" hide_none="1" label="Main Menu Folder Image" description="Image indicating a top level option has a sub-menu" />
+		<param name="img_main_hover" type="imagelist" directory="/modules/jsCookMenu/images" hide_none="1" label="Main Menu Folder Image - Hover" description="Image displayed when the cursor is over a top level option that has a sub-menu (and when the sub-menu is open)" />
+		<param name="img_sub" type="imagelist" directory="/modules/jsCookMenu/images" hide_none="1" label="Sub-Menu Folder Image" description="Image indicating a sub-menu option has its own sub-menu" />
+		<param name="img_sub_hover" type="imagelist" directory="/modules/jsCookMenu/images" hide_none="1" label="Sub-Menu Folder Image - Hover" description="Image displayed when the cursor is over a sub-menu option that has its own sub-menu (and when that (sub-)sub-menu is open)" />
+		<param name="menu_images" type="list" default="n" label="Display Option Images" description="Select whether or not to display images for menu options that have an image associated with them.">
+			<option value="n">No</option>
+			<option value="y">Yes</option>
+		</param>
+		<param name="image_resize" type="text" default="" label="Resize Option Images" description="Specify a width and height for images associated with menu options. Format must be WIDTHxHEIGHT, eg. 16x16. Images will be resized such that at least one dimension matches and the other does not exceed." />
+		<param name="status_text" type="list" default="y" label="Display Option Name" description="Select whether the browser status bar shows the menu option name (Yes) or the URL (No)">
+			<option value="n">No</option>
+			<option value="y">Yes</option>
+		</param>
+		<param name="html_list" type="list" default="y" label="Include HTML" description="Select whether or not to include non-displayable HTML unordered lists of the menus - may make the menu easier to spider.">
+			<option value="n">No</option>
+			<option value="y">Yes</option>
+		</param>
+	</params>
+</mosinstall>

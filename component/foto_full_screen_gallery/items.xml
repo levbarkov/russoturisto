@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<content>
+	<menu_item name="FOTO221">
+		<img filename="triworks_arch4.jpg" title="Street" thumbnail="thumb_4.jpg"><![CDATA[THIS FILE USES <font color='#999999'>FLASH 8 BITMAP DATA</font> COMPONENTS. THIS MAKES IMAGES LOOK MUCH BETTER WHEN THEY ARE RESIZED.]]></img>
+		<img filename="/component/foto_full_screen_gallery/items/triworks_arch1.jpg" title="LRoom" thumbnail="/component/foto_full_screen_gallery/items/thumb_1.jpg"><![CDATA[<font color='#999999'>IMAGE, SWF AND FLV</font> FILES SUPPORTED. CONTENT WILL BE ADJUSTED ACCORDING TO FILE TYPE.]]></img>
+		<img filename="/component/foto_full_screen_gallery/items/triworks_arch2.jpg" title="Museum" thumbnail="/component/foto_full_screen_gallery/items/thumb_2.jpg"><![CDATA[USE <font color='#999999'>ZOOM OPTIONS BELOW</font>. ENJOY FLASH POWER ON HIGH RESOLUTION IMAGES AND VIDEOS.]]></img>
+	</menu_item>
+</content>
+
+
+
+
+
+

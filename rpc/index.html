@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>РусПромКом</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="icon" type="image/png" href="/rpc/includes/css/images/favicon.png" />
+<link href="/rpc/includes/css/style.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="/rpc/includes/js/jquery.easing.js"></script>
+<script>
+/*/
+	var nn = 1;
+	$(function(){
+		$( ".left_menu a" ).hover(function(){ ishow($(this).index()); });
+		ishow(0);
+	});
+	function ishow(n)
+	{
+		if(nn == n){ return; } nn = n;
+		$('.slider li').hide();
+		$('.slider li').eq(n).fadeIn();
+		$('.left_menu a').removeClass('current');
+		$('.left_menu a').eq(n).addClass('current');
+	}
+	
+/*/
+
+	var nn = 1;
+	$(function()
+	{
+		
+		$( ".left_menu a" ).hover(function(){ ishow($(this).index()); });
+	});
+	function ishow(n)
+	{
+		if(nn == n){ return; } nn = n;
+		
+		var htop = 335*n;
+		
+		//console.log(htop);
+		
+		
+		$('.slider ul').stop().animate({top: '-'+htop+'px'}, "slow", "easeOutSine");
+		
+		$('.left_menu a').removeClass('current');
+		$('.left_menu a').eq(n).addClass('current');
+	}
+	
+/**/	
+</script>
+</head>
+<body>
+<div class="wrap hblue">
+	<div class="header">
+		<a class="span3 logo" href="/" title="На главную"></a>
+		<div class="span9">
+			<div class="fr tr">
+				<form action="" method="get">
+					<input class="input" type="text" name="keywords" placeholder="поиск..." />
+				</form>
+				<div class="tel"><i></i>+7(391) 21-999-01</div>
+			</div>			
+			<ul class="menu und">
+				<li><a href="">О компании</a></li>
+				<li><a href="">Контакты</a></li>
+				<li><a href="">Вопрос - ответ</a></li>
+				<li><a href="">Наши объекты</a></li>
+				<li><a href="">Партнеры</a></li>
+				<li><a href="">Карта сайта</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="mane">
+		<div class="span3 l0 left_menu">
+			<a href="">Вентиляция</a>
+			<a href="">Кондиционеры</a>
+			<a href="">Отопление</a>
+			<a href="">Автоматика</a>
+			<a href="">Расходные материал</a>
+			<a href="">Перфорация</a>
+			<a href="">Производство</a>
+			<a href="">Услуги</a>
+		</div>
+		<div class="span9 slider">
+			<ul>
+			<li><img src="/rpc/includes/css/images/slider.png" width="745" height="325" alt="image" /></li>
+			<li><img src="/rpc/includes/css/images/slider2.png" width="745" height="325" alt="image" /></li>
+			<li><img src="/rpc/includes/css/images/slider.png" 	width="745" height="325" alt="image" /></li>
+			<li><img src="/rpc/includes/css/images/slider2.png" width="745" height="325" alt="image" /></li>
+			<li><img src="/rpc/includes/css/images/slider.png" 	width="745" height="325" alt="image" /></li>
+			<li><img src="/rpc/includes/css/images/slider2.png" width="745" height="325" alt="image" /></li>
+			<li><img src="/rpc/includes/css/images/slider.png" 	width="745" height="325" alt="image" /></li>
+			<li><img src="/rpc/includes/css/images/slider2.png" width="745" height="325" alt="image" /></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+		<div class="bk">
+			<a href="" class="span3 l0"><img src="/rpc/includes/css/images/bk1.png" width="240" height="274" alt="image" /> <div>Схема проезда</div></a>
+			<a href="" class="span3"><img src="/rpc/includes/css/images/bk2.png" width="240" height="274" alt="image" /> <div>Зонты</div></a>
+			<a href="" class="span3"><img src="/rpc/includes/css/images/bk3.png" width="240" height="274" alt="image" /> <div>Фильтры</div></a>
+			<a href="" class="span3"><img src="/rpc/includes/css/images/bk4.png" width="240" height="274" alt="image" /> <div>Воздуховоды</div></a>
+			<div class="clear"></div>		
+		</div>
+	</div>
+	<div class="footer und">
+		<div class="span3 l0"><img src="/rpc/includes/css/images/logo2.png" width="110" height="45" alt="logo" /> <br>© ООО “РПК”, 2012 <br>e-mail: test@mai.ru </div>
+		<div class="span6 tc">660004, Красноярск, <br>пр. им. газеты Красноярский рабочий, 30А, стр.9 <br>тел.   +7(391) 219-99-01, 268-72-71</div>
+		<div class="span3 tr">Сделано в <a href="http://krasinsite.ru" target="_blank" title="Создание сайтов Красноярск">КрасИнсайт</a></div>
+		<div class="clear"></div>
+	</div>	
+</div>	
+</body>
+</html>

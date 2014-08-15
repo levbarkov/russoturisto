@@ -1,0 +1,719 @@
+/* == КОММЕНТАРИИ =============================================== */
+.header-comments {
+/*padding-bottom:15px;
+padding-top:20px;*/
+position:relative;
+color:#71767C;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+#comments_list {
+    padding:10px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#comments_list a:link, #comments_list a:visited, #comments_list a:hover {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.comments ul.comments {
+list-style:none outside none;
+padding-left:20px;
+position:static;
+}
+
+.header-comments h1 {
+line-height:50px;
+font-family:Arial,Helvetica,sans-serif;
+font-size:32px;
+font-weight:bold;
+font-style:normal;
+color:#343844;
+}
+
+h1 .numb {
+background-image:url("/includes/comments/img/black-tr.png");
+background-repeat:repeat;
+}
+.header-comments h1 .numb, .header-photos h1 .numb, .header-comments h1 .numb-new, .header-photos h1 .numb-new, .header-comments h1 .add {
+	display:inline-block;
+	font-weight:normal;
+	padding-left:12px;
+	padding-right:12px;
+}
+
+
+.header .add, .header-comments .add {
+background-color:#6699CC;
+background-image:url("/includes/comments/img/add-link.gif");
+background-position:left top;
+background-repeat:repeat-x;
+color:#FFFFFF;
+padding-left:12px;
+padding-right:12px;
+position:relative;
+text-decoration:underline;
+z-index:1;
+}
+
+.header-comments h1 .numb, .header-photos h1 .numb, .header-comments h1 .numb-new, .header-photos h1 .numb-new, .header-comments h1 .add {
+display:inline-block;
+font-weight:normal;
+padding-left:12px;
+padding-right:12px;
+}
+
+
+
+
+.header .add-hover, .header .add-hover, .header-comments .add-hover {
+background-color:#6699CC;
+background-image:url("/includes/comments/img/add-link.gif");
+background-position:left top;
+background-repeat:repeat-x;
+color:#FFFFFF;
+display:none;
+float:left;
+font-size:21px;
+height:52px;
+left:0;
+line-height:21px;
+margin-top:10px;
+padding:8px 12px 0;
+position:absolute;
+text-decoration:underline;
+top:-10px;
+white-space:nowrap;
+z-index:2;
+}
+
+.header-comments .add-hover {
+font-size:16px;
+height:42px;
+letter-spacing:0;
+line-height:16px;
+padding:8px 12px 0;
+}
+.comments {
+list-style:none outside none;
+}
+.comments_first{	padding-left:0px;	}
+.comments li.comment-item {
+margin-bottom:10px;
+margin-top:10px;
+width:100%;
+}
+
+.comment-block {
+position:relative;
+}
+.comment-avatar {
+background-image:url("/includes/comments/img/comment-.png");
+background-position:right 20px;
+background-repeat:no-repeat;
+left:0;
+position:absolute;
+top:0;
+width:80px;
+}
+
+#comments_list h1, #comments_list h2, #comments_list h3, #comments_list h4, #comments_list h5, #comments_list h6 {
+color:#343844;
+}
+
+.comment-avatar span {
+background-color:#CCCCCC;
+display:block;
+height:60px;
+width:60px;
+}
+.comment-info a:link, .comment-info a:visited, .comment-info a:hover {
+	color:#3389E8;
+}
+
+.comment-body {
+background-color:#F0F2F4;
+border-bottom:1px solid #DFDFDF;
+border-right-width:1px;
+margin-left:80px;
+padding:10px 30px 20px;
+}
+.comments li .comment-info {
+display:block;
+height:20px;
+margin:0;
+padding:0 100px 0 0;
+}
+.comments li .comment-info li {
+display:block;
+float:left;
+font-size:12px;
+line-height:20px;
+margin:0 8px 0 0;
+padding:0;
+position:relative;
+width:auto;
+}
+.comment-user {
+font-weight:bold;
+}
+.comment-text {
+padding-top:10px;
+}
+
+
+/*    golosa    */
+.comments .voting-container {
+font-size:21px;
+height:30px;
+line-height:30px;
+position:absolute;
+right:30px;
+text-align:center;
+top:0;
+}
+.voting-container ol {
+	float:right;
+}
+.voting-container ul, .voting-container li {
+	list-style-type:none;
+	padding:0;
+	font-family:	Arial,Helvetica,sans-serif;
+}
+.comments .voting-container .voting {
+background-image:url("/includes/comments/img/black-tr.png");
+background-position:left top;
+background-repeat:repeat;
+float:right;
+}
+.comments .voting .numb a {
+background-position:left center;
+background-repeat:repeat-x;
+}
+
+.voting li.numb a {
+background-color:#999999;
+color:#FFFFFF;
+}
+.voting li, .comments li .voting li {
+float:left;
+margin:0;
+padding:0;
+width:30px;
+}
+.comments .voting-container .voting {
+background-image:url("/includes/comments/img/black-tr.png");
+background-position:left top;
+background-repeat:repeat;
+float:right;
+}
+
+.voting a {
+display:block;
+height:30px;
+line-height:30px;
+text-decoration:none;
+}
+
+.voting .minus a {
+background-image:url("/includes/comments/img/comment0.png");
+background-position:left top;
+background-repeat:no-repeat;
+}
+
+.voting li, .comments li .voting li {
+float:left;
+margin:0;
+padding:0;
+width:30px;
+}
+.voting li.numb {
+width:auto;
+}
+
+.voting .minus a:hover { color:#FFFFFF; background-position: left center; }
+.voting .plus a:hover { background-color:#80c300; color:#FFFFFF; background-position: right center; }
+.comments .voting .numb a.numb-plus { background-position:left top;}
+.voting .numb a.numb-minus { background-position:left bottom; }
+
+.comments li .voting li.numb {
+min-width:36px;
+width:auto;
+}
+.voting .numb {
+font-size:21px;
+line-height:30px;
+text-align:center;
+}
+.comments li .voting li.numb a {
+padding-left:8px;
+padding-right:8px;
+position:relative;
+}
+.comments li .voting li.numb a {
+padding-left:8px;
+padding-right:8px;
+position:relative;
+}
+.comments .voting .numb a {
+background-image:url("/includes/comments/img/respect-.png");
+}
+
+.voting .plus a {
+background-image:url("/includes/comments/img/comment0.png");
+background-position:right top;
+background-repeat:no-repeat;
+}
+
+.header-comments .add-hover {font-size: 16px; line-height: 16px; letter-spacing:0px; padding: 8px 12px 0px 12px; height:42px;}
+span.add:hover .add-hover { display:block; letter-spacing:0px; }
+/* == END//КОММЕНТАРИИ =============================================== */
+
+
+/* == PATHWAY =============================================== */
+.iway_pathway_name, a.iway_pathway_link:link, a.iway_pathway_link:visited{
+color:#BFBFBF;
+text-decoration:none;
+line-height:14px;
+font-size:14px;
+font-style:italic;
+font-weight:normal;
+}
+a.iway_pathway_link:hover{	color:#BFBFBF;	text-decoration:underline;	}
+div.iway_ipathway_div{ 
+margin:0px;
+color:#BFBFBF;
+text-decoration:none;
+line-height:14px;
+font-size:12px;
+font-style:italic;
+vertical-align:middle;
+padding-left:5px;
+padding-top:5px;
+padding-bottom:15px;
+}
+/* == END//PATHWAY =============================================== */
+
+.article_seperator{	display:block; height:16px;	}
+
+.button {
+	text-align: center;
+	width: auto;
+	background: url(/theme/start/img/button_bg.png) repeat-x;
+	padding-left:4px;
+	padding-right:4px;
+	padding-bottom:3px;
+	padding-top:2px;
+	line-height: 16px !important;
+	line-height: 16px;
+	height: 26px !important;
+	height: 24px;
+	margin: 1px;
+	color: #7D7D7D;
+	font-family: Georgia;
+	font-size: 14px;
+	font-style: italic;
+	font-weight: normal;
+	border-right:2px solid #9c9c9c;
+	border-bottom:2px solid #9c9c9c;
+	border-left:2px solid #f0f0f0;
+	border-top:2px solid #f0f0f0;
+	cursor:pointer;
+}
+.button:active {
+	border-right:2px solid #f0f0f0;
+	border-bottom:2px solid #f0f0f0;
+	border-left:2px solid #9c9c9c;
+	border-top:2px solid #9c9c9c;
+}
+
+div.back_button a:link, div.back_button a:visited{
+  text-align: center;
+  width: auto;
+  background: url(/theme/start/img/button_bg.png) repeat-x;
+
+  padding-left:8px;
+  padding-right:8px;
+  padding-bottom:3px;
+  padding-top:2px;
+  line-height: 18px !important;
+  line-height: 16px;
+  height: 26px !important;
+  height: 24px;
+  margin: 1px;
+color: #7D7D7D;
+font-family: Georgia;
+font-size: 14px;
+font-style: italic;
+font-weight: normal;
+border-right:2px solid #9c9c9c;
+border-bottom:2px solid #9c9c9c;
+border-left:2px solid #f0f0f0;
+border-top:2px solid #f0f0f0;
+}
+
+
+/* == НАВИГАЦИЯ ПО СТРАНИЦАМ =============================================== */
+table.pager td{
+text-align: center;
+color: #7D7D7D;
+font-family: Georgia;
+font-size: 14px;
+font-style: italic;
+font-weight: normal;
+
+width: auto;
+line-height: 20px;
+margin: 1px;
+}
+table.pager td.right{
+	padding-right:10px;
+	text-align:right;
+}
+table.pager td.left{
+	padding-left:10px;
+	text-align:left;
+}
+table.pager td.right span, 
+table.pager td.right a:link, 
+table.pager td.right a:visited{
+	padding-left:4px;
+	font-weight:normal;
+}
+table.pager td.left span, 
+table.pager td.left a:link, 
+table.pager td.left a:visited{
+	font-weight:normal;
+}
+
+table.pager td.left span.next_noactive, 
+table.pager td.left a.next:link, 
+table.pager td.left a.next:visited{
+	padding-left:10px;
+}
+
+table.pager td.right span.page_noactive{
+	padding-left:4px;
+	font-weight:normal;
+}
+table.pager td.left span.prev_noactive_arrow,
+table.pager td.left span.next_noactive_arrow,
+table.pager td.left a.prev_arrow:link,
+table.pager td.left a.prev_arrow:visited,
+table.pager td.left a.next_arrow:link,
+table.pager td.left a.next_arrow:visited{
+	font-style:normal;
+	font-size:16px;
+	text-decoration:none;
+}
+/* == END//НАВИГАЦИЯ ПО СТРАНИЦАМ =============================================== */
+
+
+/* == START//СДАНДАРТНЫЙ ЭФФЕКТ ДЛЯ ФОТО (ПЛАВНО ЗАБЕЛЯЕМ КАРТИНКУ) И ВЫВОДИМ ПОВЕРХ ТЕКСТ " =============================================== */
+.gdesc {	text-align:left;	position:absolute; left:0px; top:0px; color:#464646; overflow:visible; z-index:19; padding:7px 0 0 7px; display:none;	}
+
+.gdesc a:link, .gdesc a:visited, .gdesc a:hover {
+	text-decoration:none;
+	color:#FFF;
+} 
+.gdesc span {
+/*	position:relative; */
+/*	top:10px; 
+	left:10px; 	*/
+	margin:0; 
+	padding:0;
+	text-align:left;
+}
+.gimg img {
+	display:block;
+	position:relative;
+	left:0;
+	top:0;
+} 
+.highslide img {
+	cursor: url(/highslide/graphics/zoomin.cur), pointer;
+	border: 0px solid;
+}
+.gimg {
+	line-height:normal; 
+	background-color:#ffffff; /* цвет подложки */
+}
+
+/* == END//СДАНДАРТНЫЙ ЭФФЕКТ ДЛЯ ФОТО (ПЛАВНО ЗАБЕЛЯЕМ КАРТИНКУ) И ВЫВОДИМ ПОВЕРХ ТЕКСТ =============================================== */
+
+
+
+
+/* == СТАНДАРТНЫЕ КЛАССЫ ДЛЯ ФОРМ, ЭФФЕКТ ЗАМЕНЫ ЦВЕТА ПРИ ВВОДЕ ТЕКСТА ================================================================ */
+
+/* ОФОРМЛЕНИЕ ВСЕХ ФОРМ НА AJAX */
+
+/* ОСНОВНАЯ ТАБЛИЦА */
+
+.insite_ajax_form_table{
+border:0px none;
+margin:0 auto;
+text-align:center;
+}
+table.insite_ajax_form_table th{
+color: #464646;
+font-family: Georgia;
+font-size: 18px;
+font-style: italic;
+font-weight: normal;
+line-height: normal;
+margin: 1em 0px;
+text-align:left;
+}
+table.insite_ajax_form_table td{
+color: #7D7D7D;
+font-family: Georgia;
+font-size: 14px;
+font-style: italic;
+font-weight: normal;
+line-height: normal;
+margin: 1em 0px;
+text-align:left;
+}
+
+table.insite_ajax_form_table td a:link, table.insite_ajax_form_table td a:visited{
+	color: #7D7D7D;
+	font-family: Georgia;
+	font-size: 14px;
+	font-style: italic;
+	font-weight: normal;
+	line-height: normal;
+	margin: 1em 0px;
+	text-align:left;
+	text-decoration:none;
+	border-bottom:1px dashed #7D7D7D;
+	line-height:20px;
+}
+table.insite_ajax_form_table td a:hover{
+	color: #7D7D7D;
+	font-family: Georgia;
+	font-size: 14px;
+	font-style: italic;
+	font-weight: normal;
+	line-height: normal;
+	margin: 1em 0px;
+	text-align:left;
+	text-decoration:none;
+	border-bottom:0px none;
+line-height:20px;
+}
+
+/* DIV с ответом сервера о ошибке */
+.insite_ajax_server_answer{
+	color: #7D7D7D;
+	font-family: Georgia;
+	font-size: 14px;
+	font-style: italic;
+	line-height: 21px;
+	position: relative;
+	text-align:left;
+}
+
+/* классы для полей ввода */
+.input_ajax,
+.textarea_ajax{
+	background: white;
+	padding: 1px 8px 3px 8px;
+	border: solid #d6d6d6 1px;
+	font: italic normal normal 14px/16px Georgia, sans-serif;
+	display: block;
+	
+	margin: 2px auto;
+	text-align:left;
+	float:left;
+}
+.textarea_ajax { height: 120px; }
+.input_ajax_gbcode{ width:55px;vertical-align:middle;  }
+
+.input_width_gbcode{ width:50px; }
+.input_width{ width: 274px; }
+.input_width2{ width: 90%; }
+
+/* ЦВЕТ ТЕКСТА ПО УМОЛЧАНИЮ, ПОКА НА ФОРМУ НЕ НАЖАЛИ */
+.input_gray{
+	color: #9D9D9D;
+}
+/* НОВЫЙ ЦВЕТ ТЕКСТА, КОГДА НА ФОРМУ НАЖАЛИ ИЛИ ОСНОВНОЙ ДЛЯ ФОРМ ГДЕ НЕТ ЭФФЕКТА ЗАМЕНЫ ЦВЕТА ТЕКСТА */
+.input_light {
+	color: #464646 !important;
+}
+/* СКРЫТАЯ КНОПКА, ЧТОБЫ РАБОТАЛ Enter */
+/* ОСНОВНАЯ ИДЕЯ - ПОДСОВЫВАЕМ ПОД ЧТО-НИБУДЬ */
+#hidden_button {
+	position: absolute;
+	cursor: pointer;
+	top: 0px;
+	left: 255px;
+	border: none 0px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	background: none;
+	height: 23px;
+	width: 20px;
+	text-indent: -500px;
+	overflow: hidden;
+}
+/* == END//СТАНДАРТНЫЕ КЛАССЫ ДЛЯ ФОРМ, ЭФФЕКТ ЗАМЕНЫ ЦВЕТА ПРИ ВВОДЕ ТЕКСТА ================================================================ */
+
+/* == СМОТРИТЕ В ЭТОМ РАЗДЕЛЕ ================================================================ */
+table.see_more td.right{
+text-align:right;
+width:33%
+}
+table.see_more td.left{
+text-align:left;
+width:33%
+}
+table.see_more td.center{
+width:33%
+}
+
+table.see_more td a:link,
+table.see_more td a:visited{
+	font-family: Georgia;
+	font: italic normal normal 14px/16px Georgia, sans-serif;
+	color:#464646;
+	text-decoration:underline;
+}
+table.see_more td.right_arrow a:link,
+table.see_more td.right_arrow a:visited,
+table.see_more td.right_arrow a:hover,
+table.see_more td.left_arrow a:link,
+table.see_more td.left_arrow a:visited,
+table.see_more td.left_arrow a:hover{
+	font-size:20px;	text-decoration:none;
+}
+
+/* == END//СМОТРИТЕ В ЭТОМ РАЗДЕЛЕ ================================================================ */
+
+
+/* == МОДУЛЬ КОРЗИНА ТОВАРОВ == */
+table.mytrush .mytrush_title{ height:31px; }
+table.mytrush .mytrush_total{ height:31px; }
+table.mytrush .mytrush_row td{
+    border-bottom:1px solid #DDDDDD;
+    padding-right:4px;
+    font-size:11px;
+    padding-top:4px;
+    padding-bottom:4px;
+    height:38px;
+}
+table.mytrush .mytrush_row td.left{
+text-align:left;
+}
+table.mytrush .mytrush_row td.right{
+padding-right:0px;
+text-align:right;
+}
+div.shop-cart{	color:#A1A1A1;	font-style:italic;	font-weight:normal;	font-size:14px;	}
+div.shop-cart table th a:link, div.shop-cart table th a:visited{	font-weight:normal; text-decoration:underline;	}
+div.shop-cart table th a:hover{	text-decoration:none;	}
+div.shop-cart a:link, div.shop-cart a:visited{	color:#A1A1A1;	font-style:italic;	font-weight:normal;	font-size:14px; text-decoration:none;	}
+div.shop-cart a:hover{	text-decoration:underline;	}
+div.shop-cart a.mytrash_count:link, div.shop-cart a.mytrash_count:visited{	text-decoration:none;	}
+div.shop-cart img.delme{	padding-top:5px;	}
+/* == КОНЕЦ. МОДУЛЬ КОРЗИНА ТОВАРОВ == */
+
+tr.hrow:hover {
+background-color: #feedd9;
+}
+
+
+/* == ДЛЯ СОЗДАНИЯ ЭФФЕКТА ЗАКРЫТОЙ ОБЛАСТИ БЕЛЫМ ФОНОМ =============================================== */
+.over_fade { position:absolute; background-color:#ffffff; z-index:19999; text-align:center; vertical-align:middle; display:none; }
+
+/* == START//ВЕРСТИЯ ДЛЯ ПЕЧАТИ =============================================== */
+a.print_link:link, a.print_link:visited{
+color:#7D7D7D;
+font-size:12px;
+text-decoration:underline;
+padding-left:24px;
+background-image:url(/theme/print/printer.png);
+background-repeat:no-repeat;
+background-position:left;
+height:20px;
+padding-top:4px;
+padding-bottom:4px;
+}
+a.print_link:hover{
+text-decoration:none;
+}
+/* == END//ВЕРСТИЯ ДЛЯ ПЕЧАТИ =============================================== */
+
+.CtrlEnterHint{
+color:#a1a1a1;
+font-size:11px;
+}
+a.smalledita:link, a.smalledita:visited{ font-size: 11px; }
+
+
+hr.dotted{
+border:0px; 
+border-bottom:1px dotted #C2C2C2;
+}
+/* << == ТИПЫ ССЫЛОК =============================================== */
+a.dashed:link, a.dashed:visited{
+text-decoration:none;
+border:0px none;
+border-bottom:1px dashed #F7941D;
+}
+a.dashed:hover{
+text-decoration:none;
+border:0px none;
+}
+a.no-underline:link, a.no-underline:visited{
+text-decoration:none;
+border:0px none;
+}
+a.no-underline:hover{
+text-decoration:none;
+border:0px none;
+}
+/* >> == ТИПЫ ССЫЛОК =============================================== */
+
+/* << == ПРИМЕР ПОПАПА 1 =============================================== */
+.popup-tema1{
+padding-top:10px;
+padding-left: 24px;
+padding-right: 24px;
+padding-bottom:10px;
+}
+.popup-tema1 p{
+text-align: justify;
+width: 700px;
+font-family:Arial, Helvetica, sans-serif;
+color: #000000;
+font-size:12px;
+}
+.popup-tema1 h2{
+color: #000000;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+font-weight: normal;
+margin-bottom: 11px;
+margin-top: 10px;
+padding: 0px;
+}
+.popup-tema1 h3{
+color: #000000;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 16px;
+font-weight: normal;
+margin-bottom: 11px;
+margin-top: 17px;
+padding: 0px;
+}
+.popup-tema1 h4{
+color: #000000;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-weight: normal;
+margin-bottom: 7px;
+margin-top: 7px;
+padding: 0px;
+}
+/* >>== ПРИМЕР ПОПАПА 1 =============================================== */

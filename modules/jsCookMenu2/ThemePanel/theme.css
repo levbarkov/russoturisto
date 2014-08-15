@@ -1,0 +1,152 @@
+/* ThemePanelMenu Style Sheet */
+
+.ThemePanelMenuV {
+	font-family:	verdana, arial, sans-serif;
+	font-size:	13px;
+	background-color:	#8a8a8a;
+	margin:0px;
+	padding:0px;
+	cursor:		default;
+	white-space:	nowrap;
+	width: 100%;
+}
+
+.ThemePanelMenuH {
+	font-family:	verdana, arial, sans-serif;
+	font-size:	13px;
+	background-color:	#8a8a8a;
+	margin:0px;
+	padding:0px;
+	cursor:		default;
+	white-space:	nowrap;
+    vertical-align:bottom;
+}
+
+.ThemePanelSubMenu {
+	position:	absolute;
+	visibility:	hidden;
+
+	padding-top:	2px;
+	padding-bottom:	2px;
+	padding-left:	1px;
+	padding-right:	1px;
+
+	/*
+	   Netscape/Mozilla renders borders by increasing
+	   their z-index.  The following line is necessary
+	   to cover any borders underneath
+	*/
+	z-index:	100;
+	border:		0;
+	background:	#F5F5F5 url(menubg.gif) repeat scroll 0%;
+
+	overflow:	visible;
+	border:		1px solid #002D96;
+}
+
+.ThemePanelSubMenuTable {
+	font-family:	verdana, arial, sans-serif;
+	font-size:	13px;
+	padding:	0;
+	white-space:	nowrap;
+	cursor:		default;
+	overflow:	visible;
+}
+
+
+.ThemePanelMainItem{
+	height:26px;
+	background:url(/images/insite/buton1.gif);
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:17px;
+	font-weight:bold;
+	color:#FFFFFF;
+	padding-left:46px;
+}
+.ThemePanelMainFolder{
+	height:26px;
+	background:url(/images/insite/buton1.gif);
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:17px;
+	font-weight:bold;
+	color:#FFFFFF;
+	padding-left:46px;
+}
+
+.ThemePanelMainItemHover,
+.ThemePanelMainItemActive{
+	background:url(/images/insite/buton2.gif);
+	cursor:		hand;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:17px;
+	font-weight:bold;
+	color:#FFFFFF;
+	padding-left:46px;
+}
+.ThemePanelMainFolderHover,
+.ThemePanelMainFolderActive{
+	background:url(/images/insite/buton2.gif);
+	cursor:		hand;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:17px;
+	font-weight:bold;
+	color:#FFFFFF;
+	padding-left:46px;
+}
+
+
+
+.ThemePanelMenuItem{
+	font-size:13px;
+	height:20px;
+	padding-left:31px;
+	padding-right:8px;
+	padding-bottom:1px;
+	padding-top:1px;
+	background-color:	transparent;
+}
+.ThemePanelMenuFolder{
+	font-size:13px;
+	height:20px;
+	padding-left:31px;
+	padding-right:8px;
+	padding-bottom:1px;
+	padding-top:1px;
+	background-color:	transparent;
+}
+.ThemePanelMenuItemHover,
+.ThemePanelMenuItemActive {
+	cursor:		hand;
+	white-space:	nowrap;
+	background-color:	#ffeec2;
+	border:	1px solid #000080;	
+	font-size:13px;
+	padding-left:30px;
+	padding-right:7px;
+}
+.ThemePanelMenuFolderHover,
+.ThemePanelMenuFolderActive {
+	cursor:		hand;
+	white-space:	nowrap;
+	background-color:	#ffeec2;
+	font-size:13px;
+	padding-left:30px;
+	padding-right:7px;
+}
+/* sub menus sub components */
+
+.ThemePanelMenuSplit {
+	margin:		2px;
+	height:		1px;
+	overflow:	hidden;
+	background-color:	inherit;
+	border-top:	1px solid #9C9A9C;
+}
+/* image shadow animation */
+/*
+	seq1:	image for normal
+	seq2:	image for hover and active
+	To use, in the icon field, input the following:
+	<img class="seq1" src="normal.gif" /><img class="seq2" src="hover.gif" />
+*/
+

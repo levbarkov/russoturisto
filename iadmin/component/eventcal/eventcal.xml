@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall type="component">
+	<name>eventCal</name>
+	<author>Kay Messerschmidt</author>
+	<creationDate>September 2006</creationDate>
+	<copyright>(C) 2006 Kay Messerschmidt</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>kay_messers@web.de</authorEmail>
+	<authorUrl>http://forge.joomla.org/sf/projects/eventcal</authorUrl>
+	<version>1.6.2</version>
+	<description>eventCal - The Event Calendar System for Joomla!</description>
+
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>eventcal.class.php</filename>
+		<filename>eventcal.html.php</filename>
+		<filename>eventcal.php</filename>
+		<filename>style.css</filename>
+
+		<filename>includes/index.html</filename>
+		<filename>includes/eventcal.xml.php</filename>
+		<filename>includes/jscalendar.php</filename>
+		<filename>includes/recursion.php</filename>
+
+		<filename>includes/js/index.html</filename>
+		<filename>includes/js/calendar-dutch.js</filename>
+		<filename>includes/js/calendar-english.js</filename>
+		<filename>includes/js/calendar-estonian.js</filename>
+		<filename>includes/js/calendar-german.js</filename>
+		<filename>includes/js/colorpicker.js</filename>
+
+		<filename>templates/index.html</filename>
+		<filename>templates/default.css</filename>
+
+		<filename>images/index.html</filename>
+		<filename>images/complete.png</filename>
+		<filename>images/end.png</filename>
+		<filename>images/start.png</filename>
+		<filename>images/view_day.gif</filename>
+		<filename>images/view_day_f2.gif</filename>
+		<filename>images/view_month.gif</filename>
+		<filename>images/view_month_f2.gif</filename>
+		<filename>images/view_week.gif</filename>
+		<filename>images/view_week_f2.gif</filename>
+
+		<filename>language/index.html</filename>
+		<filename>language/argentine.php</filename>
+		<filename>language/dutch.php</filename>
+		<filename>language/english.php</filename>
+		<filename>language/estonian.php</filename>
+		<filename>language/french.php</filename>
+		<filename>language/german.php</filename>
+		<filename>language/spanish.php</filename>
+
+	</files>
+
+	<install>
+		<queries>
+			<query>
+				CREATE TABLE IF NOT EXISTS `#__eventcal` (
+					`id` int(11) NOT NULL auto_increment,
+					`title` varchar(255) NOT NULL default '',
+					`description` text NOT NULL,
+					`contact` text NOT NULL,
+					`url` varchar(100) NOT NULL default '',
+					`email` varchar(120) NOT NULL default '',
+					`catid` int(11) NOT NULL default '0',
+					`published` tinyint(1) NOT NULL default '0',
+					`start_date` int(10) NOT NULL default '0',
+					`end_date` int(10) NOT NULL default '0',
+					`recur_type` set('none','day','week','month','year') NOT NULL default 'none',
+					`recur_week` varchar(7) NOT NULL default '',
+					`recur_count` char(3) NOT NULL default '',
+					`recur_except` text NOT NULL,
+					`checked_out` int(11) NOT NULL default '0',
+					`checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+					`params` text NOT NULL,
+					PRIMARY KEY  (`id`),
+					UNIQUE KEY `id` (`id`),
+					FULLTEXT KEY `params` (`params`)
+				) TYPE=MyISAM;
+			</query>
+		</queries>
+	</install>
+
+	<installfile>install.eventcal.php</installfile>
+
+	<administration>
+		<menu>Event Calendar</menu>
+
+		<submenu>
+			<menu>Manage Events</menu>
+			<menu task="categories">Manage Categories</menu>
+			<menu task="config">Configuration</menu>
+		</submenu>
+
+		<files folder="administrator">
+
+			<filename>index.html</filename>
+			<filename>admin.eventcal.php</filename>
+			<filename>admin.eventcal.html.php</filename>
+			<filename>toolbar.eventcal.html.php</filename>
+			<filename>toolbar.eventcal.php</filename>
+
+			<filename>images/index.html</filename>
+			<filename>images/calendar.png</filename>
+			<filename>images/category.png</filename>
+			<filename>images/category_f2.png</filename>
+			<filename>images/trash.gif</filename>
+
+		</files>
+	</administration>
+
+	<params>
+		<param name="view" type="list" default="month" label="standard view" description="The view style you want to call by this menu-item">
+			<option value="day">view just one day</option>
+			<option value="month">view the whole month</option>
+			<option value="week">show one week</option>
+			<option value="cat">show category-view</option>
+			<option value="addevent">show the event-add form</option>
+		</param>
+		<param name="catid" type="text" default="" label="Category" description="If you want to call the calendar view with one special category" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="view_catlist" type="radio" default="1" label="view category-list" description="Wether you want the category-list in the page footer to be displayed or not.">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_weeknumber" type="radio" default="1" label="show the numbers of the week" description="If you want the row-numbers in the monthly view to be shown.">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+		<param name="show_selectlist" type="radio" default="0" label="show selection list" description="Displays buttons on the top of the page to select the sort of view (month, week, day) and some corresponding jumping-drop-downs.">
+			<option value="0">Hide</option>
+			<option value="1">Show</option>
+		</param>
+	</params>
+
+</mosinstall>

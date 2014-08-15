@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mosinstall version="1.0.0" type="mambot" group="content">
+	<name>Маскировка электронной почты</name>
+	<author>Joomla! Project</author>
+	<creationDate>Август 2004</creationDate>
+	<copyright>(C) 2005 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>1.0.0 RE</version>
+	<description>Маскировка всех адресов электронной почты в содержимом от спам-роботов, используя javascript</description>
+	<files>
+		<filename mambot="mosemailcloak">mosemailcloak.php</filename>
+	</files>
+	<params>
+		<param name="mode" type="list" default="1" label="Режим работы" description="Выберите, как должны отображаться адреса электронной почты">
+			<option value="0">Простой текст (не ссылка)</option>
+			<option value="1">Ссылка для отправки почты</option>
+		</param>
+	</params>
+</mosinstall>

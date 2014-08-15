@@ -1,0 +1,296 @@
+/* ThemeOfficeMenu Style Sheet */
+
+.ThemeOfficeMenuH,
+.ThemeOfficeMenuV,
+.ThemeOfficeSubMenuTable {
+	font-family:	verdana, arial, sans-serif;
+	font-size:	13px;
+	padding:	0;
+	white-space:	nowrap;
+	cursor:		default;
+}
+
+.ThemeOfficeMenuV {
+	width: 100%;
+}
+
+.ThemeOfficeMenuH span {
+   vertical-align:bottom;
+}
+
+.ThemeOfficeSubMenu {
+	position:	absolute;
+	visibility:	hidden;
+
+	/*
+	   Netscape/Mozilla renders borders by increasing
+	   their z-index.  The following line is necessary
+	   to cover any borders underneath
+	*/
+	z-index:	100;
+	border:		0;
+	padding:	1px;
+	background-color:	#FFFBEE;
+
+	overflow:	visible;
+	border:		1px solid #8C867B;
+
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#BDC3BD, Direction=135, Strength=4);
+}
+
+.ThemeOfficeSubMenuTable {
+	overflow:	visible;
+}
+
+.ThemeOfficeMainItem,
+.ThemeOfficeMainItemHover,
+.ThemeOfficeMainItemActive,
+.ThemeOfficeMenuItem,
+.ThemeOfficeMenuItemHover,
+.ThemeOfficeMenuItemActive {
+	border:		0;
+	cursor:		default;
+	white-space:	nowrap;
+}
+
+.ThemeOfficeMainItem {
+	background-color:	#EFEBDE;
+}
+
+.ThemeOfficeMainItemHover,
+.ThemeOfficeMainItemActive {
+	background-color:	#C6D3EF;
+}
+
+.ThemeOfficeMenuItem {
+	background-color:	#FFFFFF;
+}
+
+.ThemeOfficeMenuItemHover,
+.ThemeOfficeMenuItemActive {
+	background-color:	#C6D3EF;
+}
+
+
+/* horizontal main menu */
+
+.ThemeOfficeMenuH .ThemeOfficeMainItem {
+	padding:	3px 3px 4px 3px;
+	border:		0;
+}
+
+.ThemeOfficeMenuH td.ThemeOfficeMainItemHover,
+.ThemeOfficeMenuH td.ThemeOfficeMainItemActive {
+	padding:	2px 2px 3px 2px;
+	border:		1px solid #3169C6;
+}
+
+.ThemeOfficeMainFolderLeft,
+.ThemeOfficeMainItemLeft,
+.ThemeOfficeMainFolderText,
+.ThemeOfficeMainItemText,
+.ThemeOfficeMainFolderRight,
+.ThemeOfficeMainItemRight {
+	background-color:	inherit;
+}
+
+/* vertical main menu sub components */
+
+.ThemeOfficeMenuV td.ThemeOfficeMainFolderLeft,
+.ThemeOfficeMenuV td.ThemeOfficeMainItemLeft {
+	padding-top:	3px;
+	padding-bottom:	3px;
+	padding-left:	0px;
+	padding-right:	2px;
+
+	border-top:	1px solid #3169C6;
+	border-bottom:	1px solid #3169C6;
+	border-left:	1px solid #3169C6;
+
+	background-color:	inherit;
+}
+
+.ThemeOfficeMenuV td.ThemeOfficeMainFolderText,
+.ThemeOfficeMenuV td.ThemeOfficeMainItemText {
+	padding-top:	3px;
+	padding-bottom:	3px;
+	padding-left:	5px;
+	padding-right:	5px;
+
+	border-top:	1px solid #3169C6;
+	border-bottom:	1px solid #3169C6;
+
+	background-color:	inherit;
+	white-space:	nowrap;
+}
+
+.ThemeOfficeMenuV td.ThemeOfficeMainFolderRight,
+.ThemeOfficeMenuV td.ThemeOfficeMainItemRight {
+	padding-top:	3px;
+	padding-bottom:	3px;
+	padding-left:	0px;
+	padding-right:	0px;
+
+	border-top:	1px solid #3169C6;
+	border-bottom:	1px solid #3169C6;
+	border-right:	1px solid #3169C6;
+
+	background-color:	inherit;
+}
+
+.ThemeOfficeMenuV tr.ThemeOfficeMainItem td.ThemeOfficeMainFolderLeft,
+.ThemeOfficeMenuV tr.ThemeOfficeMainItem td.ThemeOfficeMainItemLeft {
+	padding-top:	4px;
+	padding-bottom:	4px;
+	padding-left:	1px;
+	padding-right:	2px;
+
+	white-space:	nowrap;
+
+	border:		0;
+	background-color:	inherit;
+}
+
+.ThemeOfficeMenuV tr.ThemeOfficeMainItem td.ThemeOfficeMainFolderText,
+.ThemeOfficeMenuV tr.ThemeOfficeMainItem td.ThemeOfficeMainItemText {
+	padding-top:	4px;
+	padding-bottom:	4px;
+	padding-left:	5px;
+	padding-right:	5px;
+
+	border:		0;
+	background-color:	inherit;
+}
+
+.ThemeOfficeMenuV tr.ThemeOfficeMainItem td.ThemeOfficeMainItemRight,
+.ThemeOfficeMenuV tr.ThemeOfficeMainItem td.ThemeOfficeMainFolderRight {
+	padding-top:	4px;
+	padding-bottom:	4px;
+	padding-left:	0px;
+	padding-right:	1px;
+
+	border:		0;
+	background-color:	inherit;
+}
+
+/* sub menu sub components */
+
+.ThemeOfficeSubMenu .ThemeOfficeMenuFolderLeft,
+.ThemeOfficeSubMenu .ThemeOfficeMenuItemLeft {
+	padding-top:	2px;
+	padding-bottom:	2px;
+	padding-left:	1px;
+	padding-right:	3px;
+
+	border-top:	1px solid #3169C6;
+	border-bottom:	1px solid #3169C6;
+	border-left:	1px solid #3169C6;
+
+	background-color:	inherit;
+	white-space:	nowrap;
+}
+
+.ThemeOfficeSubMenu .ThemeOfficeMenuFolderText,
+.ThemeOfficeSubMenu .ThemeOfficeMenuItemText {
+	padding-top:	2px;
+	padding-bottom:	2px;
+	padding-left:	5px;
+	padding-right:	5px;
+
+	border-top:	1px solid #3169C6;
+	border-bottom:	1px solid #3169C6;
+
+	background-color:	inherit;
+	white-space:	nowrap;
+}
+
+.ThemeOfficeSubMenu .ThemeOfficeMenuFolderRight,
+.ThemeOfficeSubMenu .ThemeOfficeMenuItemRight {
+	padding-top:	2px;
+	padding-bottom:	2px;
+	padding-left:	0px;
+	padding-right:	0px;
+
+	border-top:	1px solid #3169C6;
+	border-bottom:	1px solid #3169C6;
+	border-right:	1px solid #3169C6;
+
+	background-color:	inherit;
+	white-space:	nowrap;
+}
+
+.ThemeOfficeMenuItem .ThemeOfficeMenuFolderLeft,
+.ThemeOfficeMenuItem .ThemeOfficeMenuItemLeft {
+	padding-top:	3px;
+	padding-bottom:	3px;
+	padding-left:	2px;
+	padding-right:	3px;
+
+	white-space:	nowrap;
+
+	border:		0;
+	background-color:	#EFEFDE;
+}
+
+.ThemeOfficeMenuItem .ThemeOfficeMenuFolderText,
+.ThemeOfficeMenuItem .ThemeOfficeMenuItemText {
+	padding-top:	3px;
+	padding-bottom:	3px;
+	padding-left:	5px;
+	padding-right:	5px;
+
+	border:		0;
+	background-color:	inherit;
+}
+
+.ThemeOfficeMenuItem .ThemeOfficeMenuFolderRight,
+.ThemeOfficeMenuItem .ThemeOfficeMenuItemRight {
+	padding-top:	3px;
+	padding-bottom:	3px;
+	padding-left:	0px;
+	padding-right:	1px;
+
+	border:		0;
+	background-color:	inherit;
+}
+
+/* menu splits */
+
+.ThemeOfficeMenuSplit {
+	margin:		2px;
+	height:		1px;
+	overflow:	hidden;
+	background-color:	inherit;
+	border-top:	1px solid #C6C3BD;
+}
+
+/* image shadow animation */
+
+/*
+	seq1:	image for normal
+	seq2:	image for hover and active
+
+	To use, in the icon field, input the following:
+	<img class="seq1" src="normal.gif" /><img class="seq2" src="hover.gif" />
+*/
+
+.ThemeOfficeMainItem img.seq1,
+.ThemeOfficeMenuItem img.seq1 {
+	display:	inline;
+}
+
+.ThemeOfficeMainItemHover img.seq2,
+.ThemeOfficeMainItemActive img.seq2,
+.ThemeOfficeMenuItemHover img.seq2,
+.ThemeOfficeMenuItemActive img.seq2 {
+	display:	inline;
+}
+
+.ThemeOfficeMainItem img.seq2,
+.ThemeOfficeMainItemHover img.seq1,
+.ThemeOfficeMainItemActive img.seq1,
+.ThemeOfficeMenuItem img.seq2,
+.ThemeOfficeMenuItemHover img.seq1,
+.ThemeOfficeMenuItemActive img.seq1 {
+	display:	none;
+}

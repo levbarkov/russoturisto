@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mosinstall version="1.0.0" type="mambot" group="editors-xtd">
+	<name>mospage.btn</name>
+	<author>Insite! Project</author>
+	<creationDate>Август 2004</creationDate>
+	<copyright>(C) 2005 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>1.0.0 RE</version>
+	<description>Позволяет кнопкой вставлять разрыв страницы {mospagebreak} в окне редактирования содержимого</description>
+	<files>
+		<filename mambot="mospage.btn">mospage.btn.php</filename>
+	</files>
+</mosinstall>

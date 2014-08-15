@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mosinstall type="module" version="1.0.0">
+	<name>Опрос</name>
+	<author>Insite</author>
+	<creationDate>2008</creationDate>
+	<copyright>(C) 2008. All rights reserved.</copyright>
+	<license>krasinsite</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.krasinsite.ru</authorUrl>
+	<version>1.0.0 RE</version>
+	<description>Это модуль компонента Каталога. вывода корзины заказов. </description>
+	<files>
+	<filename module="mod_poll">mod_poll.php</filename>
+	</files>
+	<params>
+	</params>
+</mosinstall>
