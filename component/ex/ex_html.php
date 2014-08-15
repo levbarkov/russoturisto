@@ -64,6 +64,7 @@ class tplCatalog {
 	private function htmlShowProduct($p)
 	{
 		$row = $p->exgood->vars;
+		// var_dump ($row);
 		#xmp($p->component_foto);
 	/*	?>
 		<div class="holst">
@@ -84,7 +85,50 @@ class tplCatalog {
 		<?		
 		*/
 		?> 
+		<div class="visa_center" style="margin: 0px auto 0px;
+padding: 0px 1.5% 0px;
+max-width: 1070px; position:relative; top:45px;">
+	<div class="span2" style="float:right;margin: 0 0 -600px 0;">
+	
+		<? $rand_manager = 3; ?>
+	
+		<? if ($rand_manager == 1) { ?>
+		<div class="visa_mens_new inv" style="float:right">
+			<h4>Есть вопросы?</h4>
+			<img class="manager_img" src="/images/foto/contacts/kuptsova_svetlana.jpg" alt="sveta">
+			<div class="manager_name">Купцова Светлана</div>
+			<div class="manager_phones">тел.&nbsp;+7(391) 2414-888<br>тел. +7(391) 2888-306</div>
+			<div class="manager_email"><a href="mailto:russoturisto77@mail.ru">russoturisto77@mail.ru</a></div>
+			<div class="manager_vk"><a href="http://vk.com/club54033732">http://vk.com/club54033732</a></div>
+			<div class="manager_button"><a class="btn colorbox2 cboxElement" href="/ping?s=tour"><span class="icon1 iworld">&nbsp;</span> Заявка на тур</a></div>			
+		</div>
+		<? } ?>
 		
+		<? if ($rand_manager == 2) { ?>
+		<div class="visa_mens_new inv" style="float:right">
+			<h4>Есть вопросы?</h4>
+			<img class="manager_img" src="/images/foto/contacts/marina.jpg" alt="marina">
+			<div class="manager_name">Вахрушева Марина</div>
+			<div class="manager_phones">тел.&nbsp;+7(391) 2414-888<br>тел. +7(391) 2888-306</div>
+			<div class="manager_email"><a href="mailto:russoturisto5@mail.ru">russoturisto5@mail.ru</a></div>
+			<div class="manager_vk"><a href="http://vk.com/club54033732">http://vk.com/club54033732</a></div>
+			<div class="manager_button"><a class="btn colorbox2 cboxElement" href="/ping?s=tour"><span class="icon1 iworld">&nbsp;</span> Заявка на тур</a></div>			
+		</div>
+		<? } ?>
+		
+		<? if ($rand_manager == 3) { ?>
+		<div class="visa_mens_new inv" style="float:right">
+			<h4>Есть вопросы?</h4>
+			<img class="manager_img" src="/images/ava.png" alt="marina">
+			<div class="manager_name">Светлана Жмакова</div>
+			<div class="manager_phones">тел.&nbsp;+7(391) 2888-306<br>тел. +7(391) 2414-888<br>icq 604971433</div>
+			<div class="manager_email"><a href="mailto:visarusso@mail.ru">visarusso@mail.ru</a></div>
+			<div class="manager_vk"><a href="http://vk.com/club54033732">http://vk.com/club54033732</a></div>
+			<div class="manager_button"><a class="btn colorbox2 cboxElement" href="/ping?s=tour"><span class="icon1 iworld">&nbsp;</span> Заявка на визу</a></div>			
+		</div>
+		<? } ?>
+	</div>
+</div>
 		<div class="holst">
 			<div class="inner_content fs14_24">
 				<?ipathway();?> 
@@ -92,11 +136,11 @@ class tplCatalog {
 				
 				<div class="clear"></div>
 				<div class="tabx"><?=$row->sdesc ? desafelySqlStr($row->sdesc) : "<h3 class='tc blue3'>В данное время нет информации.</h3>"; ?>
-				
-				
-				</div>	
+				</div>
+
+				<div><?php echo desafelySqlStr($row->fdesc);?></div>
 						
-				
+				<? //var_dump ($row); ?>
 				
 			</div>
 				

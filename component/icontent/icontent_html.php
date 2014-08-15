@@ -11,6 +11,7 @@ class tplContent {
 	
 	public function tpl($name, $params){
 		$tpl_name = 'html' . mb_ucfirst($name);
+		// var_dump($params);
 		if(method_exists($this, $tpl_name))
 			return $this->$tpl_name($params);
 			
@@ -29,12 +30,13 @@ class tplContent {
 		?>
 		<div class="holst">
 		<div class="inner_content news">
+		
 			<?ipathway();?>
 			<h1><?=$reg['mainparent']->name ?></h1>
 			<? if( substr($sefname,0,4)=='news' ){ ?><p class="date"><?=mindate($row->created); ?></p><? } ?>
 			<h4><?=$row->title ?></h4>
 			<? /**/if(!empty($row->org)){ echo "<img class=fr src='/images/icat/icont/{$row->org}' alt='image'>"; }/**/  ?>
-			<?=desafelySqlStr($row->fulltext); ?>
+			<?=desafelySqlStr($row->introtext); ?>
 		</div>
 		</div>
 		<?
@@ -242,11 +244,12 @@ HTML;
 			?>
 			<div class="holst hotel">
 				<div class="inner_content">
+				
 					<?ipathway();?>
 					<h1><?=$reg['mainobj']->name ?></h1>
 					<div class="photo_innner">
 						
-						<? $this->gallery($photos, '/images/icat/icat/'); ?>
+						<? //$this->gallery($photos, '/images/icat/icat/'); ?>
 						
 						<?/*/?>
 						<div class="photo_big">
@@ -279,8 +282,8 @@ HTML;
 						</script>						
 						<?/**/?>
 					</div>
-					<div><?=desafelySqlStr($reg['mainobj']->sdesc); ?></div>
-					<?=$html ?>
+					<div><?php echo desafelySqlStr($reg['mainobj']->sdesc); ?></div>
+					<?php echo $html ?>
 					<div class="clear"></div>
 				</div>
 			</div>
@@ -288,7 +291,7 @@ HTML;
 		}
 	}
 	
-	private function gallery($rows, $path='/images/icat/icat/')
+	private function gallery2($rows, $path='/images/icat/icat/')
 	{
 		js('/component/ex/js.js');
 		
@@ -349,6 +352,171 @@ HTML;
 		</div>
 		<?
 	}
+	
+	private function getImagesArray($rows, $path='/images/icat/icont/')
+	{
+		if($rows) {
+			$images = array();
+			foreach($rows as $row) {
+				$images['small'][] = $path.$row->small;
+				$images['fullsize'][] = $path.$row->org;
+			}
+			return $images;
+		} else {
+			return false;
+		}
+	}
+	
+	private function gallery($photos, $path='/images/icat/icont/')
+	{
+		$images = $this->getImagesArray($photos, $path);
+		// var_dump ($images);
+		?>
+		<!-- fotorama.css & fotorama.js. -->
+		<link  href="http://fotorama.s3.amazonaws.com/4.6.0/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+		<script src="http://fotorama.s3.amazonaws.com/4.6.0/fotorama.js"></script> <!-- 16 KB -->
+		<section class="suite-section">
+			<div class="suite-section__container country-gallery">
+				<h2 class="suite-section__title country-gallery__title">
+					Общая информация по стране
+				</h2>
+				<div class="right-column country-gallery__image-small__column">
+					<?php 
+					// var_dump ($images);
+					foreach ($images['small'] as $key => $image):
+						echo '<a class="fancybox country-gallery__image-small" rel="gallery1"><img class="" src="'.$image.'" alt=""/ onclick="setGalleryImage(\''.$images['fullsize'][$key].'\')"></a>';
+					endforeach;
+					?>
+					
+				</div>
+				<div class="left-column">
+					<a class="fancybox" rel="gallery1" href="<?php echo $images['fullsize'][0]; ?>">
+						<img id="img1" class="country-gallery__image-big" src="<?php echo $images['fullsize'][0]; ?>" alt=""/>
+					</a>
+				</div>
+			</div>
+		</section>
+		<script>
+			function setGalleryImage(img)
+			{
+				$('#img1').attr('src', img);
+			}
+
+		</script>
+		<?
+	}
+	
+	private function showVisaFormalitiesLink($html, $sefname)
+	{
+		if (strpos($html, '[visa-formalities]')) {
+			// var_dump(1);
+			$row = ggsql("SELECT title, sefname, sefnamefullcat FROM #__content WHERE sefname='".$sefname."' AND sefnamefullcat = '/visa_center';");
+			$link = '<br>Ознакомьтесь подробнее с визовым режимом и закажите визу он-лайн: <a class="individual-tour__tours-title" href='.$row[0]->sefnamefullcat.'/'.$row[0]->sefname.'.html>'.$row[0]->title.'</a>';
+			$result = str_replace('[visa-formalities]', $link, $html);
+			
+			return $result;
+		}
+	}
+	
+	private function showAnswerContactForm($html)
+	{
+		$rand = rand(1,2);
+		if ($rand === 1) {
+			$answerContactForm = '
+				<div class="causes__answer">
+					<h3 class="causes__answer-title">
+						Есть вопросы?
+					</h3>
+					<img src="/images/foto/contacts/marina.jpg" alt="" class="causes__answer-avatar"/>
+
+					<p class="causes__answer-name">
+						Вахрушева Марина
+					</p>
+					<table class="causes__answer-contact">
+						<tr>
+							<td class="causes__answer-contact-td-icon">
+								<span class="icon icon-phone"> </span>
+							</td>
+							<td>
+								<a class="causes__answer-phone active" href="tel:391-2414-888">тел. 391-2414-888</a>
+								<a class="causes__answer-phone active" href="tel:(391) 2888-306 ">тел. (391) 2888-306 </a>
+							</td>
+						</tr>
+						<tr>
+							<td class="causes__answer-contact-td-icon">
+								<span class="icon icon-email"> </span>
+							</td>
+							<td>
+								<a class="causes__answer-email active"
+								   href="mailto:russoturisto5@mail.ru">russoturisto5@mail.ru</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="causes__answer-contact-td-icon">
+								<span class="icon icon-vk"> </span>
+							</td>
+							<td>
+								<a class="causes__answer-vk active" href="http://vk.com/travelclubrusso">http://vk.com/travelclubrusso</a>
+							</td>
+						</tr>
+
+					</table>
+					<div class="causes__answer-btn_wrapper">
+						<a class="btn colorbox2 cboxElement causes__answer-btn" href="#"><span
+								class="icon1 iworld">&nbsp;</span>
+							Заявка на тур</a>
+					</div>
+				</div>';
+			} else {
+				$answerContactForm = '
+				<div class="causes__answer">
+					<h3 class="causes__answer-title">
+						Есть вопросы?
+					</h3>
+					<img src="/images/foto/contacts/dasha2.jpg" alt="" class="causes__answer-avatar"/>
+
+					<p class="causes__answer-name">
+						Фомичева Дарья 
+					</p>
+					<table class="causes__answer-contact">
+						<tr>
+							<td class="causes__answer-contact-td-icon">
+								<span class="icon icon-phone"> </span>
+							</td>
+							<td>
+								<a class="causes__answer-phone active" href="(391) 2418-048">тел. (391) 2418-048</a>
+								<a class="causes__answer-phone active" href="tel:391-2414-888">тел. 391-2414-888</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="causes__answer-contact-td-icon">
+								<span class="icon icon-email"> </span>
+							</td>
+							<td>
+								<a class="causes__answer-email active"
+								   href="mailto:russoturisto77@mail.ru ">russoturisto77@mail.ru </a>
+							</td>
+						</tr>
+						<tr>
+							<td class="causes__answer-contact-td-icon">
+								<span class="icon icon-vk"> </span>
+							</td>
+							<td>
+								<a class="causes__answer-vk active" href="http://vk.com/travelclubrusso">http://vk.com/travelclubrusso</a>
+							</td>
+						</tr>
+
+					</table>
+					<div class="causes__answer-btn_wrapper">
+						<a class="btn colorbox2 cboxElement causes__answer-btn" href="#"><span
+								class="icon1 iworld">&nbsp;</span>
+							Заявка на тур</a>
+					</div>
+				</div>';
+			}
+		$result = str_replace('[answer-contact]', $answerContactForm, $html);
+		return $result;
+	}
 
 	private function htmlShowContent_tours(&$p)
 	{
@@ -361,47 +529,73 @@ HTML;
 		xmp($photof);
 		?>
 		<div class="holst hotel">
-			<div class="inner_content">
-				<?ipathway();?>
-				<h1><?=$row->title ?></h1>
-				<? if($photos){ ?>
-				<div class="photo_innner">
-					<? $this->gallery($photos, '/images/icat/icont/'); ?>
-					<?/*/?>
-					<div class="photo_big">
-						<img id="big_img" src="/images/icat/icont/<?=$photos[0]->org ?>" width="598" height="456" alt="photo" />
+			<div class="page-content">
+				<?//ipathway();?>
+			
+			
+			<section class="suite-section country-preview">
+				<div class="suite-section__container">
+					<div class="country-preview__title">
+						<h3 class="country-preview__title-header">
+							<?=$row->title ?>
+						</h3>
+
+						<div class="country-preview__title-underline"></div>
+						<p class="country-preview__title-description">
+							для жителей Красноярска и Красноярского края
+						</p>
 					</div>
-					<div class="photo_small">		
-						<?
-							foreach($photos as $photo)
-							{
-								echo "<a href='/images/icat/icont/{$photo->org}'><img src='/images/icat/icont/{$photo->small}' width='112' height='84' alt='{$photo->name}' /></a>";
-							}
+				</div>
+			</section>
+			<pre>
+			<?php //print_r($row); ?>
+			</pre>
+			<script>
+				$(".country-preview").backstretch([
+					<?php 
+						// $images = $this->getImagesArray($photos);
+						// if ($images) {
+							// foreach ($images['fullsize'] as $image) {
+								// echo "\"" . $image . "\",\n";
+							// }
+						// } else {
+							echo "\"" . '/images/icat/icont/' . $row->org . "\",\n";
+						// }
+					?>
+				], {duration: 3000, fade: true});
+				
+				
+				
+				// $(document).ready(function () {
+					// $(".fancybox").fancybox({
+						// openEffect: 'none',
+						// closeEffect: 'none'
+					// });
+				// });
+			</script>
+			<section class="suite-section">
+				<div class="suite-section__container causes">
+					<?php 
+						$introtext = desafelySqlStr($row->introtext); 
+						$intotext = $this->showAnswerContactForm($introtext);
+						echo $intotext;
+						?>
+				</div>
+			</section>
+				
+				<? if($photos){ ?>
+					<? $this->gallery($photos, '/images/icat/icont/'); ?>
+				<? } ?>
+				<div class="clear"></div>
+				<section class="suite-section">
+					<div class="suite-section__container causes">
+						<?php 
+						echo $fulltext = desafelySqlStr($row->fulltext); 
+						
 						?>
 					</div>
-					<script>
-						$(document).ready(function()
-						{
-							$('.photo_small a').on('click',function(event)
-							{
-								var isrc = $(this).attr('href');
-								if($(this).hasClass('current')) return false;
-								
-								$('.photo_small a').removeClass('current');
-								$(this).addClass('current');
-								$('#big_img').attr('src', isrc);
-
-								event.preventDefault();
-							});
-							
-						});
-					</script>					
-					<?/**/?>
-				</div>
-				<? } ?>
-				<div><?=desafelySqlStr($row->introtext); ?></div>
-				<div class="clear"></div>
-			</div>
+				</section>
+		</div>
 		</div>
 		<?
 	}
@@ -409,16 +603,16 @@ HTML;
 	
 	private function htmlShowRubrics_tours(&$p){
 		global $reg;
-
+		
 		$html = '';
 		if(count($p->rubrics)){
 			$component_foto = $p->component_foto;
-
+			// var_dump ($p);
 			foreach($p->rubrics as $rubric)
 			{
-				if( $rubric->name != 'подкатегория')
-				$html .= "<h6>{$rubric->name}</h6>\n";
-				
+				// if( $rubric->name != 'подкатегория')
+				// $html .= "<h6>{$rubric->name}</h6>\n";
+				// var_dump ($rubric);
 				$rows = ggsql(" select * from #__content where catid = '{$rubric->id}' and `state` = 1 order by `title`; ");
 				if($rows) foreach($rows as $row)
 				{
@@ -429,13 +623,29 @@ HTML;
 					$html .= "<a href=\"{$url}\"><img src=\"{$img}\" width=\"206\" height=\"206\" alt=\"фото отеля\"> <div><span>{$name}</span></div></a> \n"; 
 				}
 			}
+			// var_dump ($rubric->sefnamefull);
+			// $category = explode('_', $rubric->sefnamefull);
+			// $sefname = $category[1];
+			// $rows = ggsql("select b.name, b.sefname, b.sefnamefullcat, b.small  from #__excat as a, #__exgood as b where a.sefname='$sefname' and b.parent = a.id and b.publish = '1' order by b.order ;");
 			
+			// if($rows) foreach($rows as $row) {
+				// $img = $row->small ? '/images/ex/good/'.$row->small : '/images/ex/good/12.jpg';
+				// $name = desafelySqlStr($row->name);
+				// $url  = $row->sefnamefullcat . '/' . $row->sefname . '.html';
+				// $html .= "<a href=\"{$url}\"><img src=\"{$img}\" width=\"206\" height=\"206\" alt=\"фото отеля\"> <div><span>{$name}</span></div></a> \n"; 
+			// }
+			
+			// var_dump ($rows);
 			?>
 			<div class="inner_content wide">
 				<?ipathway();?>
 				<h1><?=$reg['mainobj']->name ?></h1>
+				
 				<div class="item_list medical_tours"><?=$html ?></div>
-				<? if($reg['sefname1'] == 'tours_europa'){ $this->ins_iframe(); } ?>
+				<pre>
+				<?php //print_r ($p->rubrics[0]->fdesc); ?>
+				</pre>
+				<? //if($reg['sefname1'] == 'tours_europa'){ $this->ins_iframe(); } ?>
 			</div>
 			<?
 		}
@@ -495,6 +705,7 @@ HTML;
 			?>
 			<div class="holst hotel">
 				<div class="inner_content">
+					
 					<?ipathway();?>
 					<h1><?=$reg['mainobj']->name ?></h1>
 					<div class="photo_innner">

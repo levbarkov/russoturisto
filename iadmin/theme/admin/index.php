@@ -11,7 +11,33 @@ echo '<?xml version="1.0" encoding="'. $iso[0] .'"?' .'>';
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title><?php echo $sitename; ?> - Панель управления INSITE</title><?
-?><link rel="stylesheet" href="theme/admin/css/theme.css" type="text/css" /><?
+?><link rel="stylesheet" href="theme/admin/css/theme.css" type="text/css" />
+<script type="text/javascript" src="/includes/tinymce/js/tinymce/tinymce.min.js"></script>
+		<script type="text/javascript">
+		// alert (1);
+		tinymce.init({
+			selector: "textarea#introtext, textarea#fulltext",
+			language: "ru",
+			valid_elements : "*[*]",
+			inline_styles : false,
+			extended_valid_elements : "*[*]",
+			plugins: [
+				"advlist autolink lists link image charmap print preview hr anchor pagebreak",
+				"searchreplace wordcount visualblocks visualchars fullscreen",
+				"insertdatetime media nonbreaking save table contextmenu directionality",
+				"emoticons template paste textcolor colorpicker textpattern"
+			],
+			toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link | preview forecolor backcolor",
+			image_advtab: true,
+			templates: [
+				{title: 'Верхняя часть статьи', url: '/includes/tinymce/js/tinymce/templates/article1.php'},
+				{title: 'Нижняя часть статьи', url: '/includes/tinymce/js/tinymce/templates/article2.php'}
+			]
+			// toolbar2: "code preview forecolor backcolor",
+			// image_advtab: true,
+		});
+		</script>
+<?
 // ОПРЕДЕЛЯЕМ НУЖНО ЛИ ЗАПУСКАТЬ HTML РЕДАКТОР
 $doeditor = false;
 

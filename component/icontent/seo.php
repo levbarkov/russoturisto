@@ -4,8 +4,8 @@ global $database;
 $tsefname = $sefname;
 
 //$_REQUEST['clean'] = 1;
-
 preg_match("/(^.*[\/])(.*)\.html$/",$sefname, $matches);
+// var_dump ($matches);
 if (isset($matches[2]) && $matches[2] != ''){	// необходимо вывести содержимое статьи
 	if ( preg_match("/^(.*)[\/](.*)\//",$matches[1], $m) )
 	{
@@ -29,6 +29,8 @@ if (isset($matches[2]) && $matches[2] != ''){	// необходимо вывес
 
 
 $icontent = ggsql ("select id from #__icat where `sefname` = '{$sefname1}' and `parent` = 0");
+// var_dump ($icontent);
+// var_dump ($sefname1);
 if (count($icontent) > 0){
 	//определяем следующую директорию
 	$iregul = "/^[\/]*\w+[\/]+(\w+)/";

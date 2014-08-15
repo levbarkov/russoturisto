@@ -68,7 +68,8 @@ if (!defined( '_JOS_EDITOR_INCLUDED' )) {
 
 		set( 'loadEditor', true );
 		if (  $doeditor  ){
-			?><a href="javascript: void(0);" onmousedown="tinyMCE.get('<?=$hiddenField ?>').show();">[Wysiwyg]</a> &nbsp; <?
+			?>
+			<a href="javascript: void(0);" onmousedown="tinyMCE.get('<?=$hiddenField ?>').show();">[Wysiwyg]</a> &nbsp; <?
 			?><a href="javascript: void(0);" onmousedown="tinyMCE.get('<?=$hiddenField ?>').hide();">[Html]</a><?
 		}
 		$results = $_MAMBOTS->trigger( 'onEditorArea', array( $name, $content, $hiddenField, $width, $height, $col, $row ) );

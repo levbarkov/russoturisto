@@ -21,7 +21,8 @@ switch ($task) {
 function cfgcabcfg(){
 global $option, $reg;
 $exgfg = ggo (1, "#__excfg");
-?><form name="adminForm" action="index2.php" method="post"><input type="hidden"  name="iuse" id="iuse" value="0" />
+?>
+<form name="adminForm" action="index2.php" method="post"><input type="hidden"  name="iuse" id="iuse" value="0" />
 <table class="adminheading"><tr><td width="100%"><?
 	$iway[0]->name=$reg['cab_name'];
 	$iway[0]->url="index2.php?ca=cab";

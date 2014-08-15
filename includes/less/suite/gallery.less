@@ -1,0 +1,26 @@
+.country-gallery {
+  margin-bottom: 25px;
+  &__title {
+    color: #1d1d1d; // text color
+    font-family: "Arial";
+    font-size: 38px;
+    font-weight: bold;
+  }
+  &__image-big {
+    width: 100%;
+  }
+  &__image-small {
+    width: 102px;
+    margin-right: 19px;
+    float: left;
+    margin-bottom: 7px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    img {
+      width: 100%;
+    }
+    &:nth-of-type(3n+0) {
+      margin-right: 0px;
+    }
+  }
+}

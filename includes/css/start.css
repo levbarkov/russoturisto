@@ -40,6 +40,9 @@ margin: 7px 21px 35px;
 .ours_adgood a.cr10:hover{border-color: #666666;background: #666666;}
 .ours_adgood a.cr11:hover{border-color: #ffff00;background: #ffff00;}
 .ours_adgood a.cr12:hover{border-color: #00ccff;background: #00ccff;}
+.ours_adgood a.cr13:hover  {border-color: #ff0000;background: #ff0000;}
+.ours_adgood a.cr14:hover  {border-color: #ff6600;background: #ff6600;}
+.ours_adgood a.cr15:hover  {border-color: #99cc33;background: #99cc33;}
 .ours_adgood a img
 {
 border-radius: 7px;

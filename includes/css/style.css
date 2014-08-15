@@ -73,7 +73,7 @@ a:hover,a:active				{ text-decoration: none; color: inherit; outline:none; }
 
 .btn
 {
-cursor: pointer;
+/* cursor: pointer; */
 font: bold 14px/40px Arial;
 color: #fff !important;
 text-shadow: 0 -1px rgba(0, 0, 0, 0.7);

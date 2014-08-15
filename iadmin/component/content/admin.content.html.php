@@ -341,6 +341,7 @@ echo $pageNav->getListFooter();
 		}
 		//-->
 		</script>
+		
 		<form <? ctrlEnterCtrlAS (' '.$reg['submit_apply_event'], ' '.$reg['submit_save_event']) ?> action="index2.php" method="post" name="adminForm" enctype="multipart/form-data">
 		<table class="adminheading">
 		<tr>
@@ -385,10 +386,14 @@ echo $pageNav->getListFooter();
 					</td>
 				</tr>
 				<tr>
-					<td width="100%">Вводный Текст: (обязательно)<br /><?php editorArea( 'editor1',  $row->introtext , 'introtext', '100%;', '350', '75', '20' ) ; ?></td>
+					<td width="100%">Вводный Текст: (обязательно)<br />
+					<!--<textarea name="area" id="introtext" rows="30"><?php echo $row->introtext; ?></textarea>-->
+					<?php editorArea( 'editor1',  $row->introtext , 'introtext', '100%;', '350', '75', '20' ) ; ?></td>
 				</tr>
 				<tr>
-					<td width="100%">Основной текст: (опционально)<br /><?php editorArea( 'editor2',  $row->fulltext , 'fulltext', '100%;', '800', '75', '60' ) ; ?></td>
+					<td width="100%">Основной текст: (опционально)<br />
+					<!--<textarea name="area" id="fulltext" rows="30"><?php echo $row->fulltext; ?></textarea>-->
+					<?php editorArea( 'editor2',  $row->fulltext , 'fulltext', '100%;', '800', '75', '60' ) ; ?></td>
 				</tr>
 				</table>
 			</td>
@@ -637,6 +642,7 @@ echo $pageNav->getListFooter();
 		<input type="hidden" name="images" value="" />
 		<input type="hidden" name="hidemainmenu" value="1" />
 		</form>
+		
 		<?php
 
 	}

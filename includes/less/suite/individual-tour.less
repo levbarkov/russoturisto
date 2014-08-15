@@ -1,0 +1,88 @@
+.individual-tour {
+  .border-radius(10px); // border radius
+  background-color: #fff; // layer fill content
+  border: 3px solid #2b4680;
+  padding: 22px;
+  &__title {
+    color: #ff4716; // text color
+    font-family: "Arial";
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2b4680;
+  }
+  &__tours {
+    margin-top: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    padding-bottom: 5px;
+    &-title {
+      display: inline-block;
+      color: #1a69f9; // text color
+      font-family: "Arial";
+      font-size: 22px;
+      font-weight: bold;
+      text-decoration: underline;
+      margin-bottom: 10px;
+    }
+    &-number {
+      color: #000000; // text color
+      font-family: "Arial";
+      font-size: 16px;
+      font-weight: bold;
+    }
+    &-about {
+      color: #000000; // text color
+      font-family: "Arial";
+      font-size: 14px;
+    }
+    &-departure-time {
+      padding-left: 35px;
+      color: #000; // text color
+      font-family: "Arial";
+      font-size: 14px;
+      background: url("/images/avia.png") no-repeat left center;
+    }
+    &-more-link {
+      color: #ff4717; // text color
+      font-family: "Arial";
+      font-size: 20px;
+      font-weight: bold;
+      border-bottom: 1px dashed #ff4717;
+      &-wrapper {
+        margin: 25px 0px 7px;
+      }
+    }
+    &:last-child {
+      border-bottom: 0px;
+    }
+  }
+}
+
+.causes-about-list {
+  &__item {
+    padding-left: 35px;
+    position: relative;
+    margin-bottom: 40px;
+  }
+  .icon {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  .icon-capital {
+    top: -5px;
+  }
+  &__title {
+    color: #ff3901; // text color
+    font-family: "Georgia";
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+  }
+  &__text {
+    color: #000; // text color
+    font-family: "Arial";
+    font-size: 16px;
+  }
+}

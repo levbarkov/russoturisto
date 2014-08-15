@@ -2,17 +2,18 @@
 header("Content-Type: text/html; charset=windows-1251");
 //Если форма отправлена
 if(isset($_POST['submit'])) {
-
+	// $hasError = null;
 	//Проверка правильности ввода EMAIL
-	if(trim($_POST['email']) == '')  {
-		$hasError = true;
+	$email_pattern = "/^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/";
+	if(trim($_POST['email']) == '' OR (!preg_match($email_pattern, $_POST['email'])))  {
+		$hasError = 'Проверьте, корректно ли заполнено поле электронной почты.';
 	} else {
 		$email = trim($_POST['email']);
 	}
 
 	//Проверка наличия ТЕКСТА сообщения
 	if(trim($_POST['message']) == '') {
-		$hasError = true;
+		$hasError = 'Поле сообщения не может быть пустым.';
 	} else {
 		if(function_exists('stripslashes')) {
 			$comments = stripslashes(trim($_POST['message']));
@@ -23,16 +24,26 @@ if(isset($_POST['submit'])) {
 	
 	//Если ошибок нет, отправить email
 	if(!isset($hasError)) {
+		// $emailTo = 'russoturisto1@mail.ru'; //Сюда введите Ваш email
 		$emailTo = 'russoturisto1@mail.ru'; //Сюда введите Ваш email
 		$subject = trim($_POST['subject']);
 		$message = '<html> 
     <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"> 
         <title>Туристическое агенство Руссо Туристо</title> 		
+		<style>
+		body {
+			background-image: url("http://travelclubrusso.ru/mail_images/background.jpg");
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			margin: 0;
+			padding: 0;;
+		}
+ 		</style>
 	</head>
 	<body style="background-color:#91d3f3;margin: 0;padding: 0;"> 
 
-<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="91d3f3" style="background-image:url(\'http://travelclubrusso.ru/mail_images/background.jpg\');background-repeat:no-repeat;background-position: center bottom;margin: 0;padding: 0;">
+<table valign="bottom" align="center" background="http://travelclubrusso.ru/mail_images/background.jpg" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="91d3f3" style="background-image: url(\'http://travelclubrusso.ru/mail_images/background.jpg\');background-repeat:no-repeat;background-position: center bottom;margin: 0;padding: 0;">
 	<tbody> <tr>
 		<td>
 		<table align="center" cellpadding="0" cellspacing="0" border="0" width="871">
@@ -97,8 +108,8 @@ if(isset($_POST['submit'])) {
 						</td></tr></tbody>
 						</table>
 					</td>
-					<td bgcolor="f9f3e3" style="background-image:url(\'http://travelclubrusso.ru/mail_images/footer6.png\');background-repeat:no-repeat;background-position: center bottom;">&nbsp;</td>
-					<td width="85" style="background-image:url(\'http://travelclubrusso.ru/mail_images/footer7.png\');background-repeat:no-repeat;background-position: center bottom;">&nbsp;</td>
+					<td bgcolor="f9f3e3" valign="bottom" ><img valign="bottom" align="center" src="http://travelclubrusso.ru/mail_images/footer6.png"></td>
+					<td width="85" valign="bottom"><img valign="bottom" align="center" src="http://travelclubrusso.ru/mail_images/footer7.png"></td>
 				</tr>
 				<tr>
 					<td>
@@ -179,11 +190,20 @@ if(isset($_POST['submit'])) {
 <html> 
     <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"> 
-        <title>Отправка письма</title> 		
+        <title>Отправка письма</title>
+		<style>
+		body {
+			background-image: url('http://travelclubrusso.ru/mail_images/background.jpg');
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			margin: 0;
+			padding: 0;;
+		}
+		</style>
 	</head>
 	<body style="background-color:#91d3f3;margin: 0;padding: 0;"> 
 
-<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="91d3f3" style="background-image:url('/mail_images/background.jpg');background-repeat:no-repeat;background-position: center bottom;margin: 0;padding: 0;">
+<table valign="bottom" align="center" background="http://travelclubrusso.ru/mail_images/background.jpg" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="91d3f3" style="background-image: url('http://travelclubrusso.ru/mail_images/background.jpg');background-repeat:no-repeat;background-position: center bottom;margin: 0;padding: 0;">
 	<tbody> <tr>
 		<td>
 		<table align="center" cellpadding="0" cellspacing="0" border="0" width="871">
@@ -250,8 +270,8 @@ if(isset($_POST['submit'])) {
 		</td></tr></tbody>
 						</table>
 					</td>
-					<td bgcolor="f9f3e3" style="background-image:url('/mail_images/footer6.png');background-repeat:no-repeat;background-position: center bottom;">&nbsp;</td>
-					<td width="85" style="background-image:url('/mail_images/footer7.png');background-repeat:no-repeat;background-position: center bottom;">&nbsp;</td>
+					<td bgcolor="f9f3e3" valign="bottom" ><img valign="bottom" align="center" src="http://travelclubrusso.ru/mail_images/footer6.png"></td>
+					<td width="85" valign="bottom"><img valign="bottom" align="center" src="http://travelclubrusso.ru/mail_images/footer7.png"></td>
 				</tr>
 				<tr>
 					<td>
@@ -362,7 +382,7 @@ form .contactform {
 	<div id="contact-wrapper">
 
 	<?php if(isset($hasError)) { //Если найдены ошибки ?>
-		<p class="error">Проверьте, пожалуйста, правильность заполения всех полей.</p>
+		<p class="error"><?php echo $hasError; ?></p>
 	<?php } ?>
 
 	<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" >
@@ -380,7 +400,7 @@ form .contactform {
 		<div>
 			<label for="message"><strong>Сообщение:</strong></label>
 			<textarea name="message" id="message"></textarea>
-			<script type="text/javascript">                CKEDITOR.replace( 'message' );            </script>
+			<script type="text/javascript">CKEDITOR.replace( 'message' );</script>
 		</div>
 	    <input type="submit" value="Отправить письмо" name="submit" class="button"/>
 	</form>

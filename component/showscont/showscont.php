@@ -39,7 +39,10 @@ if (  $idstat==true  ){
 	if (  isset($_REQUEST['task'])  )
 		if (  $_REQUEST['task']=='viewfull'  )	{ $showcont = desafelySqlStr( $statcont->fulltext ); $viewintro = 0; }
 		
-	if (  $viewintro==1  ) $showcont = desafelySqlStr( $statcont->introtext );
+	if (  $viewintro==1  ) {
+		$showcont = desafelySqlStr( $statcont->introtext );
+		// var_dump ($idstat);
+	}
 
 	// увеличение счетчика
 	$i24r = new mosDBTable( "#__content", "id", $database );
@@ -58,7 +61,6 @@ else {	// не найден объект содержимого
 if($reg['sefname1'] == 'hot_tours')
 { 
 	$slider = slider();
-
 	$showcont = str_replace('mesto_slidera', $slider, $showcont);
 }
 
@@ -120,6 +122,7 @@ function slider()
 			<div id="lofslidecontent45" class="lof-slidecontent  lof-snleft">
 				<div class="preload"><div></div></div>
 				<? $rows = ggsql(" select b.name, b.link, b.desc, b.org from `#__exfoto` as a, `#__foto` as b where a.id = b.parent and a.sefname='start' and b.publish = '1' order by b.ordering limit 15; "); ?>
+				
 				<div class="lof-main-outer">
 					<ul class="lof-main-wapper">
 						<? 

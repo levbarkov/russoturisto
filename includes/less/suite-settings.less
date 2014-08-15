@@ -1,0 +1,37 @@
+@import "../bower_components/lesshat/build/lesshat.less";
+@import "../bower_components/bootstrap/less/variables.less";
+@import "../bower_components/bootstrap/less/mixins.less";
+
+.page-content {
+  min-width: 1080px;
+  .suite-section {
+    overflow: hidden;
+    &__title {
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 35px;
+    }
+    &__container {
+      max-width: 1288px;
+      min-width: 1080px;
+      margin: 0 auto;
+      .clearfix();
+    }
+    .left-column {
+      overflow: hidden;
+      vertical-align: top;
+      padding-right: 20px;
+    }
+    .right-column {
+      padding-left: 0;
+      float: right;
+      vertical-align: top;
+      width: 380px;
+      position: relative;
+    }
+  }
+}
+//remove it
+.icon1 {
+  margin-top: 0;
+}

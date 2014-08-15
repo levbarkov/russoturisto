@@ -10,18 +10,23 @@ $swf = <<<HTML
 </p>
 HTML;
 
-$rows1 = ggsql(" select b.name, b.sefname, b.sefnamefullcat  from #__excat as a, #__exgood as b where a.sefname='asia'		and b.parent = a.id and b.publish = '1' order by b.order ; ");
-$rows2 = ggsql(" select b.name, b.sefname, b.sefnamefullcat  from #__excat as a, #__exgood as b where a.sefname='europa' 	and b.parent = a.id and b.publish = '1' order by b.order ; ");
-$rows3 = ggsql(" select b.name, b.sefname, b.sefnamefullcat  from #__excat as a, #__exgood as b where a.sefname='exotic' 	and b.parent = a.id and b.publish = '1' order by b.order ; ");
-$rows4 = ggsql(" select b.name, b.sefname, b.sefnamefullcat  from #__excat as a, #__exgood as b where a.sefname='usa' 		and b.parent = a.id and b.publish = '1' order by b.order ; ");
-$rows5 = ggsql(" select b.name, b.sefname, b.sefnamefullcat  from #__excat as a, #__exgood as b where a.sefname='africa' 	and b.parent = a.id and b.publish = '1' order by b.order ; ");
 
-if($rows1)foreach($rows1 as $row){ $link1 .= "<a href='{$row->sefnamefullcat}/{$row->sefname}.html'>{$row->name}</a>\n"; }
-if($rows2)foreach($rows2 as $row){ $link2 .= "<a href='{$row->sefnamefullcat}/{$row->sefname}.html'>{$row->name}</a>\n"; }
-if($rows3)foreach($rows3 as $row){ $link3 .= "<a href='{$row->sefnamefullcat}/{$row->sefname}.html'>{$row->name}</a>\n"; }
-if($rows4)foreach($rows4 as $row){ $link4 .= "<a href='{$row->sefnamefullcat}/{$row->sefname}.html'>{$row->name}</a>\n"; }
-if($rows5)foreach($rows5 as $row){ $link5 .= "<a href='{$row->sefnamefullcat}/{$row->sefname}.html'>{$row->name}</a>\n"; }
+$rows1 = ggsql("SELECT title, sefname, sefnamefullcat FROM #__content WHERE catid=14 AND state=1 order by title DESC;");
+$rows2 = ggsql("SELECT title, sefname, sefnamefullcat FROM #__content WHERE catid=18 AND state=1 order by title DESC;");
+$rows3 = ggsql("SELECT title, sefname, sefnamefullcat FROM #__content WHERE catid=16 AND state=1 order by title DESC;");
+$rows4 = ggsql("SELECT title, sefname, sefnamefullcat FROM #__content WHERE catid=29 AND state=1 order by title DESC;");
+$rows5 = ggsql("SELECT title, sefname, sefnamefullcat FROM #__content WHERE catid=28 AND state=1 order by title DESC;");
+// $rows1 = ggsql(" select b.name, b.sefname, b.sefnamefullcat  from #__excat as a, #__exgood as b where a.sefname='asia'		and b.parent = a.id and b.publish = '1' order by b.order ; ");
+// $rows2 = ggsql(" select b.name, b.sefname, b.sefnamefullcat  from #__excat as a, #__exgood as b where a.sefname='europa' 	and b.parent = a.id and b.publish = '1' order by b.order ; ");
+// $rows3 = ggsql(" select b.name, b.sefname, b.sefnamefullcat  from #__excat as a, #__exgood as b where a.sefname='exotic' 	and b.parent = a.id and b.publish = '1' order by b.order ; ");
+// $rows4 = ggsql(" select b.name, b.sefname, b.sefnamefullcat  from #__excat as a, #__exgood as b where a.sefname='usa' 		and b.parent = a.id and b.publish = '1' order by b.order ; ");
+// $rows5 = ggsql(" select b.name, b.sefname, b.sefnamefullcat  from #__excat as a, #__exgood as b where a.sefname='africa' 	and b.parent = a.id and b.publish = '1' order by b.order ; ");
 
+if($rows1)foreach($rows1 as $row){ $link1 .= "<a href='{$row->sefnamefullcat}/{$row->sefname}.html'>{$row->title}</a>\n"; }
+if($rows2)foreach($rows2 as $row){ $link2 .= "<a href='{$row->sefnamefullcat}/{$row->sefname}.html'>{$row->title}</a>\n"; }
+if($rows3)foreach($rows3 as $row){ $link3 .= "<a href='{$row->sefnamefullcat}/{$row->sefname}.html'>{$row->title}</a>\n"; }
+if($rows4)foreach($rows4 as $row){ $link4 .= "<a href='{$row->sefnamefullcat}/{$row->sefname}.html'>{$row->title}</a>\n"; }
+if($rows5)foreach($rows5 as $row){ $link5 .= "<a href='{$row->sefnamefullcat}/{$row->sefname}.html'>{$row->title}</a>\n"; }
 
 verstka::insite_header();
 ?>

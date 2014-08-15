@@ -38,9 +38,15 @@ class verstka {
 			search_systems_meta_validation();
 			css("/includes/css/style.css");
 			css("/includes/css/animate.css");
-			js("http://code.jquery.com/jquery-1.10.2.js");
+			css("/includes/css/suite.css");
+			css("/includes/css/suite-settings.css");
+			css("/includes/bower_components/fancybox/source/jquery.fancybox.css");
+			// js("http://code.jquery.com/jquery-1.10.2.js");
+			js("http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js");
 			js("/includes/js/jquery.colorbox.js");
 			js("/includes/js/script.js");
+			js("/includes/bower_components/jquery-backstretch/src/jquery.backstretch.js");
+			js("/includes/bower_components/fancybox/source/jquery.fancybox.js");
 			ib_header();
 		?>
 		</head>

@@ -55,15 +55,29 @@ do_frontpage_stat();
 		<div class="ours_adgood">
 			<h3>Наши предложения</h3>
 			<div class="items">
-				<?
+				<h3>Интересные предложения</h3>
+				<?php
 					$proc = '<b class="proc"></b>';
-					$rows = ggsql(" select * from #__menu where `published`='1' AND `menutype` = 'slide_menu' AND `parent` = '0' order by `ordering` ASC; ");
+					$rows = ggsql(" select * from #__menu where `published`='1' AND `menutype` = 'interesting_offers' AND `parent` = '0' order by `ordering` ASC; ");
 					if($rows) foreach($rows as $row)
 					{
 						echo "<a class='cr{$row->params}'  href='{$row->link}'><img src='/images/adgood/{$row->params}.png'  width='263' height='263' alt='img' />{$proc} <div><span>{$row->name}</span></div></a>";
 						$proc = '';
 					}
 				?>
+				<h3>Предложения по нарпавлениям</h3>
+				<?php
+					$rows = ggsql(" select * from #__menu where `published`='1' AND `menutype` = 'destinations_by_countries' AND `parent` = '0' order by `ordering` ASC; ");
+					if($rows) foreach($rows as $row)
+					{
+						echo "<a class='cr{$row->params}'  href='{$row->link}'><img src='/images/adgood/{$row->params}.png'  width='263' height='263' alt='img' />{$proc} <div><span>{$row->name}</span></div></a>";
+						$proc = '';
+					}
+				?>
+				
+				<pre>
+				<?php //print_r ($rows); ?>
+				</pre>
 			</div>
 		</div>
 

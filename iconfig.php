@@ -1,5 +1,7 @@
 <?php
-error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT );
+error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT ^ E_DEPRECATED);
+// error_reporting(E_ALL);
+// ini_set("display_errors", 1);
 date_default_timezone_set('Asia/Krasnoyarsk');
 ini_set('short_open_tag', 'on');
 
@@ -21,16 +23,16 @@ $ip_ban = array(
 );
 
 ////DATABASE CONFIG SECTION////
-$DBhostname = "u301331.mysql.masterhost.ru";
-$DBuserName = "u301331";
-$DBname  	= "u301331";
-$DBpassword = "39dshotrygl";
+$DBhostname = "localhost";
+$DBuserName = "bureauit2_russo";
+$DBname  	= "bureauit2_russo";
+$DBpassword = "1qazxsw2";
 $DBPrefix  	= "sln_";
 
 
 ////MAIN CONFIG SECTION////
 $sitename  	= "Руссо туристо";
-define ('site_path', "/home/u301331/travelclubrusso.ru/www");
+define ('site_path', $_SERVER['DOCUMENT_ROOT']);
 
 /*
 Если у сайта есть много алиасов, то их прописываем сюда для того, чтобы флаг 4ajax не срезался
@@ -41,7 +43,7 @@ $server_aliases = array(
     'xn--b1adckeo0aq.xn--p1ai',
 );*/
 
-$server_aliases = array('www.travelclubrusso.ru', 'travelclubrusso.ru');
+$server_aliases = array('www.russo.bureauit.com', 'russo.bureauit.com');
 
 foreach($server_aliases as $alias){
     if($alias == $_SERVER['HTTP_HOST']){
@@ -60,7 +62,7 @@ ini_set('post_max_size', '30M');
 $_VERSION = new stdClass();
 
 $iversion = "2529";
-$adminEmail = "krasinsite@mail.ru";
+$adminEmail = "new0@ro.ru";
 $ilang = "russian";
 $adminTheme = "admin";
 $_VERSION->SITE=1;
@@ -77,7 +79,8 @@ $MAILuseractivation = 1;
 
 ////MAIL CONFIG SECTION////
 $MAILmailer = 'mail';
-$MAILmailfrom = 'info@krasinsite.ru';
+// $MAILmailfrom = 'info@krasinsite.ru';
+$MAILmailfrom = 'new0@ro.ru';
 $MAILmailname = 'КрасИнсайт';
 $MailcharSet = "utf-8";
 ?>

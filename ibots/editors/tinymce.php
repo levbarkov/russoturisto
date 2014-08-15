@@ -16,7 +16,7 @@ function botTinymceEditorInit() {
 	global $database, $reg;
 
 		$load 				= '<script type="text/javascript" src="'. site_url .'/ibots/editors/tinymce/jscripts/tiny_mce/tiny_mce_src.js"></script>';
-/*		$load_init 			= '	<script type="text/javascript" src="'. site_url .'/mambots/editors/tinymce/jscripts/tiny_mce/dump.js"></script>	';*/
+// /*		$load_init 			= '	<script type="text/javascript" src="'. site_url .'/mambots/editors/tinymce/jscripts/tiny_mce/dump.js"></script>	';*/
 		$load_init 			= '<script type="text/javascript" src="'. site_url .'/ibots/editors/tinymce/e24code/AjexFileManager/ajex.js"></script>';
 
 		$query = "SELECT theme"

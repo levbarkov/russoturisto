@@ -75,14 +75,17 @@ class viewCatalog {
 	{
 		global $reg;
 		
-		$rows = ggsql(" select * from #__exgood where fdesc != '' and `publish` = 1 order by `name`; ");
+		
+		$rows = ggsql(" SELECT good.sefnamefullcat, good.sefname, good.name FROM #__exgood as good, #__excat as cat WHERE good.publish = 1 AND (cat.parent='7' AND good.parent = cat.id) ORDER BY good.name; ");
 		
 		?>
+		
 		<div class="iframe visa unl">
 			<h1>Документы необходимые для оформления визы</h1>
-			<? foreach($rows as $row){ echo "<a href='{$row->sefnamefullcat}/{$row->sefname}.html#1'>{$row->name}</a> \n"; } ?>
+			<? foreach($rows as $row){ echo "<a href='{$row->sefnamefullcat}/{$row->sefname}.html'>{$row->name}</a> \n"; } ?>
 			<div class="clear"></div>
 		</div>
+		
 		<?
 	}
 	

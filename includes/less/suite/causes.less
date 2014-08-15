@@ -1,0 +1,106 @@
+.causes {
+  &__title {
+    color: #1d1d1d; // text color
+    font-family: "Arial";
+    font-size: 38px;
+    font-weight: bold;
+  }
+  &__list {
+    counter-reset: causes-counter;
+    list-style: none;
+    padding-left: 0px;
+    margin: 7px -20px 0px -10px;
+    &__item {
+      vertical-align: top;
+      color: #1d1d1d; // text color
+      font-family: @main-font;
+      font-size: 13px;
+      font-weight: normal;
+      margin: 8px 1.61% 45px;
+      width: 29.6%;
+      display: inline-block;
+      &:before {
+        line-height: 1.1;
+        display: block;
+        color: #052f73; // text color
+        font-family: "Georgia";
+        font-size: 39px;
+        font-weight: bold;
+        font-style: italic;
+        border-bottom: 1px solid #ff3901;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        content: counter(causes-counter);
+        counter-increment: causes-counter;
+      }
+    }
+  }
+  &__answer {
+    .border-radius(10px); // border radius
+    background-color: #fff; // layer fill content
+    border: 3px solid #2b4680;
+    padding: 22px;
+    &-title {
+      color: #ff4716; // text color
+      font-family: "Arial";
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 0px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #2b4680;
+    }
+    &-avatar {
+      .border-radius(999px);
+      display: block;
+      margin: 20px auto;
+    }
+
+    &-name {
+      color: #000; // text color
+      font-family: "Arial";
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+    }
+    &-phone, &-email, &-vk {
+      color: #000; // text color
+      font-family: "Arial";
+      font-size: 16px;
+      display: block;
+      margin-bottom: 10px;
+      text-decoration: none;
+      &.active {
+        color: #0561b0;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .icon-vk {
+      position: relative;
+      top: -3px;
+    }
+    &-contact {
+      margin-top: 20px;
+      &-td-icon {
+        width: 50px;
+        text-align: center;
+        vertical-align: top;
+      }
+      tr {
+        display: block;
+        margin-top: 10px;
+      }
+      td {
+
+      }
+    }
+    &-btn {
+      margin: 40px auto 20px;
+      &_wrapper {
+        text-align: center;
+      }
+    }
+  }
+}

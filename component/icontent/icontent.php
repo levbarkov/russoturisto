@@ -128,7 +128,7 @@ class viewContent {
 			$rubrics = ggsql ("select * from {$this->_model_rubric} where `parent` = {$icars->id} order by `order` ");
 			$p->rubrics = &$rubrics;
 			$p->component_foto = &$component_foto;
-			
+			// var_dump ($p);
 			$this->template->tpl('showRubrics', $p);
 		}
 	
@@ -156,7 +156,7 @@ class viewContent {
 		$p->limit      	= $this->params['limit'];
 		
 		$component_foto->init('content');
-		
+		// var_dump ($p);
 		$this->template->tpl('contentList', $p);
 	}
 	

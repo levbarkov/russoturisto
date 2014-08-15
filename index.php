@@ -1,4 +1,5 @@
 <?php
+
 define( "_VALID_INSITE", 1 );
 define ('DIRSEP', DIRECTORY_SEPARATOR);
 setlocale(LC_ALL, 'ru_RU.UTF-8');
