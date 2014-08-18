@@ -545,7 +545,13 @@ HTML;
 							для жителей Красноярска и Красноярского края
 						</p>
 					</div>
+					<div id="header-search-form">
+						<div id="TVSearchForm"></div><script src="http://tourvisor.ru/module/newform/searchform.min.js"></script>
+				<script type="text/javascript"> TV.initModule({ moduleid: 258}); </script>
+					</div>
 				</div>
+				
+				
 			</section>
 			<pre>
 			<?php //print_r($row); ?>

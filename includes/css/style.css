@@ -1796,7 +1796,15 @@ background: none;
 }
 
 
+#header-search-form {
+	width: 250px; 
+	float: right;
+	margin-top:15px;
+}
 
+.page-content .country-preview__title { 
+	float:left;
+}
 
 
 
