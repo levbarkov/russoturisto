@@ -28,6 +28,19 @@ class tplContent {
 		$component_file = $p->component_file;
 		
 		?>
+		<?php if ($reg['mainparent']->sefname==='visa_center'): ?>	
+			<div class="visa_mens_new inv" style="float:right; margin: 40px 20px;">
+				<h4>Есть вопросы?</h4>
+				<img class="manager_img" src="/images/ava.png" alt="marina">
+				<div class="manager_name">Светлана Жмакова</div>
+				<div class="manager_phones">тел.&nbsp;+7(391) 2888-306<br>тел. +7(391) 2414-888<br>icq 604971433</div>
+				<div class="manager_email"><a href="mailto:visarusso@mail.ru">visarusso@mail.ru</a></div>
+				<div class="manager_vk"><a href="http://vk.com/club54033732">http://vk.com/club54033732</a></div>
+				<div class="manager_button"><a class="btn colorbox2 cboxElement" href="/ping?s=tour"><span class="icon1 iworld">&nbsp;</span> Заявка на визу</a></div>			
+			
+			</div>
+		<?php endif; ?>
+		
 		<div class="holst">
 		<div class="inner_content news">
 		<?php if ($reg['mainparent']->sefname==='visa_center'): ?>
@@ -452,7 +465,7 @@ HTML;
 
 					</table>
 					<div class="causes__answer-btn_wrapper">
-						<a class="btn colorbox2 cboxElement causes__answer-btn" href="#"><span
+						<a class="btn colorbox2 cboxElement causes__answer-btn" href="/ping?s=tour"><span
 								class="icon1 iworld">&nbsp;</span>
 							Заявка на тур</a>
 					</div>
@@ -498,7 +511,7 @@ HTML;
 
 					</table>
 					<div class="causes__answer-btn_wrapper">
-						<a class="btn colorbox2 cboxElement causes__answer-btn" href="#"><span
+						<a class="btn colorbox2 cboxElement causes__answer-btn" href="/ping?s=tour"><span
 								class="icon1 iworld">&nbsp;</span>
 							Заявка на тур</a>
 					</div>
