@@ -30,13 +30,24 @@ class tplContent {
 		?>
 		<div class="holst">
 		<div class="inner_content news">
-		
+		<?php if ($reg['mainparent']->sefname==='visa_center'): ?>
+			<div id="ipathway_div" class="iway_ipathway_div unl">
+				<a class="iway_pathway_link" href='/'>Главная</a> 
+				<?php echo print_pathwayspliter(); ?>
+				<a class="iway_pathway_link" href="/<? echo $reg['mainparent']->sefname?>"><? echo $reg['mainparent']->name?></a>
+				<?php echo print_pathwayspliter(); ?>	
+				<?=$row->title ?>
+			</div>
+		<?php else: ?>
 			<?ipathway();?>
+		<?php endif; ?>
+
 			<h1><?=$reg['mainparent']->name ?></h1>
 			<? if( substr($sefname,0,4)=='news' ){ ?><p class="date"><?=mindate($row->created); ?></p><? } ?>
 			<h4><?=$row->title ?></h4>
 			<? /**/if(!empty($row->org)){ echo "<img class=fr src='/images/icat/icont/{$row->org}' alt='image'>"; }/**/  ?>
 			<?=desafelySqlStr($row->introtext); ?>
+			<?=desafelySqlStr($row->fulltext); ?>
 		</div>
 		</div>
 		<?
@@ -111,41 +122,29 @@ HTML;
 		{
 			//$html = '<p>База пустаs</p>';
 		}
-
+		
+		// $table = ggsql(" SELECT fdesc FROM #__icat WHERE id='19'; ");
+		// $table = desafelySqlStr($reg['mainobj']->fdesc);
+		// $table = explode('<table width="772">', $table);
+		// $table = explode('</table>', $table[1]);
+		// $table = $table[0];
 		?>
+		
 		<div class="holst">
 		<div class="inner_content news_list unl">
-			<?ipathway();?>
-			<h1><?=$reg['mainobj']->name ?></h1>
+			<?php 
+			preg_match_all('~<a.*?href="([^"]+)".*?>(.*?)</a>~s', $table, $matches);  
+			// var_dump ($matches);
+			?>
+			
+			<?//ipathway();?>
+			<h1><?//=$reg['mainobj']->name ?></h1>
 			<?=desafelySqlStr($reg['mainobj']->fdesc); ?>
 			<?=$html ?>
 		</div>
 		</div>
 		<?
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 	
 	private function htmlShowRubrics_hotel(&$p){
 		global $reg;
@@ -384,13 +383,13 @@ HTML;
 					<?php 
 					// var_dump ($images);
 					foreach ($images['small'] as $key => $image):
-						echo '<a class="fancybox country-gallery__image-small" rel="gallery1"><img class="" src="'.$image.'" alt=""/ onclick="setGalleryImage(\''.$images['fullsize'][$key].'\')"></a>';
+						echo '<a class="country-gallery__image-small" rel="gallery1"><img class="" src="'.$image.'" alt=""/ onclick="setGalleryImage(\''.$images['fullsize'][$key].'\')"></a>';
 					endforeach;
 					?>
 					
 				</div>
 				<div class="left-column">
-					<a class="fancybox" rel="gallery1" href="<?php echo $images['fullsize'][0]; ?>">
+					<a class="fancybox" id="img2" rel="gallery1" href="<?php echo $images['fullsize'][0]; ?>">
 						<img id="img1" class="country-gallery__image-big" src="<?php echo $images['fullsize'][0]; ?>" alt=""/>
 					</a>
 				</div>
@@ -400,6 +399,7 @@ HTML;
 			function setGalleryImage(img)
 			{
 				$('#img1').attr('src', img);
+				$('#img2').attr('href', img);
 			}
 
 		</script>
@@ -530,9 +530,6 @@ HTML;
 		?>
 		<div class="holst hotel">
 			<div class="page-content">
-				<?//ipathway();?>
-			
-			
 			<section class="suite-section country-preview">
 				<div class="suite-section__container">
 					<div class="country-preview__title">
@@ -553,9 +550,6 @@ HTML;
 				
 				
 			</section>
-			<pre>
-			<?php //print_r($row); ?>
-			</pre>
 			<script>
 				$(".country-preview").backstretch([
 					<?php 
@@ -572,15 +566,21 @@ HTML;
 				
 				
 				
-				// $(document).ready(function () {
-					// $(".fancybox").fancybox({
-						// openEffect: 'none',
-						// closeEffect: 'none'
-					// });
-				// });
+				$(document).ready(function () {
+					$(".fancybox").fancybox({
+						openEffect: 'none',
+						closeEffect: 'none'
+					});
+				});
 			</script>
 			<section class="suite-section">
 				<div class="suite-section__container causes">
+				<br><br>
+				<pre>
+				<?php //var_dump ($reg['mainparent']->parent); ?>
+				</pre>
+				<?ipathway();?>
+
 					<?php 
 						$introtext = desafelySqlStr($row->introtext); 
 						$intotext = $this->showAnswerContactForm($introtext);

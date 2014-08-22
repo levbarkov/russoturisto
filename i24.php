@@ -716,15 +716,26 @@ function delfile ($filename){
 
 function get_pathway_array($thisfotocat, $table_name, $parent_field, $start_url, $start_name, $last_is_url){
 global $reg;
-		$icatway = array(); $iii = 0;
+		$icatway = array(); 
+		$iii = 0;
 		if (  $last_is_url==1  ){
 			if (  $thisfotocat->id==0  ) $icatway[0]->url = $start_url;
 			else 						 $icatway[0]->url = $thisfotocat->sefnamefull.'/'.$thisfotocat->sefname;
 		}
+		// echo '<pre>';
+		// print_r ($icatway);
+		// echo '</pre>';
+		
+		if ($thisfotocat->name==='') {
+			$thisfotocat->name = $reg['mainobj']->title;
+		}	
+		
 		$icatway[0]->name = $thisfotocat->name;
 		$icatway[0]->parent = $thisfotocat->$parent_field;
 		if (  $thisfotocat->id==0  ) return $icatway;
-
+		// echo '<pre>';
+		// print_r ($thisfotocat);
+		// echo '</pre>';
 		while ($icatway[$iii]->parent!=0){
 			$icur_catfoto = ggo($icatway[$iii]->$parent_field, $table_name);
 			$iii++;
@@ -736,6 +747,11 @@ global $reg;
 			$icatway[$iii+1]->name = $start_name;
 			$icatway[$iii+1]->url = $start_url;
 		}
+		
+		// echo '<pre>';
+		// print_r ($reg);
+		// echo '</pre>';
+		// die();
 		return array_reverse( $icatway );
 }
 function get_lasturl_for_type($id, $type){

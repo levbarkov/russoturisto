@@ -24,9 +24,9 @@ $ip_ban = array(
 
 ////DATABASE CONFIG SECTION////
 $DBhostname = "localhost";
-$DBuserName = "bureauit2_russo";
-$DBname  	= "bureauit2_russo";
-$DBpassword = "1qazxsw2";
+$DBuserName = "root";
+$DBname  	= "russo";
+$DBpassword = "";
 $DBPrefix  	= "sln_";
 
 
@@ -43,7 +43,7 @@ $server_aliases = array(
     'xn--b1adckeo0aq.xn--p1ai',
 );*/
 
-$server_aliases = array('www.russo.bureauit.com', 'russo.bureauit.com');
+$server_aliases = array('russo', 'russo');
 
 foreach($server_aliases as $alias){
     if($alias == $_SERVER['HTTP_HOST']){
@@ -62,7 +62,7 @@ ini_set('post_max_size', '30M');
 $_VERSION = new stdClass();
 
 $iversion = "2529";
-$adminEmail = "new0@ro.ru";
+$adminEmail = "krasinsite@mail.ru";
 $ilang = "russian";
 $adminTheme = "admin";
 $_VERSION->SITE=1;
@@ -79,8 +79,7 @@ $MAILuseractivation = 1;
 
 ////MAIL CONFIG SECTION////
 $MAILmailer = 'mail';
-// $MAILmailfrom = 'info@krasinsite.ru';
-$MAILmailfrom = 'new0@ro.ru';
+$MAILmailfrom = 'info@krasinsite.ru';
 $MAILmailname = 'КрасИнсайт';
 $MailcharSet = "utf-8";
 ?>

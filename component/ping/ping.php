@@ -27,10 +27,12 @@ function none()
 function subs()
 {
 	if(!$_REQUEST[email]){ msg_error('Введите e-mail!'); } 
+	if(!$_REQUEST[name]){ msg_error('Введите Ваше имя!'); } 
 	
 	$body = <<<HTML
 					<h1>Письмо на подписку</h1>
 					<p>e-mail: {$_REQUEST[email]}</p>
+					<p>имя: {$_REQUEST[name]}</p>
 HTML;
 	ping_send_mail(4, $body);
 }

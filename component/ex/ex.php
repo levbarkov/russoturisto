@@ -76,13 +76,19 @@ class viewCatalog {
 		global $reg;
 		
 		
-		$rows = ggsql(" SELECT good.sefnamefullcat, good.sefname, good.name FROM #__exgood as good, #__excat as cat WHERE good.publish = 1 AND (cat.parent='7' AND good.parent = cat.id) ORDER BY good.name; ");
+		// $rows = ggsql(" SELECT good.sefnamefullcat, good.sefname, good.name FROM #__exgood as good, #__excat as cat WHERE good.publish = 1 AND ((cat.parent='0' AND cat.sefnamefull='/tours') AND good.parent = cat.id) ORDER BY good.name; ");
+		$table = ggsql(" SELECT fdesc FROM #__icat WHERE id='19'; ");
+		$table = desafelySqlStr($table[0]->fdesc);
 		
+		$table = explode('<table width="772">', $table);
+		$table = explode('</table>', $table[1]);
+		$table = $table[0];
+		preg_match_all('~<a.*?href="([^"]+)".*?>(.*?)</a>~s', $table, $rows);  
 		?>
 		
 		<div class="iframe visa unl">
 			<h1>Документы необходимые для оформления визы</h1>
-			<? foreach($rows as $row){ echo "<a href='{$row->sefnamefullcat}/{$row->sefname}.html'>{$row->name}</a> \n"; } ?>
+			<? foreach($rows[0] as $row){ echo ($row."\n"); } ?>
 			<div class="clear"></div>
 		</div>
 		

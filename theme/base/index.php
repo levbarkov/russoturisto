@@ -94,6 +94,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<form action="" class="form" id="jq_form2">
 					<label for="input_pod">Подписка</label>
 					<input id="input_pod" class="input_pod" type="text" name="email" placeholder="введите ваш e-mail" />
+					<br>
+					<input id="input_pod_name" class="input_pod" type="text" name="name" placeholder="введите ваше имя" />
 					<input type="hidden" name="c" value="ping" />
 					<input type="hidden" name="s" value="subs" />
 					<?/*/?><input type="submit" class="button_sub" value="Подписаться" /><?/**/?>
