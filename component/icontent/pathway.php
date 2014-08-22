@@ -26,9 +26,6 @@ function ishowItem_pathway( $id, $gid, $pop, $option ){
 
 	// выводим путь навигации
 	$icatway = get_pathway_array($icars, "#__icat", "parent", "", "" , $i);
-	// echo '<pre>';
-	// print_r ($icatway);
-	// echo '</pre>';
 	i24pwprint (  $icatway  );
 }
 

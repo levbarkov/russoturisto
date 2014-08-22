@@ -4,7 +4,4 @@
 
 /iconfig.php
 /_sql.log
-
-\highslide\graphics\outlines\drop
-\html\
-\images\
+/iadmin/images/adminlog.xml

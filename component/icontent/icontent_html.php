@@ -122,22 +122,12 @@ HTML;
 		{
 			//$html = '<p>База пустаs</p>';
 		}
-		
-		// $table = ggsql(" SELECT fdesc FROM #__icat WHERE id='19'; ");
-		// $table = desafelySqlStr($reg['mainobj']->fdesc);
-		// $table = explode('<table width="772">', $table);
-		// $table = explode('</table>', $table[1]);
-		// $table = $table[0];
+
 		?>
 		
 		<div class="holst">
-		<div class="inner_content news_list unl">
-			<?php 
-			preg_match_all('~<a.*?href="([^"]+)".*?>(.*?)</a>~s', $table, $matches);  
-			// var_dump ($matches);
-			?>
-			
-			<?//ipathway();?>
+		<div class="inner_content news_list unl">			
+			<?ipathway();?>
 			<h1><?//=$reg['mainobj']->name ?></h1>
 			<?=desafelySqlStr($reg['mainobj']->fdesc); ?>
 			<?=$html ?>
