@@ -531,6 +531,8 @@ HTML;
 		
 		xmp($photof);
 		?>
+		
+		
 		<div class="holst hotel">
 			<div class="page-content">
 			<section class="suite-section country-preview">
@@ -547,7 +549,7 @@ HTML;
 					</div>
 					<div id="header-search-form">
 						<div id="TVSearchForm"></div><script src="http://tourvisor.ru/module/newform/searchform.min.js"></script>
-				<script type="text/javascript"> TV.initModule({ moduleid: 258}); </script>
+						<script type="text/javascript"> TV.initModule({ moduleid: 258}); </script>
 					</div>
 				</div>
 				

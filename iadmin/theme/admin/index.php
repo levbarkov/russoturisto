@@ -16,7 +16,7 @@ echo '<?xml version="1.0" encoding="'. $iso[0] .'"?' .'>';
 		<script type="text/javascript">
 		// alert (1);
 		tinymce.init({
-			selector: "textarea#introtext, textarea#fulltext",
+			// selector: "textarea#introtext, textarea#fulltext",
 			language: "ru",
 			valid_elements : "*[*]",
 			inline_styles : false,
