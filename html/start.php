@@ -59,7 +59,7 @@
 				<a class="cr2"  href="/html/?page=new_year"><img src="/includes/css/images/adgood/2.png"  width="263" height="263" alt="img" /> <div><span>Майские праздники</span></div></a>
 				<a class="cr3"  href="/html/?page=medical_tours"><img src="/includes/css/images/adgood/3.png"  width="263" height="263" alt="img" /> <div><span>Лечебные туры</span></div></a>
 				<a class="cr4"  href="/html/?page="><img src="/includes/css/images/adgood/4.png"  width="263" height="263" alt="img" /> <div><span>Экзотические острова</span></div></a>
-				<a class="cr5"  href="/html/?page=tours_asia"><img src="/includes/css/images/adgood/5.png"  width="263" height="263" alt="img" /> <div><span></span></div></a>
+				<a class="cr5"  href="/html/?page=tours_asia"><img src="/includes/css/images/adgood/5.png"  width="263" height="263" alt="img" /> <div><span>Юго-Восточная Азия</span></div></a>
 				<a class="cr6"  href="/html/?page=country_list"><img src="/includes/css/images/adgood/6.png"  width="263" height="263" alt="img" /> <div><span>Круизы</span></div></a>
 				<a class="cr7"  href="/html/?page=hotel"><img src="/includes/css/images/adgood/7.png"  width="263" height="263" alt="img" /> <div><span>Лучшие отели мира</span></div></a>
 				<a class="cr8"  href="/html/?page=tours_europe"><img src="/includes/css/images/adgood/8.png"  width="263" height="263" alt="img" /> <div><span>Туры по Европе</span></div></a>

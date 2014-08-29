@@ -5,7 +5,7 @@ define ('DIRSEP', DIRECTORY_SEPARATOR);
 setlocale(LC_ALL, 'ru_RU.UTF-8');
 $iseoname = "[\w.-]";
 
-// необходимо восстановить значения  для $_REQUEST, из-за SEO они теряются
+
 $base = explode("?", $_SERVER['REQUEST_URI']);
 if(count($base) > 1){
 	$basevars = explode ("&", $base[1]);
@@ -25,7 +25,7 @@ if(count($base) > 1){
 	}
 }
 
-$files_loaded = array(); // Специальный массив для исключения загрузки повторяющихся переменных
+$files_loaded = array();
 
 require_once 'iconfig.php';
 require_once 'i24.php';
@@ -44,14 +44,14 @@ require_once 'imail.php';
 require_once 'isef.php';
 require_once 'icore.php';
 require_once 'table_parser.php';
-require_once 'seo.php'; // занимает много времени
+require_once 'seo.php';
 
 Api::init();
 
 $reg['promo'] = new promo ();
 ilog::vlog("######## АДРЕС ЗАГРУЖАЕМОЙ СТРАНИЦЫ: {$sefname1} #######");
 
-// ГЛОБАЛЬНАЯ ЗАЩИТА ВСЕХ ВХОДНЫХ ДАННЫХ
+
 if(!isset($reg['filter_level']))
     $reg['filter_level'] = 'MAX';
 
@@ -67,13 +67,13 @@ $my = &$reg['my'];
 $pi = get_pi();
 $icom = get_icom($pi);
 
-// учет статистики сайта
+
 $site_statistics = new site_statistics();
 $site_statistics->SearchEngineStatisticSave();
 $site_statistics->DayStatisticSave();
 
 session_start();
-// здесь необходимо сохранить все объекты в сессии
+
 foreach ($_REQUEST as $ireq => $ireqvalue){
 	$iprefix = substr($ireq, 0, 8 ); // icsmart_
 	if (strcmp($iprefix, "icsmart_") == 0){
@@ -82,7 +82,7 @@ foreach ($_REQUEST as $ireq => $ireqvalue){
 	}
 }
 
-# определяем, откуда пришел запрос, и если надо, убираем из запроса 4ajax
+
 if (isset($_REQUEST['4ajax'])) {
     $found = false;
     if (! isset($server_aliases) || sizeof($server_aliases) == 0)
@@ -113,7 +113,7 @@ $mylist = new mylist();
 $mylist->maketask( mb_strtolower(ggpr('mylist_task'), "UTF-8") );
 
 if (strcmp($icom, "in") == 0){
-	if (isset($_REQUEST['4ajax_login'])  ){	//  имеем дело с формой входа по ajax
+	if (isset($_REQUEST['4ajax_login'])  ){	
 		$mainframe->ilogin();
 		return;
 	} else 	{
@@ -122,7 +122,7 @@ if (strcmp($icom, "in") == 0){
 	}
 }
 else if (strcmp($icom, "out") == 0){
-	if (isset($_REQUEST['4ajax'])){	//  имеем дело с выходом по ajax
+	if (isset($_REQUEST['4ajax'])){	
 		$mainframe->ilogout();
 		return; 
 	} else {
@@ -143,15 +143,12 @@ $reg['iadmin'] = 0;
 $mosConfig_lang = $ilang;
 //  section for coalition
 
-// ЗАГРУЗКА ЯЗЫКОВОГО ФАЙЛА
+
 $ilang_file = site_path."/ilang/".$ilang.".php";
 require_once( $ilang_file );
 
-// ОПРЕДЕЛЯЕМ НУЖНО ЛИ ЗАПУСКАТЬ HTML РЕДАКТОР
 $doeditor = false;
-//if		(  strcmp($option, "cab")==0  ) $doeditor = true;
-//if		(  strcmp($option, "cab_news")==0  &&  strcmp($task, "edit")==0  ) $doeditor = true;
-//if		(  strcmp($option, "cab_news")==0  &&  strcmp($task, "new")==0  ) $doeditor = true;
+
 require_once( site_path . '/editor/editor.php' );
 if ($doeditor){
 	$ieditor_loaded = 0;
@@ -159,21 +156,11 @@ if ($doeditor){
 }
 
 
-/** ЗАГРУЗКА КОМПОНЕНТА ДЛЯ ИСПОЛЬЗОВАНИЯ ВНУТРИ СИСТЕМЫ (ДЛЯ ИСКЛЮЧЕНИЯ ЛИШНИХ ЗАПРОСОВ SELECT)
- *
- * создает объекты:
- *	$reg['mainobj']    - текущий объект, например новость или товар который сейчас открыт;
- *	$reg['mainparent'] - родитель текущего объект, например рубрика новости или категория товара который сейчас открыт;
- *
- * если объекты не создал, то 
- *	$reg['mainobj']    = false;
- *	$reg['mainparent'] = false;
- *
- */
+
 get_mainobj();
 
-// ЗАГРУЗКА ШАБЛОНА
-$itheme = get_theme();		// ggtr2($itheme);
+
+$itheme = get_theme();		
 $itheme_file = site_path."/theme/".$itheme->theme."/index.php";
 if (isset($_REQUEST['4ajax'])) {
 	ib();
@@ -191,4 +178,4 @@ else{
 }
 //	do_ipstat();
 //	do_access();
-show_debug_info();  // ОТОБРАЖАЕМ ОТЛАДОЧНУЮ ИНФОРМАЦИЮ (только если установлен $reg['show_debug_info'] или ?who)
+show_debug_info(); 

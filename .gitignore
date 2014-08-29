@@ -2,6 +2,7 @@
 ### COMMON INDEX MANAGEMENT ###
 ###############################
 
+/images/*
 /iconfig.php
 /_sql.log
 iadmin/images/adminlog.xml

@@ -28,6 +28,7 @@ class tplContent {
 		$component_file = $p->component_file;
 		
 		?>
+		
 		<?php if ($reg['mainparent']->sefname==='visa_center'): ?>	
 			<div class="visa_mens_new inv" style="float:right; margin: 40px 20px;">
 				<h4>Есть вопросы?</h4>
@@ -40,7 +41,6 @@ class tplContent {
 			
 			</div>
 		<?php endif; ?>
-		
 		<div class="holst">
 		<div class="inner_content news">
 		<?php if ($reg['mainparent']->sefname==='visa_center'): ?>
@@ -531,8 +531,8 @@ HTML;
 		
 		xmp($photof);
 		?>
-		
-		
+		<link rel="stylesheet" type="text/css" href="http://www.tourtrans.ru/css/listview/styles.css" />		
+		<link rel="stylesheet" type="text/css" href="http://www.tourtrans.ru/css/export.css"/>
 		<div class="holst hotel">
 			<div class="page-content">
 			<section class="suite-section country-preview">
@@ -549,7 +549,7 @@ HTML;
 					</div>
 					<div id="header-search-form">
 						<div id="TVSearchForm"></div><script src="http://tourvisor.ru/module/newform/searchform.min.js"></script>
-						<script type="text/javascript"> TV.initModule({ moduleid: 258}); </script>
+				<script type="text/javascript"> TV.initModule({ moduleid: 258}); </script>
 					</div>
 				</div>
 				
@@ -581,9 +581,7 @@ HTML;
 			<section class="suite-section">
 				<div class="suite-section__container causes">
 				<br><br>
-				<pre>
-				<?php //var_dump ($reg['mainparent']->parent); ?>
-				</pre>
+				
 				<?ipathway();?>
 
 					<?php 

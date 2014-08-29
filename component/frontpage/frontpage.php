@@ -65,7 +65,7 @@ do_frontpage_stat();
 						$proc = '';
 					}
 				?>
-				<h3>Предложения по нарпавлениям</h3>
+				<h3>Предложения по направлениям</h3>
 				<?php
 					$rows = ggsql(" select * from #__menu where `published`='1' AND `menutype` = 'destinations_by_countries' AND `parent` = '0' order by `ordering` ASC; ");
 					if($rows) foreach($rows as $row)
